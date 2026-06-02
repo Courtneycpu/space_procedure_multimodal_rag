@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local secrets and machine-specific config
+.env
+.env.*
+!.env.example
+
+
+# Generated vector stores and database artifacts
+data/chroma_baseline/
+data/chroma_enriched/
+*.sqlite3
+*.db
+
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

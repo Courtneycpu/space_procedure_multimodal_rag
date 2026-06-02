@@ -1,0 +1,1 @@
+# Runs Pure Enriched Text Vector (flattend media) evaluation
