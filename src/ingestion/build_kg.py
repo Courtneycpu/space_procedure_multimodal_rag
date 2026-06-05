@@ -33,11 +33,16 @@ except ModuleNotFoundError:
 
 load_dotenv()
 
+#debug
+print("URI:", os.getenv("NEO4J_URI"))
+print("USER:", os.getenv("NEO4J_USER"))
+print("PASS:", os.getenv("NEO4J_PASSWORD"))
+
 driver = None
 if GraphDatabase is not None:
     driver = GraphDatabase.driver(
-        os.getenv("NEO4J_URI", "bolt://localhost:7687"),
-        auth=(os.getenv("NEO4J_USER", "neo4j"), os.getenv("NEO4J_PASSWORD", "password123")),
+        os.getenv("NEO4J_URI", "bolt://127.0.0.1:7687"),
+        auth=(os.getenv("NEO4J_USER", "neo4j"), os.getenv("NEO4J_PASSWORD", "12344321")),
     )
 
 MARKDOWN_DIR = os.path.abspath("data/raw_markdown/")
