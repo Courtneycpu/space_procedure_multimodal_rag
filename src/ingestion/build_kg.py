@@ -2,8 +2,27 @@
 
 import os
 import re
+import importlib
 from neo4j import GraphDatabase
 from dotenv import load_dotenv
+
+try:
+    text_splitter_module = importlib.import_module("langchain_text_splitters")
+    RecursiveCharacterTextSplitter = text_splitter_module.RecursiveCharacterTextSplitter
+except ModuleNotFoundError:
+    class RecursiveCharacterTextSplitter:
+        def __init__(self, chunk_size=500, chunk_overlap=50, separators=None):
+            self.chunk_size = chunk_size
+            self.chunk_overlap = chunk_overlap
+
+        def split_text(self, text):
+            chunks = []
+            step = max(1, self.chunk_size - self.chunk_overlap)
+            for start in range(0, len(text), step):
+                chunk = text[start:start + self.chunk_size].strip()
+                if chunk:
+                    chunks.append(chunk)
+            return chunks
 
 load_dotenv()
 
@@ -14,6 +33,24 @@ driver = GraphDatabase.driver(
 )
 
 MARKDOWN_DIR = os.path.expanduser("~/space_procedure_multimodal_rag/data/raw_markdown")
+
+STOPWORDS = {
+    "able", "about", "above", "after", "again", "against", "all", "also",
+    "and", "any", "are", "assisted", "available", "bag", "been", "being",
+    "below", "both", "button", "call", "cap", "card", "cl", "could", "doc",
+    "does", "end", "every", "fig", "figure", "for", "from", "give", "gray",
+    "has", "have", "having", "if", "into", "its", "later", "may", "med",
+    "medical", "mcc", "not", "off", "one", "or", "other", "out", "over",
+    "pack", "page", "pages", "paper", "patient", "perform", "procedure",
+    "put", "red", "remove", "request", "retrieve", "sodf", "step", "then",
+    "the", "this", "through", "to", "using", "with", "yes",
+}
+
+text_splitter = RecursiveCharacterTextSplitter(
+    chunk_size=500,
+    chunk_overlap=50,
+    separators=["\n\n", "\n", " ", ""],
+)
 
 def parse_markdown(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
@@ -189,27 +226,7 @@ def build_graph(doc_name, metadata, steps, figures, warnings):
                 id=warning['id'],
                 step_id=warning['step_id'])
 
-        # Create TextChunk nodes for RAG
-        with open(os.path.join(MARKDOWN_DIR, doc_name + '.md'),
-                  'r', encoding='utf-8') as f:
-            full_text = f.read()
-
-        chunk_size = 500
-        chunks = [full_text[i:i+chunk_size]
-                  for i in range(0, len(full_text), chunk_size)]
-
-        for i, chunk in enumerate(chunks):
-            session.run("""
-                MERGE (c:TextChunk {id: $id})
-                SET c.text = $text,
-                    c.doc = $doc
-                WITH c
-                MATCH (d:Document {name: $doc})
-                MERGE (d)-[:HAS_CHUNK]->(c)
-            """,
-            id=f"{doc_name}_chunk_{i}",
-            text=chunk,
-            doc=doc_name)
+       
 
     print(f"  Steps:    {len(steps)}")
     print(f"  Figures:  {len(figures)}")
