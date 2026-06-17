@@ -1,7 +1,7 @@
 # Track 1: Vector search over plain text chunks
 
 import os
-from langchain_community.vectorstores import Chroma
+from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 
 # 1. Connect to the Baseline Vector Store
@@ -15,7 +15,9 @@ embeddings = HuggingFaceEmbeddings(
 
 vectorstore = Chroma(
     persist_directory=CHROMA_DIR, 
-    embedding_function=embeddings
+    embedding_function=embeddings,
+    collection_name="raw_text_chunks" 
+
 )
 
 def retrieve_text_context(query: str, top_k: int = 5):

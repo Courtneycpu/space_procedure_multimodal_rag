@@ -16,7 +16,7 @@ from datetime import datetime
 from openai import OpenAI
 from dotenv import load_dotenv
 
-load_dotenv(dotenv_path=Path(__file__).parents[1] / "config" / ".env")
+load_dotenv(dotenv_path=Path(__file__).parents[2] / "config" / ".env")
 
 # ── LLM Client ────────────────────────────────────────────────────────────────
 client = OpenAI(
@@ -44,7 +44,7 @@ def load_questions(path: str = None) -> list[dict]:
 ANSWER_SYSTEM_PROMPT = """You are a medical assistant for NASA ISS spaceflight emergency procedures.
 Answer the question using ONLY the provided context from the procedure documents.
 Be concise, accurate, and step-oriented. If the context does not contain enough
-information to answer, say: "The provided context does not contain enough information."
+information to answer, say: "The provided context does not contain enough information. If a figure is referenced, check if it is described and get the context from description, if not say : "see figure" and add the figure reference number"
 """
 
 def generate_answer(question: str, context_chunks: list[dict]) -> str:

@@ -3,37 +3,37 @@
 import os
 from neo4j import GraphDatabase
 from dotenv import load_dotenv
+from pathlib import Path
 
-load_dotenv()
+load_dotenv(dotenv_path=Path(__file__).parents[2] / "config" / ".env")
 
-# Connect to Neo4j
 driver = GraphDatabase.driver(
-    os.getenv("NEO4J_URI", "bolt://localhost:7687"),
-    auth=(os.getenv("NEO4J_USER", "neo4j"), os.getenv("NEO4J_PASSWORD", "password123"))
+    os.getenv("NEO4J_URI", "neo4j://127.0.0.1:7687"),
+    auth=(os.getenv("NEO4J_USER", "neo4j"), os.getenv("NEO4J_PASSWORD", "12344321"))
 )
 
 def retrieve_kg_context(query_entities: list):
-    """
-    Searches the graph using exact entities (e.g., ['EpiPen', 'CPR']).
-    Retrieves connected steps, figures, and warnings.
-    """
     if not query_entities:
         return []
 
     with driver.session() as session:
-        # Your teammate's excellent Cypher traversal query
         result = session.run("""
             MATCH (s:Step)
-            WHERE any(entity IN $entities WHERE toLower(s.text) CONTAINS toLower(entity))
-            OPTIONAL MATCH (s)-[:HAS_FIGURE]->(f:Figure)
-            OPTIONAL MATCH (s)-[:HAS_WARNING]->(w:Warning)
-            RETURN s.text AS step_text,
-                   s.number AS step_number,
-                   s.doc AS doc,
-                   f.path AS figure_path,
-                   f.caption AS llm_caption,
-                   f.ocr_text AS ocr_text,
-                   w.text AS warning
+            WHERE any(entity IN $entities
+                WHERE toLower(s.text) CONTAINS toLower(entity)
+                   OR toLower(s.doc)  CONTAINS toLower(entity))
+
+            // Also pull sibling steps from the same document for richer context
+            WITH collect(DISTINCT s.doc) AS matched_docs
+            MATCH (s2:Step)
+            WHERE s2.doc IN matched_docs
+            OPTIONAL MATCH (s2)-[:HAS_WARNING]->(w:Warning)
+
+            RETURN s2.text     AS step_text,
+                   s2.number   AS step_number,
+                   s2.doc      AS doc,
+                   w.text      AS warning
+            ORDER BY s2.doc, s2.number
         """, entities=query_entities)
-        
+
         return [dict(r) for r in result]

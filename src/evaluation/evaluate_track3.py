@@ -10,7 +10,7 @@ import sys
 import json
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parents[1] / "src"))
+sys.path.insert(0, str(Path(__file__).parents[2] / "src"))
 
 from retrieval.search_kg import retrieve_kg_context
 from evaluation.eval_utils import (
@@ -42,9 +42,16 @@ def extract_entities(question: str) -> list[str]:
             "content": ENTITY_EXTRACT_PROMPT.format(question=question)
         }],
         temperature=0.0,
-        max_tokens=100,
+        max_tokens=1000,
     )
-    raw = response.choices[0].message.content.strip()
+    content = response.choices[0].message.content
+    print(f"     DEBUG: finish_reason={response.choices[0].finish_reason}, content={content}")
+
+    if not content:
+        print(f"     ⚠️  Empty response from model, using empty entities")
+        return []
+
+    raw = content.strip()
     if raw.startswith("```"):
         raw = raw.split("```")[1]
         if raw.startswith("json"):

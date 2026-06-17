@@ -9,7 +9,7 @@ import argparse
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parents[1] / "src"))
+sys.path.insert(0, str(Path(__file__).parents[2] / "src"))
 
 from retrieval.search_text import retrieve_text_context
 from evaluation.eval_utils import (
@@ -20,6 +20,7 @@ from evaluation.eval_utils import (
 )
 
 TRACK = "track1_text"
+
 
 
 def run(model: str, top_k: int):

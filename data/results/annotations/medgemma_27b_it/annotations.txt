@@ -1,0 +1,179 @@
+============================================================
+Image: 1.101_SEVERE_ALLERGIC_REACTION\fig1.png
+------------------------------------------------------------
+The image shows an epinephrine auto-injector, commonly known as an EpiPen, which is used to treat severe allergic reactions. The device is cylindrical with a yellow cap at one end and a blue safety cap at the other. The label "Protective Plastic Tubing" points to the clear plastic tube surrounding the device. The label "Needle End" points to the tip of the device where the needle is located. The label "Safety Cap" points to the blue cap covering the needle end. The image is labeled "Figure 1.- Epinephrine (EpiPen)." The purpose of the image is to show the epinephrine auto-injector before use, specifically identifying its components like the needle end and safety cap.
+
+============================================================
+Image: 1.101_SEVERE_ALLERGIC_REACTION\fig2.png
+------------------------------------------------------------
+The image shows a hand holding an epinephrine auto-injector (EpiPen). The device is white with an orange tip and a blue cap on the opposite end. The hand is gripping the device, with the thumb positioned near the blue cap and the index finger near the orange tip. The device is being held in preparation for use, likely to administer epinephrine. The image is labeled "Figure 1.- Epinephrine (EpiPen)."
+
+============================================================
+Image: 1.101_SEVERE_ALLERGIC_REACTION\fig3.png
+------------------------------------------------------------
+The image shows a hand holding an epinephrine auto-injector (EpiPen) over a patient's thigh. The hand is positioned with the thumb near the safety cap and the index finger on the plunger. The EpiPen is oriented vertically, with the needle end pointing downwards towards the thigh. The patient is wearing a blue shirt and is seated. The thigh is light-skinned. The image is labeled "Figure 1.- Epinephrine (EpiPen)." The image illustrates the first step in using the EpiPen, which is removing it from its packaging and preparing to administer it.
+
+============================================================
+Image: 1.102_AED_ASSISTED_CPR\fig1.png
+------------------------------------------------------------
+The image shows the placement of Automated External Defibrillator (AED) electrodes on a human torso.
+
+The figure is labeled "Figure 1. - AED Electrode Placement."
+
+A diagram of a human torso is shown. Two AED electrode pads are placed on the chest.
+
+One pad is placed on the upper right chest, below the collarbone. The label "DEPLOY AED" points to this pad.
+
+The second pad is placed on the lower left side of the chest, below the armpit. The label "DEPLOY AED" points to this pad.
+
+The text "CONNECT AED ELECTRODES TO PATIENT'S CHEST. (Figure 1)" is associated with this figure in the surrounding document text.
+
+The image illustrates step 1 of the "DEPLOY AED" procedure block.
+
+============================================================
+Image: 1.103_ALS_ALGORITHM\fig1.png
+------------------------------------------------------------
+The image shows a medical device used for intraosseous access. It consists of a blue barrel, a gray activation mechanism, and a needle unit. The barrel has markings indicating volume measurements in milliliters (mL), ranging from 0 to 10 mL, with increments of 1 mL. The device has a cap at the end opposite the needle. The blue barrel is labeled "BD". The image is a close-up view, focusing on the device itself, likely intended to illustrate its components and markings.
+
+============================================================
+Image: 1.103_ALS_ALGORITHM\fig2.png
+------------------------------------------------------------
+The image shows a close-up view of a person's lower leg, specifically the area just below the knee, where an intraosseous (IO) device is being inserted.
+
+Visible elements:
+- A person's leg, with skin visible.
+- A blue barrel device, presumably the IO insertion device, is positioned on the leg.
+- A hand is shown applying pressure to the gray end of the device.
+- A "+" symbol is marked on the leg, indicating the target insertion point.
+- A circle with a line through it is also marked on the leg, possibly indicating an alternative or incorrect location.
+- A label "KneeCap" is written near the knee joint.
+- A label "Bony protrusion" is written near the marked insertion point.
+- An arrow points from the "Bony protrusion" label to the marked insertion point.
+- Another arrow points from the "KneeCap" label to the knee joint.
+
+The image is labeled "Figure 2.- Intraosseous Site." This suggests it is illustrating the correct anatomical location for inserting the IO device. The "+" symbol indicates the specific spot on the tibia, approximately 2 cm below the tibial tuberosity (bony protrusion) and 1 cm up from the knee joint.
+
+============================================================
+Image: 1.103_ALS_ALGORITHM\fig3.png
+------------------------------------------------------------
+The image shows a close-up view of a hand holding an intraosseous device over a leg. The device has a blue barrel and a gray end. The hand is holding the blue barrel perpendicular to the skin. A safety latch is visible, positioned between the skin and the hub of the needle. Medical tape is partially visible, securing the safety latch. The leg has exposed skin, and a small circle marking the insertion point is visible. The device is labeled "Intraosseous Injection Device". The image illustrates the step of positioning the device before activation.
+
+============================================================
+Image: 1.103_ALS_ALGORITHM\fig4.png
+------------------------------------------------------------
+The image shows a close-up view of a hand holding a syringe attached to an intraosseous (IO) device. The hand is holding the blue barrel of the IO device, which is positioned over a leg (partially visible). The syringe is connected to the IV cap on the IO device. The syringe plunger is being pulled back. The image is labeled "Figure 1.- Syringe IV Cap Assembly." The text indicates this step follows unstowing the Emergency Medical Treatment Pack (Red), which contains the Intraosseous Device Start Kit, and attaching the IV cap to the syringe. The image illustrates the assembly of the syringe and IV cap prior to insertion of the IO device.
+
+============================================================
+Image: 1.103_ALS_ALGORITHM\fig5.png
+------------------------------------------------------------
+The image shows a hand holding a red plastic device with a blue barrel and a gray end, positioned over a leg. The leg has a drawing of a circle and a plus sign marking a location. Medical tape is visible, partially attached to the leg. The hand is holding the device, ready for insertion. The image is labeled "Figure 3.- Positioning Intraosseous Device." The device is being positioned on the leg at the marked site for intraosseous access.
+
+============================================================
+Image: 1.103_ALS_ALGORITHM\fig6.png
+------------------------------------------------------------
+The image shows a hand holding a syringe attached to an IV cap, which is connected to a blue intraosseous device. The device is inserted into a leg, secured with medical tape and a safety latch. The hand is applying pressure to the blue barrel of the device. The syringe plunger is visible, and the needle unit is partially exposed. The leg is covered with a white sheet. The image is labeled "Figure 1.- Syringe IV Cap Assembly." in the surrounding text.
+
+============================================================
+Image: 1.103_ALS_ALGORITHM\fig7.png
+------------------------------------------------------------
+The image shows a syringe attached to an IV cap, which is connected to a blue barrel device. The syringe has a plunger and a needle hub. The IV cap is connected to the blue barrel. Medical tape is partially visible, wrapped around the assembly. The image is labeled "Figure 1.- Syringe IV Cap Assembly." The image illustrates the assembly of the syringe, IV cap, and the intraosseous device (blue barrel) prior to insertion, as described in step 3 of the procedure.
+
+============================================================
+Image: 1.103_ALS_ALGORITHM\fig8.png
+------------------------------------------------------------
+The image shows a medical device assembly for intraosseous injection, likely used in emergency situations. The main component is a clear plastic device with a blue barrel, a gray activation mechanism, and a needle unit extending from the end. The blue barrel is designed to be placed on the insertion site. The gray part is where pressure is applied to activate the needle insertion. The needle unit is protected by a clear plastic cover.
+
+Attached to the device is a syringe with an IV cap. The syringe is a standard 10 mL size, indicated by the markings on the barrel. The IV cap is connected to the syringe and is designed to attach to the needle unit after insertion.
+
+There are also two small, yellow, circular caps visible, likely protective covers for the needle or other parts of the device.
+
+The image is labeled "Figure 1.- Syringe IV Cap Assembly." This indicates that the image illustrates how the syringe and IV cap are connected, forming a unit ready for use with the intraosseous device. The syringe is connected to the IV cap, which is ready to be attached to the needle unit after it has been inserted into the bone.
+
+============================================================
+Image: 1.105_CHOKING\fig1.png
+------------------------------------------------------------
+The image shows a diagram illustrating the technique for performing abdominal thrusts, also known as the Heimlich maneuver.
+
+The image depicts a person standing behind another person who is leaning forward. The person performing the maneuver has their arms wrapped around the other person's waist. One hand is made into a fist, and this fist is positioned on the abdomen of the other person, specifically above the belly button but below the ribcage. The other hand is placed over the fist. The diagram shows the direction of the thrust, indicated by an arrow pointing sharply inward and upward.
+
+The image also shows a close-up view of the hand placement on the abdomen, emphasizing the position of the fist.
+
+The text label "Figure 1.- Abdominal Thrust." is present at the top of the image.
+
+The image is part of a medical procedure document for treating a choking patient on the International Space Station (ISS). It specifically illustrates step 2 of the procedure, which involves performing abdominal thrusts to dislodge an airway obstruction.
+
+============================================================
+Image: 1.105_CHOKING\fig2.png
+------------------------------------------------------------
+The image shows a diagram illustrating the hand placement for abdominal thrusts, a procedure used to clear an airway obstruction. A person is shown standing behind another person who is leaning forward. The person administering the thrusts has their fist positioned on the abdomen of the patient. The fist is located above the belly button and below the ribcage. The other hand is placed over the fist. The patient's head is tilted back, and their chin is lifted, indicating the head-tilt/chin-lift maneuver is being performed or is about to be performed. An arrow indicates the direction of the thrust, which is sharply inward and upward. The figure is labeled "Figure 1.- Abdominal Thrust."
+
+============================================================
+Image: 2.6.001_MOUTH_ANATOMY\fig1.png
+------------------------------------------------------------
+The image shows a diagram of the inside of a human mouth. The mouth is open, revealing the teeth, tongue, and other structures. Labels point to specific parts: "Teeth", "Tongue", "Gingiva (gum)", "Uvula", "Tonsil", and "Tongue". The image is titled "Figure 1. Mouth Anatomy". The purpose of the image is to demonstrate the anatomy of the mouth.
+
+============================================================
+Image: 2.6.001_MOUTH_ANATOMY\fig2.png
+------------------------------------------------------------
+The image shows a diagram of the upper and lower jaw, labeled "Anterior 1x6" and "Posterior 1x8 or 1x12 upper/lower". It illustrates the arrangement of teeth in the mouth.
+
+The upper jaw displays 16 teeth, numbered 1 through 16, starting from the midline. The lower jaw displays 16 teeth, numbered 17 through 32, starting from the midline.
+
+The image is labeled "Figure 1. Mouth Anatomy." and is part of a document titled "2.6.001 MOUTH ANATOMY". The document's objective is to demonstrate the anatomy of the mouth and teeth. The image serves to identify anatomic landmarks related to the mouth and teeth.
+
+============================================================
+Image: 2.6.001_MOUTH_ANATOMY\fig3.png
+------------------------------------------------------------
+The image shows a diagram of a tooth structure. The tooth is depicted in a vertical cross-section, revealing its internal components. The outermost layer is labeled "Enamel". Below the enamel is the "Dentin". The central cavity containing the pulp is labeled "Pulp". Within the pulp, the nerve tissue is indicated. The portion of the tooth extending below the gum line is labeled "Root". The root is covered by "Cementum". The structure anchoring the tooth to the jawbone is labeled "Periodontal Ligament". The tip of the root is labeled "Apex". The overall structure is a "Tooth". The image serves to illustrate the anatomy of a tooth.
+
+============================================================
+Image: 2.6.301_DENTAL_PROCEDURE_-_NERVE_BLOCK\fig1.png
+------------------------------------------------------------
+The image shows a step-by-step modification of a syringe to facilitate aspiration during a dental nerve block procedure.
+
+The top left shows a standard syringe with a needle attached.
+The top middle shows a strip of medical tape being twisted in the middle.
+The top right shows the twisted tape with the plunger pulled out of the syringe.
+The middle left shows the ends of the twisted tape being applied to the syringe plunger.
+The middle right shows the syringe with the tape attached to the plunger, ready for use.
+The bottom left shows the modified syringe with the needle attached, positioned for injection.
+The bottom right shows a close-up of the modified syringe, highlighting the tape attachment to the plunger and the needle.
+
+The image is labeled "Figure 1. Modification to Make Aspirating Syringe."
+The syringe is a 10 mL syringe.
+The needle is a 25G needle.
+The tape is medical tape.
+The procedure involves modifying the syringe by attaching a twisted strip of medical tape to the plunger, allowing the operator to pull back on the plunger with one hand to aspirate, ensuring the needle is not in a blood vessel.
+
+============================================================
+Image: 2.6.301_DENTAL_PROCEDURE_-_NERVE_BLOCK\fig2.png
+------------------------------------------------------------
+The image shows a close-up view of a person's mouth, specifically the upper teeth and gums, during a dental procedure. A dental syringe is positioned near the upper teeth. The syringe has a needle attached, which is aimed towards the area between the gums and the teeth. The syringe plunger is visible, and the barrel is partially obscured by the person's lip. The person's upper teeth are visible, along with the surrounding gum tissue. The image is labeled "Figure 2. Upper Nerve Block." An arrow points from the label "Muccobuccal fold" to the area where the upper lip meets the gum line. Another arrow points from the label "Dental Syringe" to the syringe itself.
+
+============================================================
+Image: 2.6.301_DENTAL_PROCEDURE_-_NERVE_BLOCK\fig3.png
+------------------------------------------------------------
+The image shows a diagram illustrating the technique for an upper nerve block for dental anesthesia.
+
+On the left side is a photograph of a patient's open mouth. A dental professional is shown inserting a needle into the patient's upper gum area. The needle is attached to a syringe. A dental mirror is also visible in the mouth.
+
+On the right side is a labeled diagram corresponding to the photograph. The diagram shows the anatomical structures involved.
+- "Coronoid Notch" is labeled.
+- "Inferior Alveolar Nerve" is labeled.
+- "Barrel of syringe over teeth 3 and 4" is labeled.
+- "Seam of cheek and throat" is labeled.
+- "Dental Syringe (Dental-2) with Long Needle (8)" is labeled.
+- "Point of Insertion" is labeled, indicating the location where the needle is inserted.
+
+The diagram shows the needle being inserted just anterior to the point where the seam between the cheek and throat turns upward toward the maxilla. The barrel of the syringe is positioned over teeth 3 and 4 on the opposite side of the injection site. The needle is directed towards the inferior alveolar nerve.
+
+============================================================
+Image: 2.6.303_DENTAL_PROCEDURE_-_DENTAL_CROWN_REPLACEMENT\fig1.png
+------------------------------------------------------------
+The image shows a dental adhesive syringe with a cap and a dental adhesive tip. The syringe is labeled "Dental Adhesive" and has a brand name "TempSpri" printed on it. The cap is labeled "Dental Adhesive Cap". The tip is labeled "Dental Adhesive Tip". An arrow points from the syringe to the tip, indicating how they connect. The syringe has a plunger and a nozzle. The tip has a v-shaped notch. The background is a neutral gray. The image is labeled "Figure 1. Dental Adhesive Equipment."
+
+============================================================
+Image: 2.6.303_DENTAL_PROCEDURE_-_DENTAL_CROWN_REPLACEMENT\fig2.png
+------------------------------------------------------------
+The image shows a close-up of a dental adhesive syringe and tip. The syringe is white with a blue band around the middle, featuring the text "DENSPLY" and "Caulk" in white. The syringe has a plunger and a nozzle. A brown cap is attached to the nozzle. The tip is clear and cylindrical, with a slightly angled end. The syringe and tip are aligned, with the tip attached to the nozzle. The image is labeled "Figure 1. Dental Adhesive Equipment."
+

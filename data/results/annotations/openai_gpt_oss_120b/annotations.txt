@@ -1,0 +1,152 @@
+============================================================
+Image: 1.101_SEVERE_ALLERGIC_REACTION\fig1.png
+------------------------------------------------------------
+Figure 1 – A single‑use auto‑injector (EpiPen) is shown isolated on a white background. The device is a bright orange, cylindrical cartridge with a
+
+============================================================
+Image: 1.102_AED_ASSISTED_CPR\fig1.png
+------------------------------------------------------------
+The illustration shows a front‑view outline of a human torso on a white background. The silhouette is drawn in thin black lines and includes the head, shoulders, rib cage, and abdomen. Two rectangular AED electrode pads are superimposed on the torso:
+
+* The first pad is positioned on the upper right side of the chest, just below the clavicle and slightly lateral to the sternum. The pad is labeled with the word “PAD 1” (or “A”) in black capital letters inside the rectangle.
+
+* The second pad is placed on the lower left side of the torso, near the mid‑axillary line and just above the abdomen. This pad carries the label “PAD 2” (or “B”) in black capital letters.
+
+A thin black arrow connects each pad to its corresponding label, indicating the intended placement location. Between the two pads, a faint dashed line runs diagonally across the chest, visually linking the pads and suggesting the path of the electrical current through the heart.
+
+Below the torso diagram, the caption reads “Figure 1 – AED Electrode Placement” in a standard sans‑serif font. No other text, symbols, or equipment appear in the image.
+
+The visual purpose is to show crew members the correct anatomical locations for attaching the AED’s electrode pads before activating the device during the “Deploy AED” step of the AED‑assisted CPR procedure.
+
+============================================================
+Image: 2.6.001_MOUTH_ANATOMY\fig1.png
+------------------------------------------------------------
+The first illustration depicts a frontal view of the oral cavity. The lips are shown opening to reveal the maxillary (upper) and mandibular (lower) arches. Each tooth is drawn in outline and is labeled with its position (e.g., “central incisor,” “canine,” “premolar,” “molar”). The gingival margin (gum line) surrounds the teeth, and the hard palate is visible behind the upper teeth. The tongue is shown resting on the floor of the mouth, and the uvula and soft palate are visible at the back of the throat. Arrows or callout lines connect the text labels to the corresponding structures, establishing a clear relationship between the visual anatomy and the terminology.
+
+The second illustration is a dental chart that assigns a unique number to every tooth in the mouth. The chart is organized into two rows representing the upper and lower arches, with the right side of the patient’s mouth on the viewer’s left. Each tooth icon is numbered sequentially from 1 to 32 (or 1 to
+
+============================================================
+Image: 2.6.001_MOUTH_ANATOMY\fig2.png
+------------------------------------------------------------
+The first illustration is a frontal schematic of a human mouth. The diagram shows the upper and lower dental arches within a closed‑mouth view. Visible structures include the lips, the vermilion border, the buccal mucosa, the hard palate, the soft palate, the uvula, the tongue, the gingiva (gums) surrounding each tooth, and the alveolar ridge. Each tooth is drawn in profile and is labeled with a generic identifier (e.g., “incisor,” “canine,” “premolar,” “molar”) positioned adjacent to the corresponding tooth. Arrows point from the labels to the individual teeth, and a curved line outlines the dental arch to emphasize the overall arrangement.
+
+The second illustration is a dental‑numbering chart. It presents a top‑down view of both the maxillary (upper) and mandibular (lower) arches. Each tooth is represented by a simple block shape and is marked with a numeric label. The numbering follows the universal system: the right maxillary third molar is labeled “1,” proceeding anteriorly to the right central incisor (“8”), then crossing the midline to the left central incisor (“9”) and continuing to the left third molar (“16”). The lower arch mirrors this pattern, with the left mandibular third molar labeled “17” and the sequence continuing to the right third molar labeled “32.” Small brackets or brackets‑like outlines may group the teeth into quadrants, and the
+
+============================================================
+Image: 2.6.001_MOUTH_ANATOMY\fig3.png
+------------------------------------------------------------
+Figure 1 – Mouth anatomy illustration  
+A schematic view of the oral cavity is shown in profile. The outer lip outlines the mouth opening and is labeled “Lip”. Inside the opening the upper and lower dental arches are visible, each populated with a series of teeth. The teeth are grouped and labeled “Upper teeth” and “Lower teeth”. The gum line (gingiva) surrounds the teeth and is marked “Gum”. Above the teeth the hard palate is depicted and labeled, with the soft palate extending posteriorly and a label “Soft palate”. A small protrusion at the back of the throat is identified as the “Uvula”. The tongue is shown within the oral cavity, labeled “Tongue”, and a
+
+============================================================
+Image: 2.6.303_DENTAL_PROCEDURE_-_DENTAL_CROWN_REPLACEMENT\fig1.png
+------------------------------------------------------------
+The first illustration (Figure 1) shows the dental‑adhesive kit laid out on a flat surface. Visible items are:
+
+* A two‑chamber dental‑adhesive syringe with its plastic cap removed; the barrel is labeled “Dental Adhesive” and the plunger is shown in the forward (dispensing) position.  
+* A small rectangular gauze pad (4 × 4 in) placed next to the syringe; a thin line of adhesive is visible on the gauze, indicating that material has been dispensed onto it.  
+* A separate “Dental Adhesive Tip” – a short, tubular applicator with a flared end. The tip is positioned beside the syringe, its v‑shaped notches clearly visible.  
+* Small graphic symbols next to the cap (a square‑like icon) and the tip (a rounded‑tip
+
+============================================================
+Image: 2.6.303_DENTAL_PROCEDURE_-_DENTAL_CROWN_REPLACEMENT\fig2.png
+------------------------------------------------------------
+The first illustration depicts the dental‑adhesive kit as it is laid out on a flat surface.  
+- In the centre is a dual‑chamber syringe (transparent barrel with two colored sections) whose plastic cap has been removed; the cap is shown nearby with a small “open” symbol.  
+- A plunger is visible at the rear of the syringe, ready to be pressed.  
+- To the right of the syringe sits a short, cylindrical Dental Adhesive Tip, the connector that will be attached to the syringe nozzle.  
+- A 4 × 4 in. gauze pad lies flat next to the syringe, partially covered with a thin smear of the adhesive material.  
+- Small arrows point from the syringe nozzle toward the tip, indicating the direction of flow.  
+- The caption beneath the image reads “Figure 1. Dental Adhesive Equipment.”  
+
+The second illustration zooms in on the connection between the syringe and the tip.  
+- The same syringe nozzle is shown with two V‑shaped notches on its lip.  
+- The Dental Adhesive Tip has matching V‑shaped slots.  
+- The tip is
+
+============================================================
+Image: 1.101_SEVERE_ALLERGIC_REACTION\fig3.png
+------------------------------------------------------------
+Figure 1 – a single‑use auto‑injector (EpiPen) displayed outside its protective plastic sheath. The device has a black barrel, an orange needle tip, a white safety cap at the proximal end, and printed labeling that reads “EpiPen” and “Epinephrine”. The protective sheath is a clear plastic tube that slides over the injector.
+
+Figure 2 – a close‑up of a hand grasping the injector. The thumb is positioned on the side of the barrel nearest the safety cap, while the remaining fingers wrap around the barrel. The safety cap is being pulled straight off the injector, exposing the orange needle tip. The hand is shown
+
+============================================================
+Image: 1.103_ALS_ALGORITHM\fig7.png
+------------------------------------------------------------
+The picture shows a single‑use 10 mL syringe with its barrel and plunger clearly visible. The needle‑free tip of the syringe is inserted into a small, white IV cap (a luer‑lock style connector). The cap’s cylindrical body is seated on the syringe tip, and the hub of the cap extends a short distance beyond the syringe barrel. No needle is attached; the connection is a smooth, sealed interface. The plunger is pulled back, exposing the interior of the barrel. A short label or printed marking on the cap identifies it as an “IV Cap.” The background is neutral, and the focus is on the assembled
+
+============================================================
+Image: 1.103_ALS_ALGORITHM\fig8.png
+------------------------------------------------------------
+**Figure 1 – Syringe IV‑Cap Assembly**  
+The picture shows a standard 10 mL syringe with its plunger retracted halfway. The needle tip is removed and a small, translucent “IV Cap” is snapped onto the syringe hub. The cap is
+
+============================================================
+Image: 1.105_CHOKING\fig1.png
+------------------------------------------------------------
+Figure 1 – Abdominal thrust illustration  
+The diagram shows a standing rescuer positioned directly behind a supine patient. The patient’s torso is depicted in profile, with the navel and lower ribs visible. The rescuer’s right hand is formed into a fist; the fist is placed on the patient’s abdomen just above the umbilicus and below the lower rib cage. A bold curved arrow points from the rescuer’s fist upward and inward toward the patient’s diaphragm, indicating the direction of the thrust. Text labels are attached to the key elements: “Fist” next to the hand, “Above belly button” (or “Above navel”) pointing to the placement area, and “Below ribcage” marking the upper boundary of the thrust zone. The patient’s head is turned slightly to the side, and a small label reads
+
+============================================================
+Image: 1.105_CHOKING\fig2.png
+------------------------------------------------------------
+The first illustration (Figure 1) shows a side‑view of a patient lying on a flat surface with a rescuer positioned directly behind. The rescuer’s right hand is formed into a closed fist; the fist is placed on the patient’s abdomen just inferior to the rib cage and superior to the navel. A thin, black arrow originates at the rescuer’s forearm and points upward and inward toward the patient’s torso, indicating the direction of the thrust. Text labels identify the “Fist” and the “Abdominal thrust point” (often marked near the umbilicus). The patient’s torso is outlined in a light gray silhouette, with a faint line marking the location of the navel. The rescuer’s left arm is shown resting on the patient’s back for support. The overall composition demonstrates the hand‑placement and force vector required to perform an abdominal thrust.
+
+The second illustration (Figure 2) depicts a supine patient with a rescuer standing at the head of the
+
+============================================================
+Image: 2.6.301_DENTAL_PROCEDURE_-_NERVE_BLOCK\fig1.png
+------------------------------------------------------------
+The illustration depicts a single‑hand‑operable, aspirating dental syringe that has been altered with medical tape.  
+
+* **Syringe body** – a standard 10 mL syringe is shown in profile, its barrel transparent enough to see the internal volume markings.  
+* **Plunger** – the plunger is pulled partially back from the barrel; around the middle of the plunger a short length of 8‑inch medical tape is twisted on itself to form a loop, then the two tape ends are wrapped and adhered to the front face of
+
+============================================================
+Image: 2.6.301_DENTAL_PROCEDURE_-_NERVE_BLOCK\fig2.png
+------------------------------------------------------------
+**Figure 1 – Syringe‑modification for one‑hand
+
+============================================================
+Image: 1.101_SEVERE_ALLERGIC_REACTION\fig2.png
+------------------------------------------------------------
+**Figure 1 – Epinephrine auto‑injector (EpiPen) removed from its protective sleeve**  
+The image shows a single, self‑contained epinephrine auto‑injector. The device is a cylindrical, orange‑red cartridge about the length of a hand, with a smooth, rounded barrel. One end of the cartridge is capped with a small, white plastic safety cap; the opposite end tapers to a concealed needle tip. The EpiPen’s brand name is printed on the barrel in black lettering, and a small label on the side reads “EpiPen”. The protective transparent tubing that originally housed the device
+
+============================================================
+Image: 1.103_ALS_ALGORITHM\fig3.png
+------------------------------------------------------------
+The picture shows a single‑use 10 mL syringe with its barrel and black plunger clearly visible. The syringe tip (Luer‑lock hub) is fitted with a small, molded IV cap that snaps onto the hub; the cap is a short, cylindrical piece of clear or white plastic with a tiny protruding ridge that locks into the syringe. The cap sits flush against the syringe tip, and the plunger is pulled back a short distance, exposing the open end of the cap. No other equipment, tape,
+
+============================================================
+Image: 1.103_ALS_ALGORITHM\fig4.png
+------------------------------------------------------------
+The picture shows two sterile, single‑use syringes prepared for intraosseous medication delivery.  
+
+* **Syringe barrels** are
+
+============================================================
+Image: 1.103_ALS_ALGORITHM\fig5.png
+------------------------------------------------------------
+Figure 1 – A 10 mL syringe with its plunger retracted, the barrel of the syringe is shown with an attached gray‑colored IV cap. The cap is seated on the syringe tip; the cap’s opening aligns with the syringe hub. No additional markings are visible on the syringe or cap.
+
+Figure 2 – The anterior aspect of a human lower‑leg (thigh/knee region) is exposed. A circular outline is drawn on the skin over the tibial crest, indicating the initial bony landmark. From the centre of the circle, a short line extends 2 cm medially (toward the inner leg) and then 1 cm proximally (upward toward the knee), ending in a “+” sign that marks the final intra
+
+============================================================
+Image: 1.103_ALS_ALGORITHM\fig6.png
+------------------------------------------------------------
+The picture shows a single‑use 10 mL syringe prepared for intra‑osseous medication delivery.
+
+============================================================
+Image: 1.103_ALS_ALGORITHM\fig1.png
+------------------------------------------------------------
+**Figure 1 – Syringe + IV‑Cap assembly**  
+A standard 10 mL syringe is shown with its plunger retracted. The tip of the syringe barrel is fitted with a small, transparent IV‑cap that snaps onto the luer‑lock. The cap is oriented so that its opening faces outward, ready to receive fluid. No other objects are present. The image’s purpose is to demonstrate the correct way to attach
+
+============================================================
+Image: 1.103_ALS_ALGORITHM\fig2.png
+------------------------------------------------------------
+**Figure 1 – Syringe + IV‑Cap Assembly**  
+A clear 10 mL syringe is shown with its barrel and pl
+

@@ -1,0 +1,169 @@
+============================================================
+Image: 1.101_SEVERE_ALLERGIC_REACTION\fig1.png
+------------------------------------------------------------
+The image displays two views of an epinephrine auto-injector, commonly known as an EpiPen, against a plain gray background. The top view shows the device with its protective plastic tubing still in place. The bottom view shows the device after the protective tubing has been removed, revealing the full body of the injector.
+
+The protective plastic tubing is a clear, cylindrical sheath that covers the main body of the injector. It has a yellow cap on one end and a translucent orange cap on the other. The label on the injector body is visible in the bottom view and contains text and pictograms related to its use.
+
+The bottom view of the injector clearly shows three labeled parts. The "Needle End" is the orange-capped end, which contains the injection needle. The "Safety Cap" is the blue-capped end, which is pulled off to activate the device. The relationship between these components is that the safety cap is located at the opposite end of the device from the needle end. The protective plastic tubing is shown to be a separate component that is removed before the safety cap is pulled off.
+
+============================================================
+Image: 1.101_SEVERE_ALLERGIC_REACTION\fig2.png
+------------------------------------------------------------
+The image displays a close-up of two hands against a plain light blue background. The left hand is clenched into a fist, holding a medical device. The device has a white cylindrical body and an orange cap on one end. The right hand is holding a small, blue plastic piece, which is being pulled away from the white body of the device. The orange cap has a textured surface and a small, dark, circular opening. The blue piece appears to be a safety cap or a protective cover. The person is wearing a green long-sleeved garment. The image is labeled "Figure 1.- Epinephrine (EpiPen)."
+
+============================================================
+Image: 1.101_SEVERE_ALLERGIC_REACTION\fig3.png
+------------------------------------------------------------
+The image is a line drawing illustrating the administration of an epinephrine auto-injector. A person's hand is shown holding a grey and white auto-injector device. The hand is positioned with the thumb near the top of the device, which is consistent with the procedure of forming a fist around the injector. The device is being pressed firmly against the outer thigh of a patient. The patient's leg is bent at the knee, and the thigh is exposed. The person administering the injection is wearing a light blue garment. The image is labeled "Figure 1.- Epinephrine (EpiPen)." This figure serves as a visual guide for the step in the procedure where the auto-injector is applied to the patient's thigh.
+
+============================================================
+Image: 1.102_AED_ASSISTED_CPR\fig1.png
+------------------------------------------------------------
+The image is a procedural diagram from a medical document, illustrating the correct placement of Automated External Defibrillator (AED) electrodes on a patient's torso. The diagram is labeled "Figure 1.- AED Electrode Placement."
+
+It displays a stylized, front-facing illustration of a human torso. Two AED electrode pads are shown on the chest. One pad is positioned on the upper right side of the chest, near the armpit. The second pad is located on the lower left side of the chest, below the left armpit. A thin wire connects the two pads, running from the upper right pad, across the chest, and down to the lower left pad. The diagram is part of a larger flowchart for a medical procedure, with a box labeled "4 DEPLOY AED" directly above it. This box contains a numbered list of instructions, and the first instruction is "1. Connect AED electrodes to patient's chest. (Figure 1)."
+
+============================================================
+Image: 1.103_ALS_ALGORITHM\fig1.png
+------------------------------------------------------------
+The image displays a medical syringe assembly against a light-colored, textured background. The syringe has a clear plastic barrel with black measurement markings, including a scale from 0 to 10 mL. A blue, plunger-like component is attached to the top of the syringe. The syringe is fitted with a clear, threaded IV cap at its base. The text "BD" is visible on the side of the syringe barrel. This image is presented as a figure illustrating the assembly of a syringe with an IV cap, a step in a medical procedure for preparing equipment to administer medication through an intraosseous needle.
+
+============================================================
+Image: 1.103_ALS_ALGORITHM\fig2.png
+------------------------------------------------------------
+The image is a medical diagram showing a person's right knee and upper shin. A white arrow points to the kneecap, with the label "Kneecap" above it. A white circle is drawn on the shin, with a white arrow pointing to it and the label "Bony protrusion" below it. A white plus sign is located on the shin, positioned between the kneecap and the bony protrusion. The diagram is part of a medical procedure guide, illustrating the anatomical landmarks for identifying the correct site to insert an intraosseous device into the tibia.
+
+============================================================
+Image: 1.103_ALS_ALGORITHM\fig3.png
+------------------------------------------------------------
+The image displays a close-up of a person's hand and forearm. A medical device, an Intraosseous (IO) Injection Device, is being held against the skin of the forearm. The device has a white top, a blue barrel, and a clear section revealing a syringe plunger. A hand with a ring on the ring finger is pressing the blue barrel of the device onto the forearm. The other hand is holding the device steady. A black circle is drawn on the skin of the forearm, indicating the intended insertion site. The image is labeled "Figure 1.- Syringe IV Cap Assembly."
+
+============================================================
+Image: 1.103_ALS_ALGORITHM\fig4.png
+------------------------------------------------------------
+The image displays a close-up of a person's hands performing a medical procedure on a patient's leg. The patient's leg is visible, with the skin appearing light-toned. The person's hands are positioned over the leg, with one hand stabilizing the leg and the other hand holding a medical device.
+
+The device being held is an intraosseous (IO) injection device. It has a white and blue plastic body with a blue barrel and a gray end. A clear, flexible tube extends from the device, leading to a syringe. The syringe has a blue plunger and a clear barrel, and it is attached to the device. The person's right hand is holding the device, while their left hand is positioned below it, with fingers near the syringe plunger, suggesting they are about to activate the device.
+
+The image is labeled "Figure 1.- Syringe IV Cap Assembly." This indicates its purpose is to illustrate the step of connecting the IV cap to the syringe as part of preparing the equipment for an intraosseous infusion.
+
+============================================================
+Image: 1.103_ALS_ALGORITHM\fig5.png
+------------------------------------------------------------
+The image displays a close-up of a person's skin, likely on the leg, with a medical procedure in progress. A hand is holding a small, red, rectangular medical device with a silver-colored component on its top surface. This device is positioned directly over a black ink marking on the skin. The marking consists of a circle and a series of dots leading to a plus sign (+). The red device is aligned with the circle, and its silver component is placed over the plus sign. The hand is holding the device steady, suggesting it is being used to mark or confirm the correct placement for a medical intervention.
+
+============================================================
+Image: 1.103_ALS_ALGORITHM\fig6.png
+------------------------------------------------------------
+The image displays a close-up of a person's hands performing a medical procedure on a patient's leg. The patient's skin is visible, with a white, square piece of medical tape applied to the area. One hand is holding a syringe with a blue cap on its plunger. The other hand is pressing down on the patient's leg, stabilizing the site. The syringe is being inserted into a device that is secured to the leg with the medical tape. The device has a blue barrel and a clear section containing a liquid. The text "Figure 1.- Syringe IV Cap Assembly." is visible below the image.
+
+============================================================
+Image: 1.103_ALS_ALGORITHM\fig7.png
+------------------------------------------------------------
+The image displays a medical device assembly on a light-colored surface. A blue, cylindrical plastic component, which is the barrel of an intraosseous injection device, is positioned on top of a white, rectangular piece of medical tape. A small, red, cylindrical cap is attached to the end of the blue barrel. A clear plastic syringe is connected to the red cap. A second, identical piece of white medical tape is placed next to the first. A thin, dark, circular ring, likely a safety latch, is visible to the right of the tape. The image is labeled "Figure 1.- Syringe IV Cap Assembly." This visual represents the step in the procedure where the IV cap is attached to the syringe.
+
+============================================================
+Image: 1.103_ALS_ALGORITHM\fig8.png
+------------------------------------------------------------
+The image displays a medical device assembly on a white, textured surface. The central object is a clear plastic syringe with a blue plunger and a green cap on its barrel. A clear plastic IV cap is attached to the tip of the syringe. The syringe barrel has black measurement markings. To the left of the syringe are two yellow plastic caps, one larger and one smaller. To the right of the syringe is a separate, clear plastic component with a black cap on top and a pink and white label with black text and measurement markings. The image is labeled "Figure 1.- Syringe IV Cap Assembly." This assembly is a key step in preparing an Intraosseous Device for use, as described in the accompanying document.
+
+============================================================
+Image: 1.105_CHOKING\fig1.png
+------------------------------------------------------------
+The image is a medical illustration divided into two panels, serving as Figure 1 for a choking procedure.
+
+The left panel shows a rescuer standing behind a patient. The rescuer's arms are wrapped around the patient's torso, with their hands positioned on the patient's abdomen. The patient is standing and appears to be in distress.
+
+The right panel provides a detailed anatomical view of the upper body. It shows the patient's ribcage and spine in outline, with the internal organs, including the lungs and diaphragm, highlighted in pink. The rescuer's hands are shown applying pressure to the patient's abdomen, specifically above the navel and below the ribcage. A second, smaller panel below this shows the hands in a slightly different position, illustrating the inward and upward motion of the thrust.
+
+The text "Figure 1.- Abdominal Thrust." is located below the right panel. The image visually demonstrates the correct hand placement and technique for performing abdominal thrusts to clear an airway obstruction.
+
+============================================================
+Image: 1.105_CHOKING\fig2.png
+------------------------------------------------------------
+The image is a line drawing illustrating a medical procedure on a patient lying on their back. The patient has light-colored hair and is wearing a blue shirt. Two hands are shown interacting with the patient's head and neck. One hand is placed on the patient's forehead, applying downward pressure. The other hand is positioned under the patient's chin, lifting it upward. Two curved red arrows are present: one above the forehead hand, indicating a downward motion, and one below the chin hand, indicating an upward motion. The image is labeled "Figure 1.- Abdominal Thrusts."
+
+============================================================
+Image: 2.6.001_MOUTH_ANATOMY\fig1.png
+------------------------------------------------------------
+This is a medical illustration of the human oral cavity, viewed from the front. The image displays the upper and lower jaws with a full set of teeth. The soft tissues of the mouth, including the tongue, gums, and the back of the throat, are also visible.
+
+The following anatomical structures are labeled with lines pointing to their respective locations:
+*   **Teeth:** The white, hard structures in the upper and lower jaws.
+*   **Tonsil:** The rounded, fleshy tissue located on the left side of the back of the throat.
+*   **Uvula:** The small, conical projection hanging from the soft palate at the back of the throat.
+*   **Tongue:** The large, pink muscular organ occupying the floor of the mouth.
+*   **Gingiva (gum):** The pink tissue that surrounds the base of the teeth.
+
+The image is presented as a diagram to serve as a reference for identifying the normal anatomy of the mouth and teeth.
+
+============================================================
+Image: 2.6.001_MOUTH_ANATOMY\fig2.png
+------------------------------------------------------------
+The image displays a dental model of a human mouth, showing both the upper and lower jaws with their teeth. The model is colored orange-red for the gums and pink for the palate and floor of the mouth. The teeth are white and arranged in their correct anatomical positions.
+
+The model is divided into sections with labels indicating different types of teeth. The upper jaw is labeled "Maxillary Upper Horseshoe." The lower jaw is labeled "Mandibular Lower Lingual bar." The upper jaw has a label for "Anterior 1-6" and "2 x 6 or 1 x 12 upper/lower." The lower jaw has a label for "Posterior 1-8" and "2 x 8 or 1 x 16 upper/lower."
+
+Each tooth is numbered. The upper jaw teeth are numbered 1 through 16, and the lower jaw teeth are numbered 17 through 32. The numbers are placed on the occlusal surface of each tooth. The upper jaw is positioned above the lower jaw, showing the occlusion of the teeth. The model is used to demonstrate the anatomy of the mouth and teeth.
+
+============================================================
+Image: 2.6.001_MOUTH_ANATOMY\fig3.png
+------------------------------------------------------------
+This is a cross-sectional diagram of a human tooth and its surrounding structures, presented as a medical illustration. The image displays the tooth embedded within the jawbone, showing the relationship between the tooth and the supporting tissues.
+
+Visible components include:
+- The crown of the tooth, which is covered by a layer labeled "Enamel".
+- Beneath the enamel is a layer labeled "Dentin".
+- The central, softer core of the tooth is labeled "Pulp".
+- The root of the tooth is covered by a layer labeled "Cementum".
+- The tooth is held in place by a ligament labeled "Periodontal Ligament".
+- The surrounding bony structure is labeled "Jawbone".
+
+The diagram is part of a document section on mouth anatomy, intended to demonstrate the anatomical landmarks of a tooth.
+
+============================================================
+Image: 2.6.301_DENTAL_PROCEDURE_-_NERVE_BLOCK\fig1.png
+------------------------------------------------------------
+The image is a composite of four photographs arranged in a two-by-two grid, illustrating the modification of a medical syringe. The background is a solid light blue, consistent with a sterile drape.
+
+The top-left panel displays a clear plastic syringe with a black plunger and a black cap on the needle hub. The syringe barrel is marked with measurement gradations, including the number "10" near the top, indicating a 10 mL capacity. A strip of white medical tape is placed horizontally across the syringe.
+
+The top-right panel shows a strip of white medical tape that has been twisted in the middle to form a loop.
+
+The bottom-left panel shows the syringe with the twisted tape loop attached to the plunger. The loop is positioned around the plunger, creating a handle.
+
+The bottom-right panel provides a clearer view of the modified syringe, showing the tape loop securely fastened to the plunger, allowing for a one-handed grip to pull back on the plunger for aspiration.
+
+============================================================
+Image: 2.6.301_DENTAL_PROCEDURE_-_NERVE_BLOCK\fig2.png
+------------------------------------------------------------
+This is a close-up, intraoral photograph showing the upper jaw of a patient, with the mouth held open by a dental retractor. The image is labeled as "Figure 2" and is titled "Upper Nerve Block."
+
+Visible components include:
+*   **Moveable Membrane (mucobuccal fold):** A fold of pink oral mucosa is indicated by a label and arrow. It is located on the upper jaw, between the gums and the inner cheek.
+*   **Dental Syringe:** A syringe with a needle is shown inserted into the moveable membrane. The syringe barrel is positioned over the patient's upper teeth.
+*   **Teeth:** The upper front teeth are visible.
+*   **Gums:** The pink gums are visible surrounding the teeth.
+
+The image illustrates the correct placement for an upper dental nerve block. The syringe is positioned at the height of the moveable membrane, with the needle directed towards the root of a tooth to be anesthetized. This visual is part of a medical procedure document that instructs on administering a local anesthetic.
+
+============================================================
+Image: 2.6.301_DENTAL_PROCEDURE_-_NERVE_BLOCK\fig3.png
+------------------------------------------------------------
+The image is a composite medical diagram illustrating a lower dental nerve block procedure, divided into two panels.
+
+The left panel, labeled "Point of Insertion," is a photograph showing a person's open mouth. A gloved hand is holding a dental syringe with a long needle, which is inserted into the soft tissue at the junction where the cheek meets the throat. The syringe is positioned to target the area near the lower jaw. The photograph is annotated with three labels: "Coronoid Notch," pointing to the jawbone; "Seam of cheek and throat," indicating the insertion site; and "Dental Syringe (Dental-2) with Long Needle (Dental-6)," identifying the equipment.
+
+The right panel, labeled "Target Area," is a black-and-white anatomical line drawing of the lower jaw and surrounding structures. It shows the path of the dental syringe and the target location for the injection. The drawing is annotated with "Inferior Alveolar Nerve," indicating the nerve being blocked. A label points to the syringe barrel, stating "Barrel of syringe over teeth 3 and 4 on opposite side of injection," which describes the correct positioning of the syringe during the procedure.
+
+============================================================
+Image: 2.6.303_DENTAL_PROCEDURE_-_DENTAL_CROWN_REPLACEMENT\fig1.png
+------------------------------------------------------------
+The image displays a dental adhesive syringe and its components against a dark gray background. The syringe is white with a blue and orange label that reads "Integrity TempGrip". A white plunger is visible at the rear of the syringe. The syringe has a brown cap on its front end, which is labeled as the "Dental Adhesive Cap". A thin, pointed tip is attached to the front of the syringe, labeled as the "Dental Adhesive Tip". Arrows point from the labels to the corresponding parts of the equipment. This image serves as a visual guide for the "Dental Adhesive Equipment" required for the procedure.
+
+============================================================
+Image: 2.6.303_DENTAL_PROCEDURE_-_DENTAL_CROWN_REPLACEMENT\fig2.png
+------------------------------------------------------------
+The image displays a dental adhesive syringe, presented horizontally against a neutral gray background. The syringe has a white body with a prominent blue diagonal band. On this band, the brand name "BENSPLY" is visible in white text, with "CALIX" printed below it in smaller white text. The product name "Grip" is printed in large orange letters on the white portion of the syringe body. The syringe is fitted with a white plastic adapter that has a brown, ribbed, screw-on cap. A clear, pointed plastic tip is attached to the adapter, extending from the right side of the syringe. The overall appearance is that of a dual-chamber syringe designed for mixing and dispensing a dental adhesive. This image serves as a visual reference for the "Dental Adhesive" item listed in the procedure's equipment.
+

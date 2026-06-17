@@ -1,3 +1,4 @@
+# class is used to get the names of all avilable models in the SAIA API. Not really used in the project.
 from openai import OpenAI
 import os
 from dotenv import load_dotenv
