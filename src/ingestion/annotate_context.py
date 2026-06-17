@@ -44,7 +44,6 @@ def encode_image(image_path: Path) -> str:
 
 
 # get related context from the markdown
-
 def find_markdown_context(image_path: Path) -> str:
     """
     Finds context for an image by matching its parent folder name to the
@@ -153,7 +152,6 @@ def get_output_path() -> Path:
 
 #Apends one image entry to the shared annotations file.
 def save_annotation(output_path: Path, image_path: Path, description: str):
-    
     rel_path = image_path.relative_to(BASE_DIR)
     with open(output_path, "a", encoding="utf-8") as f:
         f.write("=" * 60 + "\n")
@@ -163,8 +161,7 @@ def save_annotation(output_path: Path, image_path: Path, description: str):
         f.write("\n")
 
 
-# ── Collection ─────────────────────────────────────────────────────────────────
-
+# Collection 
 def collect_images(base_dir: Path) -> list[Path]:
     return [
         p for p in base_dir.rglob("*")
@@ -180,8 +177,7 @@ def already_annotated(output_path: Path, image_path: Path) -> bool:
     return rel in output_path.read_text(encoding="utf-8", errors="ignore")
 
 
-# ── Main ───────────────────────────────────────────────────────────────────────
-
+# Main 
 if __name__ == "__main__":
     print(f"Model:        {model_name}")
     print(f"Images dir:   {BASE_DIR.resolve()}")
