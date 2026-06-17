@@ -1,0 +1,1 @@
+"""run the same set of quetion across the 3 pipeline generators"""
