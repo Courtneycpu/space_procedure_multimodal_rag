@@ -1,7 +1,10 @@
 # Track 3: Explicit entity matching via deterministic Cypher
 
 import os
+import json
+import time
 from neo4j import GraphDatabase
+from openai import OpenAI
 from dotenv import load_dotenv
 from pathlib import Path
 
@@ -12,9 +15,50 @@ driver = GraphDatabase.driver(
     auth=(os.getenv("NEO4J_USER", "neo4j"), os.getenv("NEO4J_PASSWORD", "12344321"))
 )
 
-def retrieve_kg_context(query_entities: list):
-    if not query_entities:
+client = OpenAI(
+    api_key=os.getenv("SAIA_API_KEY"),
+    base_url=os.getenv("SAIA_BASE_URL"),
+    timeout=60,
+)
+MODEL = os.getenv("SAIA_DEFAULT_MODEL")
+
+
+def extract_entities(query: str) -> list[str]:
+    """Uses LLM to extract key medical terms and equipment names from the query."""
+    prompt = f"""Extract the key medical terms, equipment names, procedure names,
+and component names from this question.
+Return ONLY a JSON array of strings. No explanation, no markdown.
+Example: ["EpiPen", "epinephrine", "injection"]
+
+Question: {query}"""
+
+    for attempt in range(3):
+        try:
+            response = client.chat.completions.create(
+                model=MODEL,
+                messages=[{"role": "user", "content": prompt}],
+                max_tokens=100,
+            )
+            raw = response.choices[0].message.content.strip()
+            raw = raw.replace("```json", "").replace("```", "").strip()
+            return json.loads(raw)
+        except Exception as e:
+            print(f"  Entity extraction attempt {attempt+1} failed: {e}")
+            if attempt < 2:
+                time.sleep(3)
+    return []
+
+
+def retrieve_kg_context(query: str) -> list[dict]:
+    """
+    Extracts entities from the query, then retrieves matching steps,
+    figures, and warnings from the KG.
+    """
+    entities = extract_entities(query)
+    if not entities:
         return []
+
+    print(f"  Extracted entities: {entities}")
 
     with driver.session() as session:
         result = session.run("""
@@ -22,18 +66,17 @@ def retrieve_kg_context(query_entities: list):
             WHERE any(entity IN $entities
                 WHERE toLower(s.text) CONTAINS toLower(entity)
                    OR toLower(s.doc)  CONTAINS toLower(entity))
-
-            // Also pull sibling steps from the same document for richer context
-            WITH collect(DISTINCT s.doc) AS matched_docs
-            MATCH (s2:Step)
-            WHERE s2.doc IN matched_docs
-            OPTIONAL MATCH (s2)-[:HAS_WARNING]->(w:Warning)
-
-            RETURN s2.text     AS step_text,
-                   s2.number   AS step_number,
-                   s2.doc      AS doc,
+            OPTIONAL MATCH (s)-[:HAS_FIGURE]->(f:Figure)
+            OPTIONAL MATCH (s)-[:HAS_WARNING]->(w:Warning)
+            RETURN s.text      AS step_text,
+                   s.number    AS step_number,
+                   s.doc       AS doc,
+                   s.body      AS step_body,
+                   f.path      AS figure_path,
+                   f.caption   AS llm_caption,
+                   f.ocr_text  AS ocr_text,
                    w.text      AS warning
-            ORDER BY s2.doc, s2.number
-        """, entities=query_entities)
+            ORDER BY s.doc, s.number
+        """, entities=entities)
 
         return [dict(r) for r in result]
