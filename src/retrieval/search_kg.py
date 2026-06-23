@@ -1,4 +1,4 @@
-# Track 3: Explicit entity matching via deterministic Cypher
+# Track 3: Explicit entity matching via deterministic Cypher using enteties extraction
 
 import os
 import json
@@ -49,7 +49,7 @@ Question: {query}"""
     return []
 
 
-def retrieve_kg_context(query: str) -> list[dict]:
+def retrieve_kg_context(query: str, top_k = 5) -> list[dict]:
     """
     Extracts entities from the query, then retrieves matching steps,
     figures, and warnings from the KG.
@@ -71,12 +71,12 @@ def retrieve_kg_context(query: str) -> list[dict]:
             RETURN s.text      AS step_text,
                    s.number    AS step_number,
                    s.doc       AS doc,
-                   s.body      AS step_body,
                    f.path      AS figure_path,
                    f.caption   AS llm_caption,
                    f.ocr_text  AS ocr_text,
                    w.text      AS warning
             ORDER BY s.doc, s.number
+            LIMIT $top_k
         """, entities=entities)
 
         return [dict(r) for r in result]

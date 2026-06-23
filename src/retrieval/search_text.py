@@ -3,9 +3,10 @@
 import os
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
+from pathlib import Path
 
 # 1. Connect to the Baseline Vector Store
-CHROMA_DIR = os.path.abspath("data/chroma_baseline")
+CHROMA_DIR = CHROMA_DIR = str(Path(__file__).parents[2] / "data" / "chroma_baseline")
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 
 embeddings = HuggingFaceEmbeddings(

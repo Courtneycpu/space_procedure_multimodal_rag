@@ -31,7 +31,7 @@ client = OpenAI(
 model_name = os.getenv("SAIA_DEFAULT_MODEL")
 
 
-BASE_DIR = os.path.abspath("data/")
+BASE_DIR = BASE_DIR = Path(__file__).parents[2] / "data"
 
 def encode_image(image_path):
 

@@ -72,17 +72,20 @@ def generate_answer(question: str, context_chunks: list[dict]) -> str:
             entry["warning"] = r["warning"]
         context_json["results"].append(entry)
 
-    response = client.chat.completions.create(
-        model=MODEL,
-        messages=[
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user",   "content": f"Context:\n{json.dumps(context_json, indent=2)}\n\nQuestion: {question}"},
-        ],
-        temperature=0.1,
-        max_tokens=600,
-    )
-    return response.choices[0].message.content.strip()
-
+    try: 
+        response = client.chat.completions.create(
+            model=MODEL,
+            messages=[
+                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "user",   "content": f"Context:\n{json.dumps(context_json, indent=2)}\n\nQuestion: {question}"},
+            ],
+            temperature=0.1,
+            max_tokens=600,
+        )
+        return response.choices[0].message.content.strip()
+    except Exception as e:
+        print(f"  ✗ LLM call failed: {e}")
+        return "Error: LLM call failed."
 
 # ── Questions ──────────────────────────────────────────────────────────────────
 
@@ -135,7 +138,7 @@ def run(top_k: int):
         question = q["question"]
         print(f"  [{qid}] {question[:70]}...")
 
-        context = retrieve_kg_context(query=question)
+        context = retrieve_kg_context(query=question, top_k = top_k)
         answer  = generate_answer(question=question, context_chunks=context)
         sources = len({r.get("doc") for r in context if r.get("doc")})
 

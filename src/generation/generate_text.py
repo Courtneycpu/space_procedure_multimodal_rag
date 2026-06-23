@@ -44,18 +44,23 @@ def generate_answer(question: str, context_chunks: list[dict]) -> str:
             context_parts.append(f"[{i+1}] (from {doc})\n{text.strip()}")
  
     context_str = "\n\n".join(context_parts) if context_parts else "No context available."
- 
-    response = client.chat.completions.create(
-        model=MODEL,
-        messages=[
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user",   "content": f"Context:\n{context_str}\n\nQuestion: {question}"},
-        ],
-        temperature=0.1,
-        max_tokens=600,
-    )
-    return response.choices[0].message.content.strip()
- 
+
+    try: 
+        response = client.chat.completions.create(
+            model=MODEL,
+            messages=[
+                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "user",   "content": f"Context:\n{context_str}\n\nQuestion: {question}"},
+            ],
+            temperature=0.1,
+            max_tokens=600,
+        )
+        return response.choices[0].message.content.strip()
+    except Exception as e:
+        print(f"  ✗ LLM call failed: {e}")
+        return "Error: LLM call failed."
+    
+
  
 # ── Questions ──────────────────────────────────────────────────────────────────
  

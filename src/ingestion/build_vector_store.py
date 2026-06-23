@@ -17,7 +17,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(Path(__file__).parents[2] / "config" / ".env")
 
 # ── Config ────────────────────────────────────────────────────────────────────
 RAW_MD_DIR = Path("data/raw_markdown")
@@ -155,11 +155,11 @@ def main():
     print("=== Building Vector Databases ===")
     
     # 1. Build Track 1 (Pure Text Baseline)
-    """build_store_from_directory(
+    build_store_from_directory(
         source_dir=RAW_MD_DIR, 
         persist_dir=CHROMA_BASELINE_DIR,
         collection_name="raw_text_chunks"
-    )"""
+    )
 
     # 2. Build Track 2 (Enriched / Flattened Baseline)
     build_store_from_directory(

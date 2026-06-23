@@ -2,21 +2,27 @@
 
 import os
 from pathlib import Path
-from langchain_community.vectorstores import Chroma
+from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 from neo4j import GraphDatabase
 from dotenv import load_dotenv
 
 load_dotenv(dotenv_path=Path(__file__).parents[2] / "config" / ".env")
 
-ROOT_DIR   = Path(__file__).parents[2]
-CHROMA_DIR = str(ROOT_DIR / "data" / "chroma_baseline")
+CHROMA_DIR = CHROMA_DIR = str(Path(__file__).parents[2] / "data" / "chroma_baseline")
+EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 
 embeddings = HuggingFaceEmbeddings(
-    model_name="sentence-transformers/all-MiniLM-L6-v2",
+    model_name= EMBEDDING_MODEL,
     model_kwargs={"device": "cpu"}
 )
-vectorstore = Chroma(persist_directory=CHROMA_DIR, embedding_function=embeddings)
+
+vectorstore = Chroma(
+    persist_directory=CHROMA_DIR, 
+    embedding_function=embeddings,
+    collection_name="raw_text_chunks" 
+
+)
 
 driver = GraphDatabase.driver(
     os.getenv("NEO4J_URI", "neo4j://127.0.0.1:7687"),

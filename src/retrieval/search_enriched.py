@@ -1,5 +1,5 @@
-# Track 2: Vector search over flattened markdown blocksimport os
-from anyio import Path
+# Track 2: Vector search over flattened markdown blocks
+import os 
 from langchain_chroma import Chroma
 from pathlib import Path
 from langchain_huggingface import HuggingFaceEmbeddings
