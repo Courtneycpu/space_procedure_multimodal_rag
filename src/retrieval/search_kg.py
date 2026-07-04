@@ -62,21 +62,37 @@ def retrieve_kg_context(query: str, top_k = 5) -> list[dict]:
 
     with driver.session() as session:
         result = session.run("""
-            MATCH (s:Step)
+            MATCH (c:TextChunk)
             WHERE any(entity IN $entities
-                WHERE toLower(s.text) CONTAINS toLower(entity)
-                   OR toLower(s.doc)  CONTAINS toLower(entity))
+                WHERE toLower(c.text) CONTAINS toLower(entity)
+                   OR toLower(coalesce(c.procedure_name, "")) CONTAINS toLower(entity)
+                   OR toLower(replace(c.doc, "_", " ")) CONTAINS toLower(entity))
+            WITH c
+            ORDER BY c.doc, c.chunk_index
+            LIMIT $top_k
+            OPTIONAL MATCH (d:Document {name: c.doc})-[:HAS_STEP]->(candidate:Step)
+            WITH c,
+                 [step IN collect(candidate)
+                  WHERE step IS NOT NULL
+                    AND (toLower(c.text) CONTAINS toLower(step.text)
+                         OR toLower(c.text) CONTAINS toLower(left(step.text, 30)))]
+                 AS matched_steps
+            UNWIND CASE
+                WHEN size(matched_steps) = 0 THEN [null]
+                ELSE matched_steps
+            END AS s
             OPTIONAL MATCH (s)-[:HAS_FIGURE]->(f:Figure)
             OPTIONAL MATCH (s)-[:HAS_WARNING]->(w:Warning)
-            RETURN s.text      AS step_text,
-                   s.number    AS step_number,
-                   s.doc       AS doc,
-                   f.path      AS figure_path,
-                   f.caption   AS llm_caption,
-                   f.ocr_text  AS ocr_text,
-                   w.text      AS warning
-            ORDER BY s.doc, s.number
-            LIMIT $top_k
-        """, entities=entities)
+            RETURN c.text         AS step_body,
+                   c.chunk_index  AS chunk_index,
+                   c.doc          AS doc,
+                   s.text         AS step_text,
+                   s.number       AS step_number,
+                   f.path         AS figure_path,
+                   f.caption      AS llm_caption,
+                   f.ocr_text     AS ocr_text,
+                   w.text         AS warning
+            ORDER BY c.doc, c.chunk_index, s.number
+        """, entities=entities, top_k=top_k)
 
         return [dict(r) for r in result]

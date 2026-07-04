@@ -95,8 +95,9 @@ def enrich_content(content: str, folder_name: str, lookup: dict[str, str]) -> st
 
         description = lookup.get(rel_key)
         if description:
+            figure_label = alt.strip() or filename
             return (
-                f"![{alt}]({path})\n\n"
+                f"[{figure_label}]\n\n"
                 f"> **[Figure description]** {description}\n"
             )
         # No annotation found — leave the link unchanged

@@ -1,6 +1,7 @@
 import os
 import re
 from pathlib import Path
+import chromadb
 from neo4j import GraphDatabase
 from dotenv import load_dotenv
 
@@ -8,6 +9,8 @@ from dotenv import load_dotenv
 # (this file is expected to live at src/ingestion/build_knowledge_graph.py)
 ROOT_DIR = Path(__file__).parents[2]
 MARKDOWN_DIR = ROOT_DIR / "data" / "raw_markdown"
+CHROMA_BASELINE_DIR = ROOT_DIR / "data" / "chroma_baseline"
+CHROMA_COLLECTION_NAME = "raw_text_chunks"
 
 # .env lives in config/, not the repo root, so point load_dotenv there explicitly
 load_dotenv(ROOT_DIR / "config" / ".env")
@@ -21,6 +24,42 @@ driver = GraphDatabase.driver(
     NEO4J_URI,
     auth=(NEO4J_USER, NEO4J_PASSWORD)
 )
+
+chroma_client = chromadb.PersistentClient(path=str(CHROMA_BASELINE_DIR))
+chroma_collection = chroma_client.get_collection(CHROMA_COLLECTION_NAME)
+
+
+def get_chroma_chunks(doc_name):
+    """Fetch the already-built baseline vector chunks for one document."""
+    result = chroma_collection.get(
+        where={"doc": doc_name},
+        include=["documents", "metadatas"],
+    )
+
+    chunks = []
+    for chunk_id, text, metadata in zip(
+            result["ids"],
+            result["documents"],
+            result["metadatas"]):
+        metadata = metadata or {}
+        chunks.append({
+            "id": chunk_id,
+            "text": text,
+            "doc": metadata.get("doc", doc_name),
+            "chunk_index": metadata.get("chunk_index"),
+            "procedure_number": metadata.get("procedure_number"),
+            "procedure_name": metadata.get("procedure_name"),
+            "doc_type": metadata.get("doc_type"),
+            "category_id": metadata.get("category_id"),
+        })
+
+    return sorted(
+        chunks,
+        key=lambda c: (
+            c["chunk_index"] if c["chunk_index"] is not None else 10**9,
+            c["id"],
+        )
+    )
 
 def parse_markdown(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
@@ -196,31 +235,40 @@ def build_graph(doc_name, metadata, steps, figures, warnings):
                 id=warning['id'],
                 step_id=warning['step_id'])
 
-        # Create TextChunk nodes for RAG
-        with open(os.path.join(MARKDOWN_DIR, doc_name + '.md'),
-                  'r', encoding='utf-8') as f:
-            full_text = f.read()
+        # Create TextChunk nodes for RAG from Chroma, so KG chunk IDs/text
+        # stay aligned with vector retrieval.
+        chunks = get_chroma_chunks(doc_name)
+        if not chunks:
+            raise RuntimeError(
+                f"No Chroma chunks found for {doc_name}. "
+                "Run src/ingestion/build_vector_store.py first."
+            )
 
-        chunk_size = 500
-        chunks = [full_text[i:i+chunk_size]
-                  for i in range(0, len(full_text), chunk_size)]
+        session.run("""
+            MATCH (d:Document {name: $doc})-[:HAS_CHUNK]->(c:TextChunk)
+            DETACH DELETE c
+        """, doc=doc_name)
 
-        for i, chunk in enumerate(chunks):
+        for chunk in chunks:
             session.run("""
                 MERGE (c:TextChunk {id: $id})
                 SET c.text = $text,
-                    c.doc = $doc
+                    c.doc = $doc,
+                    c.chunk_index = $chunk_index,
+                    c.procedure_number = $procedure_number,
+                    c.procedure_name = $procedure_name,
+                    c.doc_type = $doc_type,
+                    c.category_id = $category_id
                 WITH c
                 MATCH (d:Document {name: $doc})
                 MERGE (d)-[:HAS_CHUNK]->(c)
             """,
-            id=f"{doc_name}_chunk_{i}",
-            text=chunk,
-            doc=doc_name)
+            **chunk)
 
     print(f"  Steps:    {len(steps)}")
     print(f"  Figures:  {len(figures)}")
     print(f"  Warnings: {len(warnings)}")
+    print(f"  Chunks:   {len(chunks)}")
 
 # Run for all markdown files
 print("Building Knowledge Graph...\n")
@@ -236,6 +284,7 @@ for filename in sorted(os.listdir(MARKDOWN_DIR)):
 with driver.session() as session:
     session.run("CREATE INDEX figure_path IF NOT EXISTS FOR (f:Figure) ON (f.path)")
     session.run("CREATE INDEX step_id IF NOT EXISTS FOR (s:Step) ON (s.id)")
+    session.run("CREATE INDEX chunk_id IF NOT EXISTS FOR (c:TextChunk) ON (c.id)")
     print("Indexes created.")
 
 driver.close()

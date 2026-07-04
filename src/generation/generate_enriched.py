@@ -15,6 +15,7 @@ import os
 import sys
 import json
 import argparse
+import re
 from pathlib import Path
 from datetime import datetime
 from openai import OpenAI
@@ -40,12 +41,48 @@ MODEL = os.getenv("SAIA_DEFAULT_MODEL")
 SYSTEM_PROMPT = """You are a medical assistant for NASA ISS spaceflight emergency procedures.
 Answer the question using ONLY the provided context from the procedure documents.
 Be concise, accurate, and step-oriented.
+This is enriched markdown: lines labeled "Figure description" are textual evidence
+from the figures. Use those descriptions directly when answering visual questions.
+Do not answer with "see figure" if a figure description is present in the context.
+Only mention figure numbers after explaining the concrete content from the description.
+Do not include figure-number citations such as "(Figure 1)" in the answer.
 If the context does not contain enough information to answer, say:
 "The provided context does not contain enough information."
-If a figure is referenced but not described, say: "see figure <reference>".
 """
 
 # ── Answer Generation ──────────────────────────────────────────────────────────
+
+FIGURE_DESCRIPTION_RE = re.compile(
+    r"^\s*>\s*\*\*\[Figure description\]\*\*\s*",
+    flags=re.IGNORECASE | re.MULTILINE,
+)
+IMAGE_LINK_RE = re.compile(r"!\[([^\]]*)\]\([^)]+\)")
+FIGURE_REF_RE = re.compile(
+    r"\s*\(Figure\s+\d+(?:\s+and\s+Figure\s+\d+)?\)",
+    flags=re.IGNORECASE,
+)
+FIGURE_LABEL_RE = re.compile(r"^\s*\[Figure\s+\d+\]\s*$\n?", flags=re.MULTILINE)
+FIGURE_CAPTION_RE = re.compile(
+    r"^\s*Figure\s+\d+\.?-?\s*(.+)$",
+    flags=re.IGNORECASE | re.MULTILINE,
+)
+FIGURE_SENTENCE_RE = re.compile(
+    r"\bFigure\s+\d+\s+(shows|illustrates|is|contains|serves)\b",
+    flags=re.IGNORECASE,
+)
+
+
+def format_enriched_text(text: str) -> str:
+    """Make enriched markdown read like evidence instead of figure pointers."""
+    text = IMAGE_LINK_RE.sub(r"[\1 image reference]", text)
+    text = FIGURE_DESCRIPTION_RE.sub("Figure description: ", text)
+    text = FIGURE_REF_RE.sub("", text)
+    text = FIGURE_LABEL_RE.sub("", text)
+    text = FIGURE_CAPTION_RE.sub(r"Image caption: \1", text)
+    text = FIGURE_SENTENCE_RE.sub(r"The image \1", text)
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    return text.strip()
+
 
 def generate_answer(question: str, context_chunks: list[dict]) -> str:
     if not context_chunks:
@@ -56,7 +93,7 @@ def generate_answer(question: str, context_chunks: list[dict]) -> str:
         text = chunk.get("text") or chunk.get("chunk_text") or chunk.get("step_text") or ""
         doc  = chunk.get("doc", "unknown")
         if text:
-            context_parts.append(f"[{i+1}] (from {doc})\n{text.strip()}")
+            context_parts.append(f"[{i+1}] (from {doc})\n{format_enriched_text(text)}")
 
     context_str = "\n\n".join(context_parts) if context_parts else "No context available."
 

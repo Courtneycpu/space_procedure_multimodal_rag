@@ -158,6 +158,6 @@ def run(top_k: int):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--top-k", type=int, default=3)
+    parser.add_argument("--top-k", type=int, default=5)
     args = parser.parse_args()
     run(top_k=args.top_k)

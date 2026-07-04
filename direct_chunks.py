@@ -1,6 +1,5 @@
 """the class used mainly to retrive chunks from the DB to check for quality"""
 
-from anyio import Path
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 
@@ -9,11 +8,12 @@ embeddings = HuggingFaceEmbeddings(
     model_kwargs={"device": "cpu"}
 )
 
-PERSIST_DIR = "data/chroma_baseline" # or chroma_enriched
+PERSIST_DIR = "data/chroma_enriched" # data/chroma_enriched or data/chroma_baseline
+
 vectorstore = Chroma(
-    persist_directory=PERSIST_DIR,  
+    persist_directory=PERSIST_DIR,
     embedding_function=embeddings,
-    collection_name="raw_text_chunks"
+    collection_name="enriched_text_chunks" # enriched_text_chunks or row_text_chunks
 )
 
 # Get the raw collection
@@ -55,7 +55,7 @@ for i in range(len(all_chunks["ids"])):
         "text": all_chunks["documents"][i]
     })
 
-with open("chunks_dump.json", "w", encoding="utf-8") as f:
+with open("chunks_dump_enriched.json", "w", encoding="utf-8") as f:
     json.dump(data, f, indent=2, ensure_ascii=False)
 
 print("Saved to chunks_dump.json")
