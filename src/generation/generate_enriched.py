@@ -39,17 +39,69 @@ MODEL = os.getenv("SAIA_DEFAULT_MODEL")
 
 # ── Prompts ────────────────────────────────────────────────────────────────────
 
-SYSTEM_PROMPT = """You are a medical assistant for NASA ISS spaceflight emergency procedures.
-Answer the question using ONLY the provided context from the procedure documents.
-Be concise, accurate, and step-oriented.
-This is enriched markdown: lines labeled "Figure description" are textual evidence
-from the figures. Use those descriptions directly when answering visual questions.
-Do not answer with "see figure" if a figure description is present in the context.
-Only mention figure numbers after explaining the concrete content from the description.
-Do not include figure-number citations such as "(Figure 1)" in the answer.
-If the context does not contain enough information to answer, say:
+BASE_SYSTEM_PROMPT = """You are a procedure-grounded assistant for NASA ISS spaceflight emergency procedure documents.
+
+Your task is to answer the user's question using ONLY the provided retrieved context.
+
+Grounding rules:
+1. Use only the provided context. Do not use outside medical or general knowledge.
+2. First decide whether the retrieved context contains enough information to answer.
+3. If the context is insufficient, answer exactly:
 "The provided context does not contain enough information."
+4. Ignore irrelevant or duplicate context.
+5. If the retrieved context contains conflicting information, say that the retrieved context is conflicting and only give details that are directly supported.
+6. Preserve exact procedure names, equipment names, medication names, quantities, units, warnings, and order of steps when they appear in the context.
+7. Do not invent missing steps, figure details, warnings, dosages, or equipment.
+
+Textual figure-representation rules:
+8. Some pipelines may include textual representations of figures, such as figure descriptions, captions, OCR text, labels, or extracted figure entities.
+9. Treat those textual figure representations as evidence.
+10. Do not answer only with "see figure", "refer to the figure", or "as shown in the figure" if textual figure evidence is available. Convert figure annotation content into plain text statements in your answer.
+11. If a figure is referenced but no textual figure evidence is available, say that the visual details are not available in the retrieved context.
+12. Do not include figure-number citations unless the user explicitly asks for them.
+
+Answer style:
+13. Be concise, accurate, and step-oriented.
+14. For procedure questions, use numbered steps.
+15. For equipment or warning questions, use short bullet points.
+16. Output only the final answer, not your reasoning process.
 """
+
+TRACK_CONTEXT_NOTE = """Context format:
+The retrieved context is enriched markdown converted into plain text.
+Lines labeled "Figure description:" are textual evidence describing figure content.
+Lines labeled "Image caption:" are figure captions from the source material.
+Use figure descriptions and image captions directly when they answer figure-related questions.
+Do not mention image paths or markdown image links in the answer.
+"""
+
+TRACK_NAME = "track_2_enriched_markdown"
+SYSTEM_PROMPT = BASE_SYSTEM_PROMPT + "\n\n" + TRACK_CONTEXT_NOTE
+
+
+def build_messages(context: str, question: str) -> list[dict[str, str]]:
+    user_prompt = f"""
+<retrieval_track>
+{TRACK_NAME}
+</retrieval_track>
+
+<context_format>
+{TRACK_CONTEXT_NOTE.strip()}
+</context_format>
+
+<retrieved_context>
+{context}
+</retrieved_context>
+
+<question>
+{question}
+</question>
+""".strip()
+
+    return [
+        {"role": "system", "content": SYSTEM_PROMPT.strip()},
+        {"role": "user", "content": user_prompt},
+    ]
 
 # ── Answer Generation ──────────────────────────────────────────────────────────
 
@@ -102,12 +154,9 @@ def generate_answer(question: str, context_chunks: list[dict]) -> str:
     try:
         response = client.chat.completions.create(
             model=MODEL,
-            messages=[
-                {"role": "system", "content": SYSTEM_PROMPT},
-                {"role": "user",   "content": f"Context:\n{context_str}\n\nQuestion: {question}"},
-            ],
-            temperature=0.1,
-            max_tokens=2000,
+            messages=build_messages(context=context_str, question=question),
+            temperature=0.0,
+            max_tokens=1300,
         )
         return response.choices[0].message.content.strip()
     except Exception as e: 

@@ -4,8 +4,28 @@
    "question": "What safety warnings are given about using the EpiPen?"
  },
  {
-   "id": "natural_q05",
+   "id": "figure_q01",
+   "category": "figure_description",
+   "question": "What does the upper injection technique figure show and what labels are visible?"
+ },
+ {
+   "id": "steps_q01",
+   "category": "steps",
+   "question": "What are the steps to treat a severe allergic reaction?"
+ },
+ {
+   "id": "general_q01",
+   "category": "general",
+   "question": "What equipment is needed for an intraosseous device insertion?"
+ },
+ {
+   "id": "natural_q01",
    "category": "natural_language",
-   "question": "A crewmate says they cannot breathe well, and I need to quickly report useful vitals to the Surgeon. What should I measure first and how?"
+   "question": "My crewmate is showing signs of a serious allergic reaction and I have the EpiPen. Where exactly do I inject it, how long do I hold it, and can I give another dose if symptoms come back?"
+ },
+ {
+   "id": "natural_q03",
+   "category": "natural_language",
+   "question": "Someone got splashed with a possible toxic substance, maybe in the eyes and on clothing. What should we do first to avoid exposing more crew and clean them up?"
  }
 ]
