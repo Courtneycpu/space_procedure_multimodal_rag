@@ -8,7 +8,7 @@ load_dotenv()
 client = OpenAI(
     api_key=os.getenv("SAIA_API_KEY"),
     base_url=os.getenv("SAIA_BASE_URL"),
-    timeout=60
+    timeout=120
 )
 
 payload = client.get("/models", cast_to=object)

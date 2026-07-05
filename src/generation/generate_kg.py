@@ -32,7 +32,7 @@ from retrieval.search_kg import retrieve_kg_context
 client = OpenAI(
     api_key=os.getenv("SAIA_API_KEY"),
     base_url=os.getenv("SAIA_BASE_URL"),
-    timeout=60,
+    timeout=120,
 )
 MODEL = os.getenv("SAIA_DEFAULT_MODEL")
 

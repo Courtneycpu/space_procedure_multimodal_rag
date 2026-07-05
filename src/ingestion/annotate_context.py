@@ -20,7 +20,7 @@ load_dotenv(dotenv_path=Path(__file__).parents[2] / "config" / ".env")
 client = OpenAI(
     api_key=os.getenv("SAIA_API_KEY"),
     base_url=os.getenv("SAIA_BASE_URL"),
-    timeout=60
+    timeout=120
 )
 model_name = os.getenv("SAIA_DEFAULT_MODEL")
 

@@ -13,7 +13,7 @@ Usage:
     python src/generation/evaluate.py --tracks 1 3 4
 
 Output:
-    data/results/{question_category}/{question_id}/{model_name}/answers_from_4_tracks.txt
+    data/results/{question.category}/{question_id}/{model_name}/answers_from_4_tracks.txt
 """
 
 from __future__ import annotations
@@ -59,6 +59,16 @@ def _safe_model_name(model: str | None) -> str:
 def _question_category(questions_path: Path | None) -> str:
     questions_file = questions_path or Path(__file__).parent / "questions.json"
     return questions_file.stem
+
+
+def _safe_path_part(value: str | None, fallback: str) -> str:
+    raw = (value or fallback).strip()
+    safe = "".join(ch if ch.isalnum() or ch in ("_", "-") else "_" for ch in raw)
+    return safe.strip("_") or fallback
+
+
+def _category_for_question(q: dict, questions_path: Path | None) -> str:
+    return _safe_path_part(q.get("category"), fallback=_question_category(questions_path))
 
 
 def _set_track_model(module: ModuleType, model: str) -> None:
@@ -123,16 +133,16 @@ def run(
 ) -> None:
     models = models or DEFAULT_MODELS
     selected_tracks = tracks or sorted(TRACKS)
-    category = _question_category(questions_path)
     questions = _load_questions(questions_path)
+    categories = sorted({_category_for_question(q, questions_path) for q in questions})
 
     print("\nEvaluation")
     print(f"  Models   : {len(models)}")
     print(f"  Tracks   : {selected_tracks}")
-    print(f"  Category : {category}")
+    print(f"  Categories: {categories}")
     print(f"  Questions: {len(questions)}")
     print(f"  Top-k    : {top_k}")
-    print(f"  Output   : {ROOT_DIR / 'data' / 'results' / category}\n")
+    print(f"  Output   : {ROOT_DIR / 'data' / 'results'}\n")
 
     for model in models:
         print(f"\n{'=' * 60}")
@@ -141,7 +151,9 @@ def run(
 
         for q in questions:
             question_id = q["id"]
+            category = _category_for_question(q, questions_path)
             print(f"\n[{question_id}] {q['question']}")
+            print(f"Category: {category}")
 
             question_result = {
                 "question_id": question_id,

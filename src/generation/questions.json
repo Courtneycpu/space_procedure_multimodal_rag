@@ -1,10 +1,11 @@
-[
-  {
-    "id": "q001",
-    "question": "My crewmate is showing signs of a serious allergic reaction and I have the EpiPen. Where exactly do I inject it, how long do I hold it, and can I give another dose if symptoms come back?"
-  },
-  {
-    "id": "q002",
-    "question": "In AED Assisted CPR, what should I do if the patient is unresponsive and not breathing or has no normal breathing, only gasping?"
-  }
+[{
+   "id": "text_q01",
+   "category": "text_only",
+   "question": "What safety warnings are given about using the EpiPen?"
+ },
+ {
+   "id": "natural_q05",
+   "category": "natural_language",
+   "question": "A crewmate says they cannot breathe well, and I need to quickly report useful vitals to the Surgeon. What should I measure first and how?"
+ }
 ]
