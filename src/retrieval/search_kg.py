@@ -17,6 +17,7 @@ import json
 import os
 import re
 import time
+from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any
 
@@ -59,7 +60,48 @@ STOPWORDS = {
     "when", "where", "which", "who", "why", "with", "about", "does",
     "do", "show", "shows", "explain", "describe", "procedure", "procedures",
     "step", "steps", "figure", "figures", "mention", "mentions", "mentioned",
+    "treat", "treats", "treated", "treating", "treatment", "provide",
+    "provided", "using", "use", "used", "need", "needs", "needed",
+    "should", "would", "could", "patient", "context", "information", 
+    "i", "me", "my", "we", "us", "our", "you", "your",
+    "just", "told", "tell", "said", "say", "think", "might",
+    "maybe", "probably", "now", "then", "again", "still",
+    "start", "stop", "check", "feel", "feels"
 }
+
+DOMAIN_ALIASES = {
+    # AED battery troubleshooting
+    "battery warning": ["replace battery", "battery indicator", "main display", "aed"],
+    "low battery": ["replace battery", "battery indicator", "main display", "aed"],
+    "replace battery": ["battery warning", "battery indicator", "main display", "aed"],
+
+    # Toxic exposure / contamination
+    "toxic substance": ["toxic exposure", "chemical exposure", "contamination", "decontamination", "eye", "clothing"],
+    "splashed": ["toxic exposure", "chemical exposure", "contamination", "eye", "clothing"],
+    "eyes": ["eye", "irrigate", "flush"],
+    "clothing": ["remove clothing", "contamination", "decontamination"],
+
+    # Breathing / oxygen / respiratory distress
+    "difficulty breathing": ["respiratory rate", "pulse", "oxygen", "albuterol", "inhaler"],
+    "breathing badly": ["difficulty breathing", "oxygen", "ventilation", "bag valve mask", "bvm"],
+    "looks blue": ["cyanotic", "cyanosis", "oxygen", "ventilation"],
+    "blue": ["cyanotic", "cyanosis", "oxygen", "ventilation"],
+    "bagging": ["bag valve mask", "bvm", "ventilation", "ventilate", "rescue breathing"],
+    "actively bagging": ["bag valve mask", "bvm", "ventilation", "ventilate"],
+    "albuterol": ["difficulty breathing", "inhaler", "oxygen"],
+
+    # IO troubleshooting
+    "medicine does not flow": ["medicine flow", "intraosseous needle", "intraosseous device", "iv cap", "10 ml syringe"],
+    "medication does not flow": ["medicine flow", "intraosseous needle", "intraosseous device", "iv cap", "10 ml syringe"],
+    "needle blocked": ["intraosseous needle", "bone fragments", "10 ml syringe"],
+
+    # Dental crown
+    "lost crown": ["dental crown", "crown replacement", "dental adhesive", "seating"],
+    "dental crown": ["crown replacement", "dental adhesive", "seating"],
+    "confirm seating": ["seating", "bite down", "dental adhesive", "crown"]
+}
+
+_KG_VOCAB_CACHE: list[str] | None = None
 
 
 def _parse_json_array(raw: str) -> list[str]:
@@ -80,11 +122,33 @@ def _parse_json_array(raw: str) -> list[str]:
     return []
 
 
+def _clean_term(term: str) -> str:
+    term = re.sub(r"\s+", " ", str(term)).strip(" .,:;!?()[]{}\"'")
+    return term
+
+
+def _dedupe_terms(terms: list[str], limit: int = 50) -> list[str]:
+    seen: set[str] = set()
+    deduped: list[str] = []
+    for term in terms:
+        term = _clean_term(term)
+        if not term:
+            continue
+        key = term.lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped.append(term)
+        if len(deduped) >= limit:
+            break
+    return deduped
+
+
 def _fallback_terms_from_query(query: str) -> list[str]:
     """Simple fallback if the LLM entity extraction fails."""
     # Keep acronyms/numbers/technical tokens, remove common words.
     tokens = re.findall(r"[A-Za-z][A-Za-z0-9_\-/]*|\d+(?:\.\d+)?", query)
-    terms: list[str] = []
+    content_tokens: list[str] = []
     for token in tokens:
         normalized = token.strip(" .,:;!?()[]{}\"'")
         if not normalized:
@@ -93,8 +157,14 @@ def _fallback_terms_from_query(query: str) -> list[str]:
             continue
         if len(normalized) < 2 and not normalized.isdigit():
             continue
-        terms.append(normalized)
-    return terms
+        content_tokens.append(normalized)
+
+    phrases: list[str] = []
+    for n in (4, 3, 2):
+        for i in range(0, max(len(content_tokens) - n + 1, 0)):
+            phrases.append(" ".join(content_tokens[i:i + n]))
+
+    return _dedupe_terms(phrases + content_tokens, limit=25)
 
 
 def _normalize_entities(entities: list[str], query: str) -> list[str]:
@@ -102,10 +172,15 @@ def _normalize_entities(entities: list[str], query: str) -> list[str]:
     cleaned: list[str] = []
 
     for entity in entities:
-        entity = re.sub(r"\s+", " ", str(entity)).strip(" .,:;!?()[]{}\"'")
+        entity = _clean_term(entity)
         if not entity:
             continue
-        if entity.lower() in STOPWORDS:
+
+        entity_tokens = [
+            t for t in re.findall(r"[A-Za-z0-9]+", entity.lower())
+            if t not in STOPWORDS
+        ]
+        if not entity_tokens:
             continue
         if len(entity) < 2 and not entity.isdigit():
             continue
@@ -116,15 +191,7 @@ def _normalize_entities(entities: list[str], query: str) -> list[str]:
     if not cleaned:
         cleaned.extend(_fallback_terms_from_query(query))
 
-    seen: set[str] = set()
-    deduped: list[str] = []
-    for entity in cleaned:
-        key = entity.lower()
-        if key not in seen:
-            deduped.append(entity)
-            seen.add(key)
-
-    return deduped[:20]
+    return _dedupe_terms(cleaned, limit=20)
 
 
 def extract_entities(query: str) -> list[str]:
@@ -157,28 +224,169 @@ Question: {query}"""
     return _normalize_entities(raw_entities, query)
 
 
-def _find_seed_nodes(session: Any, entities: list[str], seed_k: int) -> list[dict[str, Any]]:
+def _expand_domain_aliases(terms: list[str]) -> list[str]:
+    expanded: list[str] = []
+    for term in terms:
+        expanded.append(term)
+        key = term.lower()
+        expanded.extend(DOMAIN_ALIASES.get(key, []))
+        for alias_key, aliases in DOMAIN_ALIASES.items():
+            if alias_key in key:
+                expanded.extend(aliases)
+    return _dedupe_terms(expanded, limit=60)
+
+
+def _get_kg_vocabulary(session: Any) -> list[str]:
+    """Collect short searchable KG labels for entity normalization."""
+    global _KG_VOCAB_CACHE
+    if _KG_VOCAB_CACHE is not None:
+        return _KG_VOCAB_CACHE
+
+    result = session.run(
+        """
+        CALL () {
+            MATCH (d:Document)
+            RETURN [d.name, replace(d.name, "_", " "), d.title, d.objective] AS terms
+
+            UNION ALL
+
+            MATCH (c:TextChunk)
+            RETURN [c.doc, replace(c.doc, "_", " "), c.procedure_name] AS terms
+
+            UNION ALL
+
+            MATCH (s:Step)
+            RETURN [s.number, s.text] AS terms
+
+            UNION ALL
+
+            MATCH (f:Figure)
+            RETURN [f.label, f.caption_text, f.caption, f.ocr_text] + coalesce(f.entities, []) AS terms
+
+            UNION ALL
+
+            MATCH (w:Warning)
+            RETURN [w.text] AS terms
+        }
+        UNWIND terms AS raw_term
+        WITH DISTINCT trim(toString(raw_term)) AS term
+        WHERE term <> ""
+          AND size(term) >= 2
+          AND size(term) <= 140
+        RETURN term
+        LIMIT 10000
+        """
+    )
+
+    _KG_VOCAB_CACHE = _dedupe_terms([record["term"] for record in result], limit=10000)
+    return _KG_VOCAB_CACHE
+
+
+def _term_similarity(left: str, right: str) -> float:
+    left_l = left.lower()
+    right_l = right.lower()
+
+    if left_l == right_l:
+        return 1.0
+    if len(left_l) >= 4 and left_l in right_l:
+        return 0.95
+    if len(right_l) >= 4 and right_l in left_l:
+        return 0.92
+
+    left_tokens = set(re.findall(r"[a-z0-9]+", left_l)) - STOPWORDS
+    right_tokens = set(re.findall(r"[a-z0-9]+", right_l)) - STOPWORDS
+    token_score = 0.0
+    if left_tokens and right_tokens:
+        token_score = len(left_tokens & right_tokens) / min(len(left_tokens), len(right_tokens))
+
+    char_score = SequenceMatcher(None, left_l, right_l).ratio()
+    return max(token_score, char_score)
+
+
+def _link_terms_to_kg_vocabulary(session: Any, terms: list[str], limit: int = 30) -> list[str]:
+    """Map noisy extracted terms onto actual KG vocabulary strings."""
+    vocabulary = _get_kg_vocabulary(session)
+    linked: list[str] = []
+
+    for term in terms:
+        scored: list[tuple[float, str]] = []
+        for candidate in vocabulary:
+            score = _term_similarity(term, candidate)
+            if score >= 0.78:
+                scored.append((score, candidate))
+
+        scored.sort(key=lambda item: (-item[0], len(item[1])))
+        linked.extend(candidate for _, candidate in scored[:2])
+
+        if len(linked) >= limit:
+            break
+
+    return _dedupe_terms(linked, limit=limit)
+
+
+def _prepare_search_terms(session: Any, query: str, extracted_entities: list[str]) -> dict[str, list[str]]:
+    query_terms = _fallback_terms_from_query(query)
+    cleaned_entities = _normalize_entities(extracted_entities, query)
+    expanded_entities = _expand_domain_aliases(cleaned_entities)
+    linked_terms = _link_terms_to_kg_vocabulary(
+        session,
+        _dedupe_terms(expanded_entities + query_terms, limit=50),
+        limit=30,
+    )
+
+    primary_terms = _dedupe_terms(
+        expanded_entities + linked_terms,
+        limit=40,
+    )
+
+    primary_keys = {term.lower() for term in primary_terms}
+    fallback_terms = [
+        term for term in query_terms
+        if term.lower() not in primary_keys
+    ]
+
+    return {
+        "cleaned_entities": cleaned_entities,
+        "expanded_entities": expanded_entities,
+        "linked_terms": linked_terms,
+        "primary_terms": primary_terms,
+        "fallback_terms": _dedupe_terms(fallback_terms, limit=20),
+    }
+
+
+def _find_seed_nodes(
+    session: Any,
+    primary_terms: list[str],
+    fallback_terms: list[str],
+    seed_k: int,
+) -> list[dict[str, Any]]:
     """Link extracted query entities to concrete KG nodes across all node types."""
     result = session.run(
         """
         CALL () {
             MATCH (s:Step)
-            WITH s, [e IN $entities WHERE
+            WITH s,
+                 [e IN $primary_terms WHERE
                 toLower(coalesce(s.text, "")) CONTAINS toLower(e)
                 OR toLower(coalesce(s.number, "")) = toLower(e)
-            ] AS hits
-            WHERE size(hits) > 0
+                 ] AS primary_hits,
+                 [e IN $fallback_terms WHERE
+                toLower(coalesce(s.text, "")) CONTAINS toLower(e)
+                OR toLower(coalesce(s.number, "")) = toLower(e)
+                 ] AS fallback_hits
+            WHERE size(primary_hits) + size(fallback_hits) > 0
             RETURN "Step" AS seed_type,
                    s.id AS seed_id,
                    s.doc AS doc,
                    s.text AS seed_text,
-                   hits AS matched_entities,
-                   size(hits) * 10 + 5 AS match_score
+                   primary_hits + fallback_hits AS matched_entities,
+                   size(primary_hits) * 20 + size(fallback_hits) * 3 + 5 AS match_score
 
             UNION
 
             MATCH (f:Figure)
-            WITH f, [e IN $entities WHERE
+            WITH f,
+                 [e IN $primary_terms WHERE
                 toLower(coalesce(f.label, "")) CONTAINS toLower(e)
                 OR toLower(coalesce(f.caption_text, "")) CONTAINS toLower(e)
                 OR toLower(coalesce(f.caption, "")) CONTAINS toLower(e)
@@ -188,64 +396,90 @@ def _find_seed_nodes(session: Any, entities: list[str], seed_k: int) -> list[dic
                        WHERE trim(toString(x)) <> ""
                          AND (toLower(toString(x)) CONTAINS toLower(e)
                               OR toLower(e) CONTAINS toLower(toString(x))))
-            ] AS hits
-            WHERE size(hits) > 0
+                 ] AS primary_hits,
+                 [e IN $fallback_terms WHERE
+                toLower(coalesce(f.label, "")) CONTAINS toLower(e)
+                OR toLower(coalesce(f.caption_text, "")) CONTAINS toLower(e)
+                OR toLower(coalesce(f.caption, "")) CONTAINS toLower(e)
+                OR toLower(coalesce(f.ocr_text, "")) CONTAINS toLower(e)
+                OR toLower(coalesce(f.path, "")) CONTAINS toLower(replace(e, " ", "_"))
+                OR any(x IN coalesce(f.entities, [])
+                       WHERE trim(toString(x)) <> ""
+                         AND (toLower(toString(x)) CONTAINS toLower(e)
+                              OR toLower(e) CONTAINS toLower(toString(x))))
+                 ] AS fallback_hits
+            WHERE size(primary_hits) + size(fallback_hits) > 0
             RETURN "Figure" AS seed_type,
                    f.path AS seed_id,
                    f.doc AS doc,
                    coalesce(f.caption, f.caption_text, f.label, f.path) AS seed_text,
-                   hits AS matched_entities,
-                   size(hits) * 10 + 4 AS match_score
+                   primary_hits + fallback_hits AS matched_entities,
+                   size(primary_hits) * 20 + size(fallback_hits) * 3 + 4 AS match_score
 
             UNION
 
             MATCH (d:Document)
-            WITH d, [e IN $entities WHERE
+            WITH d,
+                 [e IN $primary_terms WHERE
                 toLower(coalesce(d.name, "")) CONTAINS toLower(replace(e, " ", "_"))
                 OR toLower(coalesce(d.title, "")) CONTAINS toLower(e)
                 OR toLower(coalesce(d.objective, "")) CONTAINS toLower(e)
-            ] AS hits
-            WHERE size(hits) > 0
+                 ] AS primary_hits,
+                 [e IN $fallback_terms WHERE
+                toLower(coalesce(d.name, "")) CONTAINS toLower(replace(e, " ", "_"))
+                OR toLower(coalesce(d.title, "")) CONTAINS toLower(e)
+                OR toLower(coalesce(d.objective, "")) CONTAINS toLower(e)
+                 ] AS fallback_hits
+            WHERE size(primary_hits) + size(fallback_hits) > 0
             RETURN "Document" AS seed_type,
                    d.name AS seed_id,
                    d.name AS doc,
                    coalesce(d.title, d.name) AS seed_text,
-                   hits AS matched_entities,
-                   size(hits) * 10 + 3 AS match_score
+                   primary_hits + fallback_hits AS matched_entities,
+                   size(primary_hits) * 20 + size(fallback_hits) * 3 + 3 AS match_score
 
             UNION
 
             MATCH (w:Warning)
-            WITH w, [e IN $entities WHERE
+            WITH w,
+                 [e IN $primary_terms WHERE
                 toLower(coalesce(w.text, "")) CONTAINS toLower(e)
-            ] AS hits
-            WHERE size(hits) > 0
+                 ] AS primary_hits,
+                 [e IN $fallback_terms WHERE
+                toLower(coalesce(w.text, "")) CONTAINS toLower(e)
+                 ] AS fallback_hits
+            WHERE size(primary_hits) + size(fallback_hits) > 0
             RETURN "Warning" AS seed_type,
                    w.id AS seed_id,
                    w.doc AS doc,
                    w.text AS seed_text,
-                   hits AS matched_entities,
-                   size(hits) * 10 + 2 AS match_score
+                   primary_hits + fallback_hits AS matched_entities,
+                   size(primary_hits) * 20 + size(fallback_hits) * 3 + 2 AS match_score
 
             UNION
 
             MATCH (c:TextChunk)
-            WITH c, [e IN $entities WHERE
+            WITH c,
+                 [e IN $primary_terms WHERE
                 toLower(coalesce(c.text, "")) CONTAINS toLower(e)
-            ] AS hits
-            WHERE size(hits) > 0
+                 ] AS primary_hits,
+                 [e IN $fallback_terms WHERE
+                toLower(coalesce(c.text, "")) CONTAINS toLower(e)
+                 ] AS fallback_hits
+            WHERE size(primary_hits) + size(fallback_hits) > 0
             RETURN "TextChunk" AS seed_type,
                    c.id AS seed_id,
                    c.doc AS doc,
                    left(c.text, 220) AS seed_text,
-                   hits AS matched_entities,
-                   size(hits) * 10 + 1 AS match_score
+                   primary_hits + fallback_hits AS matched_entities,
+                   size(primary_hits) * 20 + size(fallback_hits) * 3 + 1 AS match_score
         }
         RETURN seed_type, seed_id, doc, seed_text, matched_entities, match_score
         ORDER BY match_score DESC, seed_type, doc, seed_id
         LIMIT $seed_k
         """,
-        entities=entities,
+        primary_terms=primary_terms,
+        fallback_terms=fallback_terms,
         seed_k=seed_k,
     )
     return [dict(record) for record in result]
@@ -462,20 +696,29 @@ def retrieve_kg_context(query: str, top_k: int = 5) -> list[dict[str, Any]]:
         Extra debug fields are added:
         seed_type, seed_id, seed_text, matched_entities, match_score.
     """
-    entities = extract_entities(query)
-    if not entities:
-        print(f"  Extracted entities: []", flush=True)
-        return []
-
-    print(f"  Extracted entities: {entities}", flush=True)
-
     # Use top_k seed nodes; each seed can contribute a few rows.
     # Keeping per_seed_limit modest prevents noisy graph expansion.
     seed_k = max(top_k, 1)
     per_seed_limit = 4
 
     with driver.session() as session:
-        seeds = _find_seed_nodes(session, entities, seed_k=seed_k)
+        entities = extract_entities(query)
+        prepared = _prepare_search_terms(session, query, entities)
+
+        print(f"  Extracted entities: {entities}", flush=True)
+        print(f"  KG-linked terms: {prepared['linked_terms']}", flush=True)
+        debug_print(f"  Primary KG terms: {prepared['primary_terms']}")
+        debug_print(f"  Fallback query terms: {prepared['fallback_terms']}")
+
+        if not prepared["primary_terms"] and not prepared["fallback_terms"]:
+            return []
+
+        seeds = _find_seed_nodes(
+            session,
+            primary_terms=prepared["primary_terms"],
+            fallback_terms=prepared["fallback_terms"],
+            seed_k=seed_k,
+        )
         if not seeds:
             debug_print("  No KG seed nodes matched the extracted entities.")
             return []

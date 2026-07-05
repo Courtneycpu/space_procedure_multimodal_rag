@@ -107,7 +107,7 @@ def generate_answer(question: str, context_chunks: list[dict]) -> str:
                 {"role": "user",   "content": f"Context:\n{context_str}\n\nQuestion: {question}"},
             ],
             temperature=0.1,
-            max_tokens=600,
+            max_tokens=2000,
         )
         return response.choices[0].message.content.strip()
     except Exception as e: 

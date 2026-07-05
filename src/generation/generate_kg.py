@@ -39,9 +39,16 @@ MODEL = os.getenv("SAIA_DEFAULT_MODEL")
 # ── Answer Generation ──────────────────────────────────────────────────────────
 
 SYSTEM_PROMPT = """You are a medical assistant for NASA ISS spaceflight emergency procedures.
-Answer the question using ONLY the provided context from the Knowledge Graph.
+Answer the question using ONLY the provided context.
 Be concise, accurate, and step-oriented.
-If figure annotations are available, include relevant details from them.
+
+Very important:
+- Do NOT answer by saying "see Figure", "refer to Figure", or "as shown in the figure".
+- If a step mentions a figure and a figure annotation is available, convert the figure information into plain text.
+- Use the figure caption, OCR text, and figure entities as part of the answer.
+- If the retrieved context only contains a figure reference but no figure annotation, say that the visual details are not available in the retrieved context.
+- Do not invent visual details that are not in the caption, OCR text, or entities.
+
 If the context does not contain enough information, say:
 "The provided context does not contain enough information."
 """
@@ -64,12 +71,21 @@ def generate_answer(question: str, context_chunks: list[dict]) -> str:
             "step_body":   r.get("step_body") or "",
         }
         if r.get("figure_path"):
-            entry["figure"] = {
-                "path":       r["figure_path"],
-                "llm_caption": r.get("llm_caption") or "Not yet annotated",
-                "ocr_text":   r.get("ocr_text") or "None",
-                "entities":   r.get("figure_entities") or [],
-            }
+            caption = r.get("llm_caption") or r.get("caption") or r.get("original_caption") or ""
+            ocr = r.get("ocr_text") or ""
+            entities = r.get("figure_entities") or r.get("entities") or []
+
+            if isinstance(entities, list):
+                entities_text = ", ".join(str(e) for e in entities if e)
+            else:
+                entities_text = str(entities)
+
+            entry["linked_figure_description"] = (
+                f"Figure path: {r.get('figure_path')}\n"
+                f"Figure description: {caption if caption else 'No figure description available.'}\n"
+                f"OCR text in figure: {ocr if ocr else 'None'}\n"
+                f"Visual entities: {entities_text if entities_text else 'None'}"
+            )
         if r.get("warning"):
             entry["warning"] = r["warning"]
         context_json["results"].append(entry)
@@ -82,7 +98,7 @@ def generate_answer(question: str, context_chunks: list[dict]) -> str:
                 {"role": "user",   "content": f"Context:\n{json.dumps(context_json, indent=2)}\n\nQuestion: {question}"},
             ],
             temperature=0.1,
-            max_tokens=600,
+            max_tokens=2000,
         )
         return response.choices[0].message.content.strip()
     except Exception as e:

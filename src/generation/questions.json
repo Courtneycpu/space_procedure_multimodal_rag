@@ -1,18 +1,82 @@
 [
   {
-    "id": "q01",
-    "question": "What are the steps to treat a severe allergic reaction?"
+    "id": "q001",
+    "question": "My crewmate is showing signs of a serious allergic reaction and I have the EpiPen. Where exactly do I inject it, how long do I hold it, and can I give another dose if symptoms come back?"
   },
   {
-    "id": "q02",
-    "question": "How do you perform CPR with one rescuer available?"
+    "id": "q002",
+    "question": "In AED Assisted CPR, what should I do if the patient is unresponsive and not breathing or has no normal breathing, only gasping?"
   },
   {
-    "id": "q03",
-    "question": "What equipment is needed for an intraosseous device insertion?"
+    "id": "q003",
+    "question": "The AED just told us to start CPR, but I think I might feel a pulse. What is the check and when do we stop compressions?"
   },
   {
-      "id": "q04",
-      "question": "What equipment is needed for treating a choking patient?"
-    }
+    "id": "q004",
+    "question": "What actions should I take if the AED gives a CONNECT ELECTRODES voice prompt?"
+  },
+  {
+    "id": "q005",
+    "question": "During CPR the AED battery warning came on. Should we stop resuscitation to change it, or keep working while handling the battery problem?"
+  },
+  {
+    "id": "q006",
+    "question": "If the choking patient is awake, how do I perform abdominal thrusts and when do I stop?"
+  },
+  {
+    "id": "q007",
+    "question": "Someone got splashed with a possible toxic substance, maybe in the eyes and on clothing. What should we do first to avoid exposing more crew and clean them up?"
+  },
+  {
+    "id": "q008",
+    "question": "During a seizure, how should I protect the patient from injury and what should I never do with the patient's mouth?"
+  },
+  {
+    "id": "q009",
+    "question": "The seizure is not stopping after several minutes. What dose of Valium do we prepare, when do we repeat it, and what should we check afterward?"
+  },
+  {
+    "id": "q010",
+    "question": "For difficulty breathing, how do I count pulse and respiratory rate, administer oxygen, and give inhaled Albuterol?"
+  },
+  {
+    "id": "q011",
+    "question": "We need emergency bone access for medication. Where is the leg insertion site and what are the main setup and activation steps for the IO device?"
+  },
+  {
+    "id": "q012",
+    "question": "What should I do if the medicine does not flow through the Intraosseous needle?"
+  },
+  {
+    "id": "q013",
+    "question": "The patient has a pulse again but looks blue and is breathing badly. How do I decide between just giving oxygen and actively bagging them?"
+  },
+  {
+    "id": "q014",
+    "question": "Under what conditions should CPR termination be considered in the ALS Algorithm?"
+  },
+  {
+    "id": "q015",
+    "question": "The Surgeon wants pictures of a dental issue. What exactly should I inspect, photograph, and downlink, and where do I look for tooth-numbering references?"
+  },
+  {
+    "id": "q016",
+    "question": "How do I prepare a dental nerve block, configure the syringe for one-handed aspiration, and inject Lidocaine for upper or lower nerve block?"
+  },
+  {
+    "id": "q017",
+    "question": "A crewmate lost a filling and there is a cavity. How do we pack the temporary filling material, and how long should they avoid food or drinking afterward?"
+  },
+  {
+    "id": "q018",
+    "question": "What should I do after a lost dental crown, and how do I replace and confirm seating of the crown with Dental Adhesive?"
+  },
+  {
+    "id": "q019",
+    "question": "A crewmate broke a tooth and I can see the sensitive inner part. What pain control and Eugenol steps do we use, and what tissue contact should I avoid?"
+  },
+  {
+    "id": "q020",
+    "question": "For loss of tooth, how do I control bleeding, treat pain, and document the injury?"
+  }
 ]
