@@ -1,0 +1,210 @@
+"""
+Run all four generation tracks without duplicating their pipeline logic.
+
+Each track keeps its own retrieval, prompt, answer formatting, and result
+writer inside its generate_*.py file. This script only orchestrates which
+tracks/models/question file to run.
+
+Usage:
+    python src/generation/evaluate.py
+    python src/generation/evaluate.py --questions src/generation/questions.json
+    python src/generation/evaluate.py --top-k 8
+    python src/generation/evaluate.py --models gemma-4-31b-it medgemma-27b-it
+    python src/generation/evaluate.py --tracks 1 3 4
+
+Output:
+    data/results/{question_category}/{question_id}/{model_name}/answers_from_4_tracks.txt
+"""
+
+from __future__ import annotations
+
+import argparse
+import sys
+from datetime import datetime
+from pathlib import Path
+from types import ModuleType
+
+from dotenv import load_dotenv
+
+ROOT_DIR = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT_DIR / "src"))
+load_dotenv(ROOT_DIR / "config" / ".env")
+
+from generation import generate_enriched
+from generation import generate_hybrid
+from generation import generate_kg
+from generation import generate_text
+
+
+DEFAULT_MODELS = [
+    "gemma-4-31b-it",
+    "qwen3-omni-30b-a3b-instruct",
+    "internvl3.5-30b-a3b",
+    "medgemma-27b-it",
+]
+
+
+TRACKS: dict[int, tuple[str, ModuleType]] = {
+    1: ("Pure Text Vector Baseline", generate_text),
+    2: ("Enriched Markdown", generate_enriched),
+    3: ("Knowledge Graph Retrieval", generate_kg),
+    4: ("Hybrid RAG + Knowledge Graph", generate_hybrid),
+}
+
+
+def _safe_model_name(model: str | None) -> str:
+    return (model or "unknown").replace("/", "_").replace("-", "_")
+
+
+def _question_category(questions_path: Path | None) -> str:
+    questions_file = questions_path or Path(__file__).parent / "questions.json"
+    return questions_file.stem
+
+
+def _set_track_model(module: ModuleType, model: str) -> None:
+    # The generate_* modules read MODEL when building prompts/output paths.
+    # Keeping this assignment here lets evaluate.py reuse their run() methods
+    # without reimplementing their internals.
+    module.MODEL = model
+
+
+def _load_questions(questions_path: Path | None) -> list[dict]:
+    return generate_text.load_questions(questions_path)
+
+
+def _save_model_question_file(
+    model: str,
+    category: str,
+    question_result: dict,
+    selected_tracks: list[int],
+) -> None:
+    question_id = question_result["question_id"]
+    out_dir = (
+        ROOT_DIR
+        / "data"
+        / "results"
+        / category
+        / question_id
+        / _safe_model_name(model)
+    )
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_path = out_dir / "answers_from_4_tracks.txt"
+    with open(out_path, "w", encoding="utf-8") as f:
+        f.write(f"Model       : {model}\n")
+        f.write(f"Category    : {category}\n")
+        f.write(f"Question ID : {question_id}\n")
+        f.write(f"Question    : {question_result['question']}\n")
+        f.write(f"Timestamp   : {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+        f.write("=" * 60 + "\n\n")
+
+        for track_num in selected_tracks:
+            label = TRACKS[track_num][0]
+            result = question_result["tracks"].get(track_num)
+
+            f.write(f"TRACK {track_num}: {label}\n")
+            f.write("-" * 60 + "\n")
+
+            if result is None:
+                f.write("No result produced.\n\n")
+                continue
+
+            f.write(f"Sources retrieved : {result.get('sources_retrieved', 0)}\n")
+            f.write("Answer:\n")
+            f.write(f"{result.get('answer', '')}\n\n")
+
+    print(f"  Saved {out_path}")
+
+
+def run(
+    top_k: int = 5,
+    questions_path: Path | None = None,
+    models: list[str] | None = None,
+    tracks: list[int] | None = None,
+) -> None:
+    models = models or DEFAULT_MODELS
+    selected_tracks = tracks or sorted(TRACKS)
+    category = _question_category(questions_path)
+    questions = _load_questions(questions_path)
+
+    print("\nEvaluation")
+    print(f"  Models   : {len(models)}")
+    print(f"  Tracks   : {selected_tracks}")
+    print(f"  Category : {category}")
+    print(f"  Questions: {len(questions)}")
+    print(f"  Top-k    : {top_k}")
+    print(f"  Output   : {ROOT_DIR / 'data' / 'results' / category}\n")
+
+    for model in models:
+        print(f"\n{'=' * 60}")
+        print(f"MODEL: {model}")
+        print(f"{'=' * 60}")
+
+        for q in questions:
+            question_id = q["id"]
+            print(f"\n[{question_id}] {q['question']}")
+
+            question_result = {
+                "question_id": question_id,
+                "question": q["question"],
+                "tracks": {},
+            }
+
+            for track_num in selected_tracks:
+                if track_num not in TRACKS:
+                    raise ValueError(f"Unknown track: {track_num}. Expected one of {sorted(TRACKS)}.")
+
+                label, module = TRACKS[track_num]
+                _set_track_model(module, model)
+
+                print(f"\nTrack {track_num}: {label}")
+                result = module.run_question(q, top_k=top_k)
+                question_result["tracks"][track_num] = result
+
+            _save_model_question_file(
+                model=model,
+                category=category,
+                question_result=question_result,
+                selected_tracks=selected_tracks,
+            )
+
+    print("\nEvaluation complete.")
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        description="Run selected generation tracks by calling their generate_*.py run() methods."
+    )
+    parser.add_argument(
+        "--top-k",
+        type=int,
+        default=5,
+        help="Number of chunks / seed nodes to retrieve per track.",
+    )
+    parser.add_argument(
+        "--questions",
+        type=Path,
+        default=None,
+        help="Path to questions JSON file.",
+    )
+    parser.add_argument(
+        "--models",
+        nargs="+",
+        default=None,
+        help="Override the model list.",
+    )
+    parser.add_argument(
+        "--tracks",
+        nargs="+",
+        type=int,
+        choices=sorted(TRACKS),
+        default=None,
+        help="Track numbers to run. Defaults to all tracks.",
+    )
+    args = parser.parse_args()
+
+    run(
+        top_k=args.top_k,
+        questions_path=args.questions,
+        models=args.models,
+        tracks=args.tracks,
+    )

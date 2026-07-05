@@ -157,10 +157,29 @@ def save_results(results: list[dict], output_path: Path, category: str):
 
 # ── Main ───────────────────────────────────────────────────────────────────────
 
-def run(top_k: int, questions_path: Path = None):
+def run_question(q: dict, top_k: int) -> dict:
+    qid      = q["id"]
+    question = q["question"]
+    print(f"  [{qid}] {question[:70]}...")
+
+    context = retrieve_enriched_context(query=question, top_k=top_k)
+    answer  = generate_answer(question=question, context_chunks=context)
+    sources = len({c.get("doc") for c in context if c.get("doc")})
+
+    result = {
+        "question_id":       qid,
+        "question":          question,
+        "sources_retrieved": sources,
+        "answer":            answer,
+    }
+    print(f"     âœ“ {sources} source(s) â€” {answer[:60].replace(chr(10), ' ')}...")
+    return result
+
+
+def run(top_k: int, questions_path: Path = None, write_results: bool = True) -> list[dict]:
     questions   = load_questions(questions_path)
     category    = get_questions_category(questions_path)
-    output_path = get_output_path(category)
+    output_path = get_output_path(category) if write_results else None
     results     = []
 
     print(f"\n🚀 Track 2 — Enriched Markdown")
@@ -168,7 +187,7 @@ def run(top_k: int, questions_path: Path = None):
     print(f"   Category  : {category}")
     print(f"   Top-K     : {top_k}")
     print(f"   Questions : {len(questions)}")
-    print(f"   Output    : {output_path}\n")
+    print(f"   Output    : {output_path if write_results else 'returned to evaluator'}\n")
 
     for q in questions:
         qid      = q["id"]
@@ -187,7 +206,9 @@ def run(top_k: int, questions_path: Path = None):
         })
         print(f"     ✓ {sources} source(s) — {answer[:60].replace(chr(10), ' ')}...")
 
-    save_results(results, output_path, category)
+    if write_results and output_path is not None:
+        save_results(results, output_path, category)
+    return results
 
 
 if __name__ == "__main__":
