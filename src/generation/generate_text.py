@@ -68,21 +68,27 @@ def load_questions(path: Path = None) -> list[dict]:
     questions_path = path or Path(__file__).parent / "questions.json"
     with open(questions_path, "r", encoding="utf-8") as f:
         return json.load(f)
+
+
+def get_questions_category(path: Path = None) -> str:
+    questions_path = path or Path(__file__).parent / "questions.json"
+    return questions_path.stem
  
  
 # ── Output ─────────────────────────────────────────────────────────────────────
  
-def get_output_path() -> Path:
+def get_output_path(category: str) -> Path:
     safe_model = (MODEL or "unknown").replace("/", "_").replace("-", "_")
-    out_dir = ROOT_DIR / "data" / "results" / "questions" /"track1" / safe_model
+    out_dir = ROOT_DIR / "data" / "results" / category / "track1" / safe_model
     out_dir.mkdir(parents=True, exist_ok=True)
     return out_dir / "results.txt"
  
  
-def save_results(results: list[dict], output_path: Path):
+def save_results(results: list[dict], output_path: Path, category: str):
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(f"Track 1 — Pure Text Vector Baseline\n")
         f.write(f"Model     : {MODEL}\n")
+        f.write(f"Category  : {category}\n")
         f.write(f"Timestamp : {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
         f.write("=" * 60 + "\n\n")
  
@@ -98,13 +104,15 @@ def save_results(results: list[dict], output_path: Path):
  
 # ── Main ───────────────────────────────────────────────────────────────────────
  
-def run(top_k: int):
-    questions   = load_questions()
-    output_path = get_output_path()
+def run(top_k: int, questions_path: Path = None):
+    questions   = load_questions(questions_path)
+    category    = get_questions_category(questions_path)
+    output_path = get_output_path(category)
     results     = []
  
     print(f"\n🚀 Track 1 — Pure Text Baseline")
     print(f"   Model     : {MODEL}")
+    print(f"   Category  : {category}")
     print(f"   Top-K     : {top_k}")
     print(f"   Questions : {len(questions)}")
     print(f"   Output    : {output_path}\n")
@@ -126,11 +134,12 @@ def run(top_k: int):
         })
         print(f"     ✓ {sources} source(s) — {answer[:60].replace(chr(10), ' ')}...")
  
-    save_results(results, output_path)
+    save_results(results, output_path, category)
  
  
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--top-k", type=int, default=5)
+    parser.add_argument("--questions", type=Path, default=None)
     args = parser.parse_args()
-    run(top_k=args.top_k)
+    run(top_k=args.top_k, questions_path=args.questions)

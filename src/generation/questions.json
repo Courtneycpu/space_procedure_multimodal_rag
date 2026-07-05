@@ -10,5 +10,9 @@
   {
     "id": "q03",
     "question": "What equipment is needed for an intraosseous device insertion?"
-  }
+  },
+  {
+      "id": "q04",
+      "question": "What equipment is needed for treating a choking patient?"
+    }
 ]
