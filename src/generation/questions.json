@@ -4,28 +4,38 @@
    "question": "What safety warnings are given about using the EpiPen?"
  },
  {
-   "id": "figure_q01",
-   "category": "figure_description",
-   "question": "What does the upper injection technique figure show and what labels are visible?"
+   "id": "text_q02",
+   "category": "text_only",
+   "question": "What procedure should you follow after completing AED assisted CPR?"
  },
  {
-   "id": "steps_q01",
-   "category": "steps",
-   "question": "What are the steps to treat a severe allergic reaction?"
+   "id": "text_q03",
+   "category": "text_only",
+   "question": "The AED just told us to start CPR, but I think I might feel a pulse. What is the check and when do we stop compressions?"
  },
  {
-   "id": "general_q01",
-   "category": "general",
-   "question": "What equipment is needed for an intraosseous device insertion?"
+   "id": "text_q04",
+   "category": "text_only",
+   "question": "What actions should I take if the AED gives a CONNECT ELECTRODES voice prompt?"
  },
  {
-   "id": "natural_q01",
-   "category": "natural_language",
-   "question": "My crewmate is showing signs of a serious allergic reaction and I have the EpiPen. Where exactly do I inject it, how long do I hold it, and can I give another dose if symptoms come back?"
+   "id": "text_q05",
+   "category": "text_only",
+   "question": "During CPR the AED battery warning came on. Should we stop resuscitation to change it, or keep working while handling the battery problem?"
  },
  {
-   "id": "natural_q03",
-   "category": "natural_language",
-   "question": "Someone got splashed with a possible toxic substance, maybe in the eyes and on clothing. What should we do first to avoid exposing more crew and clean them up?"
+   "id": "text_q06",
+   "category": "text_only",
+   "question": "What should I do if the medicine does not flow through the Intraosseous needle?"
+ },
+ {
+   "id": "text_q07",
+   "category": "text_only",
+   "question": "Under what conditions should CPR termination be considered in the ALS Algorithm?"
+ },
+ {
+   "id": "text_q08",
+   "category": "text_only",
+   "question": "For loss of tooth, how do I control bleeding, treat pain, and document the injury?"
  }
 ]

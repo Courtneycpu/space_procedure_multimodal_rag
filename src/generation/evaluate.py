@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import argparse
 import sys
+import time
 from datetime import datetime
 from pathlib import Path
 from types import ModuleType
@@ -130,6 +131,7 @@ def run(
     questions_path: Path | None = None,
     models: list[str] | None = None,
     tracks: list[int] | None = None,
+    call_delay: float = 5.0,
 ) -> None:
     models = models or DEFAULT_MODELS
     selected_tracks = tracks or sorted(TRACKS)
@@ -142,6 +144,7 @@ def run(
     print(f"  Categories: {categories}")
     print(f"  Questions: {len(questions)}")
     print(f"  Top-k    : {top_k}")
+    print(f"  Call delay: {call_delay}s")
     print(f"  Output   : {ROOT_DIR / 'data' / 'results'}\n")
 
     for model in models:
@@ -171,6 +174,8 @@ def run(
                 print(f"\nTrack {track_num}: {label}")
                 result = module.run_question(q, top_k=top_k)
                 question_result["tracks"][track_num] = result
+                if call_delay > 0:
+                    time.sleep(call_delay)
 
             _save_model_question_file(
                 model=model,
@@ -212,6 +217,12 @@ if __name__ == "__main__":
         default=None,
         help="Track numbers to run. Defaults to all tracks.",
     )
+    parser.add_argument(
+        "--call-delay",
+        type=float,
+        default=5.0,
+        help="Seconds to wait after each track answer call.",
+    )
     args = parser.parse_args()
 
     run(
@@ -219,4 +230,5 @@ if __name__ == "__main__":
         questions_path=args.questions,
         models=args.models,
         tracks=args.tracks,
+        call_delay=args.call_delay,
     )

@@ -27,6 +27,8 @@ data/chroma_enriched/
 *.sqlite3
 *.db
 
+src\generation\questions.json
+
 
 # OS/editor noise
 .DS_Store

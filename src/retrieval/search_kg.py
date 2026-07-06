@@ -45,6 +45,8 @@ client = OpenAI(
     timeout=120,
 )
 MODEL = os.getenv("SAIA_DEFAULT_MODEL")
+ENTITY_EXTRACTION_RETRY_DELAYS = [15, 30, 60]
+_ENTITY_EXTRACTION_CACHE: dict[str, list[str]] = {}
 
 # Keep normal generation output clean. Set RAG_VERBOSE=1 only when debugging.
 VERBOSE = os.getenv("RAG_VERBOSE", "0") == "1"
@@ -196,6 +198,9 @@ def _normalize_entities(entities: list[str], query: str) -> list[str]:
 
 def extract_entities(query: str) -> list[str]:
     """Extract key medical/procedural/equipment entities from the user query."""
+    if query in _ENTITY_EXTRACTION_CACHE:
+        return list(_ENTITY_EXTRACTION_CACHE[query])
+
     prompt = f"""Extract the key domain entities from this question.
 Include medical terms, equipment names, procedure names, component names,
 body parts, step numbers, figure numbers, acronyms, and important labels.
@@ -205,7 +210,7 @@ Example: ["EpiPen", "epinephrine", "injection", "Figure 2", "1.2"]
 Question: {query}"""
 
     raw_entities: list[str] = []
-    for attempt in range(3):
+    for attempt in range(len(ENTITY_EXTRACTION_RETRY_DELAYS) + 1):
         try:
             response = client.chat.completions.create(
                 model=MODEL,
@@ -218,10 +223,12 @@ Question: {query}"""
             break
         except Exception as e:
             debug_print(f"  Entity extraction attempt {attempt + 1} failed: {e}")
-            if attempt < 2:
-                time.sleep(3)
+            if attempt < len(ENTITY_EXTRACTION_RETRY_DELAYS):
+                time.sleep(ENTITY_EXTRACTION_RETRY_DELAYS[attempt])
 
-    return _normalize_entities(raw_entities, query)
+    normalized_entities = _normalize_entities(raw_entities, query)
+    _ENTITY_EXTRACTION_CACHE[query] = normalized_entities
+    return list(normalized_entities)
 
 
 def _expand_domain_aliases(terms: list[str]) -> list[str]:

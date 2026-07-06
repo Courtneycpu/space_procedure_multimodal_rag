@@ -15,6 +15,7 @@ Usage:
 import os
 import sys
 import json
+import time
 import argparse
 from pathlib import Path
 from datetime import datetime
@@ -35,6 +36,7 @@ client = OpenAI(
     timeout=120,
 )
 MODEL = os.getenv("SAIA_DEFAULT_MODEL")
+LLM_RETRY_DELAYS = [15, 30, 60]
 
 # ── Answer Generation ──────────────────────────────────────────────────────────
 
@@ -109,6 +111,34 @@ def build_messages(context: str, question: str) -> list[dict[str, str]]:
         {"role": "user", "content": user_prompt},
     ]
 
+def _is_retryable_llm_error(error: Exception) -> bool:
+    message = str(error).lower()
+    return (
+        "429" in message
+        or "rate limit" in message
+        or "timeout" in message
+        or "temporarily" in message
+    )
+
+
+def create_chat_completion_with_retries(messages: list[dict[str, str]]):
+    for attempt in range(len(LLM_RETRY_DELAYS) + 1):
+        try:
+            return client.chat.completions.create(
+                model=MODEL,
+                messages=messages,
+                temperature=0.0,
+                max_tokens=1300,
+            )
+        except Exception as e:
+            if attempt >= len(LLM_RETRY_DELAYS) or not _is_retryable_llm_error(e):
+                raise
+
+            delay = LLM_RETRY_DELAYS[attempt]
+            print(f"  LLM call retrying in {delay}s: {e}")
+            time.sleep(delay)
+
+
 def generate_answer(question: str, context_chunks: list[dict]) -> str:
     if not context_chunks:
         return "No context retrieved."
@@ -158,11 +188,8 @@ def generate_answer(question: str, context_chunks: list[dict]) -> str:
 
     try: 
         context_text = json.dumps(context_json, indent=2, default=str)
-        response = client.chat.completions.create(
-            model=MODEL,
+        response = create_chat_completion_with_retries(
             messages=build_messages(context=context_text, question=question),
-            temperature=0.0,
-            max_tokens=1300,
         )
         return response.choices[0].message.content.strip()
     except Exception as e:
