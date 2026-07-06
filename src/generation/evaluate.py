@@ -13,7 +13,7 @@ Usage:
     python src/generation/evaluate.py --tracks 1 3 4
 
 Output:
-    data/results/{question.category}/{question_id}/{model_name}/answers_from_4_tracks.txt
+    data/results/{question.category}/{question_id}/{model_name}.txt
 """
 
 from __future__ import annotations
@@ -38,10 +38,10 @@ from generation import generate_text
 
 
 DEFAULT_MODELS = [
-    "gemma-4-31b-it",
-    "qwen3-omni-30b-a3b-instruct",
-    "internvl3.5-30b-a3b",
     "medgemma-27b-it",
+    "deepseek-r1-distill-llama-70b",
+    "qwen3.5-122b-a10b",
+    "openai-gpt-oss-120b",
 ]
 
 
@@ -96,10 +96,9 @@ def _save_model_question_file(
         / "results"
         / category
         / question_id
-        / _safe_model_name(model)
     )
     out_dir.mkdir(parents=True, exist_ok=True)
-    out_path = out_dir / "answers_from_4_tracks.txt"
+    out_path = out_dir / f"{_safe_model_name(model)}.txt"
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(f"Model       : {model}\n")
         f.write(f"Category    : {category}\n")
