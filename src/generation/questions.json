@@ -1,41 +1,28 @@
 [{
-   "id": "text_q01",
-   "category": "text_only",
-   "question": "What safety warnings are given about using the EpiPen?"
+   "id": "natural_q01",
+   "category": "natural_language",
+   "question": "My crewmate is showing signs of a serious allergic reaction and I have the EpiPen. Where exactly do I inject it, how long do I hold it, and can I give another dose if symptoms come back?"
  },
  {
-   "id": "text_q02",
-   "category": "text_only",
-   "question": "What procedure should you follow after completing AED assisted CPR?"
- },
- {
-   "id": "text_q03",
-   "category": "text_only",
-   "question": "The AED just told us to start CPR, but I think I might feel a pulse. What is the check and when do we stop compressions?"
- },
- {
-   "id": "text_q04",
-   "category": "text_only",
-   "question": "What actions should I take if the AED gives a CONNECT ELECTRODES voice prompt?"
- },
- {
-   "id": "text_q05",
-   "category": "text_only",
+   "id": "natural_q02",
+   "category": "natural_language",
    "question": "During CPR the AED battery warning came on. Should we stop resuscitation to change it, or keep working while handling the battery problem?"
  },
  {
-   "id": "text_q06",
-   "category": "text_only",
-   "question": "What should I do if the medicine does not flow through the Intraosseous needle?"
+   "id": "natural_q03",
+   "category": "natural_language",
+   "question": "Someone got splashed with a possible toxic substance, maybe in the eyes and on clothing. What should we do first to avoid exposing more crew and clean them up?"
  },
  {
-   "id": "text_q07",
-   "category": "text_only",
-   "question": "Under what conditions should CPR termination be considered in the ALS Algorithm?"
+   "id": "natural_q04",
+   "category": "natural_language",
+   "question": "The patient has a pulse again but looks blue and is breathing badly. How do I decide between just giving oxygen and actively bagging them?"
  },
  {
-   "id": "text_q08",
-   "category": "text_only",
-   "question": "For loss of tooth, how do I control bleeding, treat pain, and document the injury?"
+   "id": "natural_q05",
+   "category": "natural_language",
+   "question": "A crewmate says they cannot breathe well, and I need to quickly report useful vitals to the Surgeon. What should I measure first and how?"
  }
+
+
 ]
