@@ -1,0 +1,56 @@
+Model       : qwen3.5-122b-a10b
+Category    : steps
+Question ID : steps_q11
+Question    : A crewmate lost a filling and there is a cavity. How do we pack the temporary filling material, and how long should they avoid food or drinking afterward?
+Timestamp   : 2026-07-06 15:34:10
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+Error: LLM call failed.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+Error: LLM call failed.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+**Packing the Temporary Filling Material:**
+
+1. Place Temporary Tooth Filling into the tooth cavity and gently form to tooth
+2. Wipe off excess with Gauze 4"x4"
+3. Have subject firmly bite down on Temporary Tooth Filling for 2 minutes, allowing the Temporary Tooth Filling to form to the surfaces of the tooth and to harden
+4. Adjust filling by removing and smoothing excess filling using Gauze 4"x4" and Dental Carver File (G)
+
+**Food and Drinking Restrictions Afterward:**
+
+- Filling will achieve initial set in 5 minutes
+- Subject may resume drinking in approximately 1 hour
+- Limit solid or hard food consumption on the affected side of the mouth for first 12 to 24 hours as filling hardens
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+**How to Pack the Temporary Filling Material:**
+
+1. Puncture end of Temporary Tooth Filling.
+2. Squeeze Temporary Tooth Filling material onto finger.
+3. Roll material into a ball.
+4. Place Temporary Tooth Filling into the tooth cavity and gently form to tooth.
+5. Wipe off excess with Gauze 4"x4".
+6. Have subject firmly bite down on Temporary Tooth Filling for 2 minutes, allowing the Temporary Tooth Filling to form to the surfaces of the tooth and to harden.
+7. Adjust filling by removing and smoothing excess filling using Gauze 4"x4" and Dental Carver File (G).
+
+**Post-Procedure Food/Drink Restrictions:**
+
+- Filling will achieve initial set in 5 minutes.
+- Subject may resume drinking in approximately 1 hour.
+- Limit solid or hard food consumption on the affected side of the mouth for first 12 to 24 hours as filling hardens.
+

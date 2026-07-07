@@ -1,0 +1,46 @@
+Model       : qwen3.5-122b-a10b
+Category    : steps
+Question ID : steps_q04
+Question    : How do you help someone who is choking and no longer conscious?
+Timestamp   : 2026-07-06 13:20:17
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+Error: LLM call failed.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+Error: LLM call failed.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The provided context does not contain enough information.
+
+The retrieved choking procedure (1.105_CHOKING) mentions:
+- Open airway using Head tilt-Chin lift
+- Inspect for foreign object and remove, if easily accessible
+- Pinch nose and attempt to give breaths
+- Go to 1.102 AED ASSISTED CPR
+
+However, the context does not provide specific steps for when the choking victim is **no longer conscious**. The procedure references going to "1.102 AED ASSISTED CPR" but does not include the actual CPR steps or unconscious choking victim protocols in the retrieved context.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+Based on the retrieved choking procedure (1.105 CHOKING), here are the steps for helping someone who is choking and no longer conscious:
+
+1. **Open airway using Head tilt-Chin lift** (Figure 2 demonstrates this maneuver)
+2. **Inspect for foreign object and remove, if easily accessible**
+3. **Pinch nose and attempt to give breaths**
+4. **Go to 1.102 AED ASSISTED CPR** (SODF: MED CL: EMERGENCY)
+
+The procedure indicates that when a choking patient becomes unconscious during abdominal thrusts, you should proceed to Section 3 (CLEAR AIRWAY/GIVE BREATHS) as outlined above.
+

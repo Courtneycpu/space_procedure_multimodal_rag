@@ -1,0 +1,49 @@
+Model       : openai-gpt-oss-120b
+Category    : steps
+Question ID : steps_q09
+Question    : The seizure is not stopping after several minutes. What dose of Valium do we prepare, when do we repeat it, and what should we check afterward?
+Timestamp   : 2026-07-06 13:12:27
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+**Dose preparation**  
+- Prepare **2 mL of Diazepam (Valium) 5 mg/mL**, which provides a total of **10 mg** (Topical & Injectable Medication Pack, brown).
+
+**When to repeat**  
+- If the seizure continues **> 5 minutes** or seizures recur, **repeat the same dose after 10 minutes**.
+
+**What to check afterward**  
+- **Obtain a history**: collect information about the seizure event and the medications that have been administered (see “8. OBTAINING HISTORY – 8.1”).
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1. **Prepare the Valium dose**  
+   - Draw **2 mL of Diazepam (Valium) 5 mg/mL**, giving a total of **10 mg** (from the Topical & Injectable Medication Pack, brown).
+
+2. **When to repeat**  
+   - If the seizure **continues for more than 5 minutes** or seizures recur, **repeat the same 10 mg IM dose after 10 minutes**.
+
+3. **What to check afterward**  
+   - After the repeat dose, **measure and record the patient’s SpO₂** using the Blood Oximeter (Medical Diagnostic Pack, blue).
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The provided context does not contain enough information.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1. **Prepare the Valium dose** – Draw up **2 mL of Diazepam (Valium) 5 mg/mL**, giving a total of **10 mg** (Topical & Injectable Medication Pack, brown).  
+
+2. **Repeat the dose** – If the seizure lasts longer than **5 minutes** or seizures recur, give another identical dose **10 minutes** after the first injection.  
+
+3. **Check afterward** – After the injection (and any repeat), **apply the blood oximeter** to assess the crew member’s oxygen saturation.
+

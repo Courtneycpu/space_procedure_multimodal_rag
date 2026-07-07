@@ -1,0 +1,65 @@
+Model       : qwen3.5-122b-a10b
+Category    : steps
+Question ID : steps_q12
+Question    : A crewmate broke a tooth and I can see the sensitive inner part. What pain control and Eugenol steps do we use, and what tissue contact should I avoid?
+Timestamp   : 2026-07-06 15:35:42
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+Error: LLM call failed.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+Error: LLM call failed.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 4
+Answer:
+**Pain Control:**
+- Take two (2) tablets Ibuprofen (Motrin) (400 mg per tablet) [Convenience Medication Pack (White)]
+- Take one (1) tablet Hydrocodone and Acetaminophen (Vicodin HP) (10 mg/300 mg per tablet) [Oral Medication Pack (Purple)]
+
+**Eugenol Steps:**
+1. Don Nitrile Gloves
+2. Moisten a small portion of a Gauze 4"x4" with Eugenol [Topical & Injectable Medication Pack (Brown)]
+3. Squeeze excess Eugenol out of Gauze 4"x4" onto a second piece of Gauze 4"x4" or a Dry Wipe
+4. Place moistened portion of Gauze 4"x4" over exposed pulp
+5. Have patient hold gauze with teeth for 1 to 2 minutes
+6. Avoid chewing on affected side and keep food out of cavity
+
+**Tissue Contact to Avoid:**
+- Minimize contact between the Eugenol and skin or gums to prevent tissue damage
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**Pain Control Steps:**
+
+1. Take two (2) tablets Ibuprofen (Motrin) (400mg per tablet) from Convenience Medication Pack (White)
+2. Take one (1) tablet Hydrocodone and Acetaminophen (Vicodin HP) (10mg/300mg per tablet) from Oral Medication Pack (Purple)
+3. If pain is severe or immediate relief is required, perform 2.6.301 DENTAL PROCEDURE - NERVE BLOCK
+
+**Eugenol Treatment Steps:**
+
+1. Don Nitrile Gloves
+2. Moisten a small portion of a Gauze 4"x4" with Eugenol from Topical & Injectable Medication Pack (Brown)
+3. Squeeze excess Eugenol out of Gauze 4"x4" onto a second piece of Gauze 4"x4" or a Dry Wipe
+4. Place moistened portion of Gauze 4"x4" over exposed pulp
+5. Have patient hold gauze with teeth for 1 to 2 minutes
+6. Additional placement of Eugenol should not require additional local anesthesia
+
+**Tissue Contact to Avoid:**
+
+- Minimize contact between the Eugenol and skin or gums to prevent tissue damage
+
+**Additional Instructions:**
+
+- Avoid chewing on affected side and keep food out of cavity
+

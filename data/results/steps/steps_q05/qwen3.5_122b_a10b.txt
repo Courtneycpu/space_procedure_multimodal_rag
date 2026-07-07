@@ -1,0 +1,63 @@
+Model       : qwen3.5-122b-a10b
+Category    : steps
+Question ID : steps_q05
+Question    : My crewmate is showing signs of a serious allergic reaction and I have the EpiPen. Where exactly do I inject it, how long do I hold it, and can I give another dose if symptoms come back?
+Timestamp   : 2026-07-06 13:21:18
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. Inject the needle end perpendicular to and firmly against the patient's outer thigh.
+2. Hold firmly against the thigh for 10 seconds.
+3. Epinephrine (EpiPen) may be repeated every 20 minutes if symptoms recur or progress.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+Error: LLM call failed.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+Based on the retrieved emergency procedure for Severe Allergic Reaction (1.101):
+
+**Injection Location:**
+- Press the needle end perpendicular to and firmly against the patient's **outer thigh**
+
+**Hold Time:**
+- Hold firmly against thigh for **10 seconds** (until a click is heard or felt)
+
+**Repeat Dosing:**
+- Epinephrine (EpiPen) may be repeated every **20 minutes** if symptoms recur or progress
+
+**Additional Steps from the Procedure:**
+1. Remove Epinephrine (EpiPen) from protective plastic tubing
+2. Form a fist around Epinephrine (EpiPen) with thumb closest to safety cap
+3. Activate auto injector by pulling off safety cap
+4. Using a jabbing motion, press the needle end perpendicular to and firmly against patient's outer thigh until a click is heard or felt
+5. Hold firmly against thigh for 10 seconds
+6. Discard used Epinephrine (EpiPen) in original protective plastic tubing; secure in tube with Gray Tape and discard
+7. Call MCC-H to request PMC
+
+**Warnings:**
+- Do not put fingers over needle end of Epinephrine (EpiPen) to prevent injection into finger
+- Do not give shot through clothing to prevent needle contamination
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. **Injection Location:** Press the needle end perpendicular to and firmly against the patient's **outer thigh** until a click is heard or felt.
+
+2. **Hold Time:** Hold firmly against the thigh for **10 seconds**.
+
+3. **Repeat Dosing:** Epinephrine (EpiPen) may be repeated every **20 minutes** if symptoms recur or progress.
+
+**Important Warnings:**
+- Do not put fingers over needle end of Epinephrine (EpiPen) to prevent injection into finger.
+- Do not give shot through clothing to prevent needle contamination.
+

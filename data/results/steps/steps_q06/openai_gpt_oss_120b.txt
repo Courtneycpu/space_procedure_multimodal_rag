@@ -1,0 +1,58 @@
+Model       : openai-gpt-oss-120b
+Category    : steps
+Question ID : steps_q06
+Question    : In AED Assisted CPR, what should I do if the patient is unresponsive and not breathing or has no normal breathing, only gasping?
+Timestamp   : 2026-07-06 13:10:32
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**If the patient is unresponsive and not breathing (or only gasping), proceed to step 3 – Perform CPR.**
+
+1. **Perform CPR** – 30 chest compressions followed by 2 breaths (1 second each breath) for 5 cycles (≈ 2 minutes).  
+2. **While performing CPR,** as needed:  
+   - Relocate and restrain the patient on the Crew Medical Restraint System.  
+   - Page an additional crewmember for assistance.  
+   - Call MCC‑H to request a Physician‑Medical‑Crew (PMC) member.  
+
+(After completing these actions, continue to the next step in the algorithm.)
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**If the patient is unresponsive and not breathing (or only gasping), go to step 3 – “PERFORM CPR”:**
+
+1. **Relocate and restrain** the patient on the Crew Medical Restraint System.  
+2. **Page an additional crewmember** for assistance.  
+3. **Call MCC‑H** to request PMC.  
+4. **Begin CPR**: perform 30 chest compressions followed by 2 breaths (1 second each breath) for 5 cycles (≈ 2 minutes).  
+5. After completing the cycles, proceed to **step 4 “DEPLOY AED.”**
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+**If the patient is unresponsive and not breathing (or only gasping), proceed to step 3 – “Perform CPR.”**  
+
+1. **Relocate and restrain the patient** on the Crew Medical Restraint System.  
+2. **Page an additional crewmember** for assistance.  
+3. **Call MCC‑H** to request PMC.  
+4. **Perform CPR**:  
+   - 30 chest compressions followed by 2 rescue breaths (≈ 1 second per breath).  
+   - Continue for 5 cycles (≈ 2 minutes).  
+5. **After CPR, deploy the AED** (connect electrodes, turn AED on, follow prompts).
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**If the patient is unresponsive and not breathing (or only gasping), follow these steps:**
+
+1. **Relocate and restrain the patient** on the Crew Medical Restraint System.  
+2. **Page an additional crewmember** for assistance.  
+3. **Call MCC‑H** to request a Physician‑Medical‑Crew (PMC).  
+4. **Proceed to the ALS algorithm** – go to 1.103 ALS ALGORITHM, block 13, page 5, Respiratory Assessment.
+

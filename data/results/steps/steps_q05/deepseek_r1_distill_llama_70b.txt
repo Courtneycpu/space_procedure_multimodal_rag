@@ -1,0 +1,70 @@
+Model       : deepseek-r1-distill-llama-70b
+Category    : steps
+Question ID : steps_q05
+Question    : My crewmate is showing signs of a serious allergic reaction and I have the EpiPen. Where exactly do I inject it, how long do I hold it, and can I give another dose if symptoms come back?
+Timestamp   : 2026-07-06 14:11:43
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+To administer the EpiPen to your crewmate experiencing a serious allergic reaction:
+
+1. **Remove the EpiPen** from its protective plastic tubing.
+2. **Activate the auto-injector** by pulling off the safety cap with your thumb, forming a fist around the device.
+3. **Inject into the outer thigh** using a firm jabbing motion, holding it perpendicular and pressing until a click is heard or felt. Hold for 10 seconds.
+4. **Dispose of the used EpiPen** by placing it back in the protective tubing, securing it with Gray Tape, and discarding it. Contact MCC-H to request a PMC.
+5. **Repeat if necessary** every 20 minutes if symptoms recur or worsen.
+
+Ensure not to inject through clothing or cover the needle end with your fingers to prevent accidental injury.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+To administer the EpiPen to your crewmate:
+
+1. **Hold the EpiPen** by forming a fist with your thumb closest to the safety cap.
+2. **Activate the auto-injector** by pulling off the safety cap with your thumb and index finger.
+3. **Inject into the outer thigh** using a jabbing motion, pressing the needle end perpendicular and firm until a click is heard. Hold for 10 seconds.
+4. **Dispose of the used EpiPen** in its protective tubing, secure with gray tape, and discard. Call MCC-H to request a PMC.
+5. **Repeat if necessary** every 20 minutes if symptoms recur.
+
+Ensure not to inject through clothing or over the needle end to avoid contamination or self-injection.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+To administer the EpiPen to your crewmate showing signs of a serious allergic reaction, follow these steps:
+
+1. **Remove the EpiPen** from its protective plastic tubing.
+2. **Form a fist** around the EpiPen with your thumb closest to the safety cap.
+3. **Activate the auto-injector** by pulling off the safety cap.
+4. **Inject into the outer thigh**: Using a jabbing motion, press the needle end perpendicular to and firmly against the patient's outer thigh until a click is heard or felt.
+5. **Hold firmly** against the thigh for **10 seconds**.
+6. **Discard the used EpiPen** in its original protective plastic tubing, securing it with Gray Tape.
+
+If symptoms recur or progress, **another dose may be given every 20 minutes** if available.
+
+**Warnings**:
+- Do not put fingers over the needle end to prevent self-injection.
+- Do not inject through clothing to avoid needle contamination.
+
+After administration, call MCC-H to request further assistance.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. **Injection Location**: Inject the EpiPen into the **outer thigh**.  
+2. **Hold Duration**: Hold the EpiPen firmly against the thigh for **10 seconds**.  
+3. **Repeat Dose**: Yes, the EpiPen may be repeated **every 20 minutes** if symptoms recur or progress.  
+
+**Important Warnings**:  
+- Do not put fingers over the needle end to prevent injection into the finger.  
+- Do not give the shot through clothing to prevent needle contamination.  
+
+After injection, discard the used EpiPen in its original protective plastic tubing, secure it with Gray Tape, and call MCC-H to request a PMC.
+

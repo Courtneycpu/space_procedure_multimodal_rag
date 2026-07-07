@@ -1,0 +1,80 @@
+Model       : openai-gpt-oss-120b
+Category    : steps
+Question ID : steps_q11
+Question    : A crewmate lost a filling and there is a cavity. How do we pack the temporary filling material, and how long should they avoid food or drinking afterward?
+Timestamp   : 2026-07-06 13:13:38
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+**Packing the temporary filling material**
+
+1. Puncture the end of the Temporary Tooth Filling container.  
+2. Squeeze a small amount of the material onto your finger.  
+3. Roll the material on the finger into a ball.  
+4. Place the ball into the tooth cavity and gently form it to the tooth.  
+5. Wipe off any excess with a 4" × 4" gauze pad.  
+6. Have the crewmate firmly bite down on the filling for **2 minutes** to allow it to set to the tooth surfaces.  
+7. If needed, remove and smooth any excess using a 4" × 4" gauze pad and a Dental Carver File (G).
+
+**Post‑procedure food and drink restrictions**
+
+- The crewmate may resume drinking **about 1 hour** after placement.  
+- Limit solid or hard food on the affected side of the mouth for the **first 12 – 24 hours** while the filling hardens.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+**Packing the temporary filling material**
+
+1. Puncture the end of the Temporary Tooth Filling container.  
+2. Squeeze the material onto your finger.  
+3. Roll the material into a ball.  
+4. Place the material into the tooth cavity and gently form it to the tooth.  
+5. Wipe off excess with a 4"x4" gauze pad.  
+6. Have the crewmate firmly bite down on the filling for **2 minutes** to allow it to set to the tooth surfaces.  
+7. If needed, adjust the filling by removing and smoothing excess with a 4"x4" gauze pad and a Dental Carver File (G).
+
+**Post‑procedure food and drink restrictions**
+
+- The filling reaches an initial set in **5 minutes**.  
+- The crewmate may resume drinking after **approximately 1 hour**.  
+- Limit solid or hard food consumption on the affected side of the mouth for the first **12 to 24 hours** while the filling hardens.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+**Packing the temporary filling**
+
+1. Place the Temporary Tooth Filling into the cavity and gently shape it to the tooth.  
+2. Wipe off any excess with a 4 × 4 in gauze pad.  
+3. Have the crewmate firmly bite down on the material for **2 minutes** so it conforms to the tooth surfaces and hardens.  
+4. If needed, remove and smooth any remaining excess using a 4 × 4 in gauze pad and a Dental Carver File (type G).
+
+**Post‑procedure restrictions**
+
+- The filling reaches an initial set in about **5 minutes**.  
+- The crewmate may **resume drinking** after roughly **1 hour**.  
+- **Avoid solid or hard foods** on the treated side of the mouth for the first **12 to 24 hours** while the material fully hardens.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+**Packing the temporary filling material**
+
+1. **Prepare the material** – Puncture the end of the Temporary Tooth Filling, squeeze a small amount onto your finger, and roll it into a ball.  
+2. **Place the material** – Insert the ball into the tooth cavity and gently shape it to the tooth.  
+3. **Remove excess** – Wipe off any excess with a 4 in × 4 in gauze pad.  
+4. **Set the filling** – Have the crewmate firmly bite down on the material for **2 minutes** so it conforms to the tooth surfaces and begins to harden.  
+5. **Adjust if needed** – If excess remains, smooth it away using gauze and a Dental Carver File (G).
+
+**Post‑procedure dietary restrictions**
+
+- The crewmate may **resume drinking** after **approximately 1 hour**.  
+- **Solid or hard foods** on the treated side should be avoided for the **first 12 – 24 hours** while the filling fully hardens.
+

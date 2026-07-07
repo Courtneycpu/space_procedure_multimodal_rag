@@ -1,0 +1,50 @@
+Model       : openai-gpt-oss-120b
+Category    : steps
+Question ID : steps_q03
+Question    : What medication is used to treat a seizure and how is it administered?
+Timestamp   : 2026-07-06 13:08:50
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+- **Diazepam (Valium)** – injectable  
+  1. Prepare 2 mL of Diazepam 5 mg/mL (total 10 mg).  
+  2. Administer as a **2 mL intramuscular injection**.  
+
+- **Phenytoin (Dilantin ER)** – oral capsule (used when the patient is awake, coherent, and able to swallow)  
+  1. Give one capsule by mouth as directed by the Surgeon.  
+  2. Give a second dose after two hours (or as directed).
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+- **Medication:** Diazepam (Valium) 5 mg/mL solution.  
+- **Administration:** Prepare 2 mL (total 10 mg) and give as an intramuscular injection.  
+
+*If the patient regains consciousness, is coherent, and can swallow, a capsule of Phenytoin (Dilantin ER) is then given orally as directed by the Surgeon.*
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+- **Medication:** Diazepam (Valium) – 2 mL of a 5 mg/mL solution, providing a total dose of 10 mg, taken from the Topical & Injectable Medication Pack (brown).
+
+- **Administration:** Prepare the dose as above and give it as an intramuscular injection (step 2.2 “Administer Injection of Medication”).
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+**Medication and administration for a seizure**
+
+1. **Diazepam (Valium) – injectable**  
+   - Prepare 2 mL of Diazepam 5 mg/mL (total 10 mg) from the Topical & Injectable Medication Pack (Brown).  
+   - Administer as a **2 mL intramuscular injection**.
+
+2. **Phenytoin (Dilantin ER) – oral (used when the crew member is awake, coherent, and able to swallow)**  
+   - Give one capsule by mouth as directed by the Surgeon.  
+   - After two hours, give a second dose (or as directed by the Surgeon).
+

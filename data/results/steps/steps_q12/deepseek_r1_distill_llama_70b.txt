@@ -1,0 +1,93 @@
+Model       : deepseek-r1-distill-llama-70b
+Category    : steps
+Question ID : steps_q12
+Question    : A crewmate broke a tooth and I can see the sensitive inner part. What pain control and Eugenol steps do we use, and what tissue contact should I avoid?
+Timestamp   : 2026-07-06 15:04:07
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+To address the situation where a crewmate has a broken tooth with exposed pulp, follow these steps:
+
+**Pain Control:**
+1. Administer two (2) Ibuprofen tablets (400mg each) from the Convenience Medication Pack (White).
+2. Administer one (1) Hydrocodone and Acetaminophen tablet (10mg/300mg) from the Oral Medication Pack (Purple).
+
+**Eugenol Application:**
+1. Don Nitrile Gloves to handle Eugenol safely.
+2. Moisten a small portion of a Gauze 4"x4" with Eugenol from the Topical & Injectable Medication Pack (Brown).
+3. Squeeze excess Eugenol onto another Gauze or a Dry Wipe to avoid excess exposure.
+4. Place the moistened Gauze over the exposed pulp and have the patient hold it for 1 to 2 minutes.
+
+**Precautions:**
+- Minimize contact between Eugenol and skin or gums to prevent tissue damage.
+- Avoid chewing on the affected side and keep food out of the cavity.
+
+**Documentation:**
+- Use the Digital Camera to photo document the tooth and mouth for further assessment.
+
+This approach ensures proper pain management and careful handling of Eugenol to prevent further tissue damage.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+For a crewmate with a broken tooth exposing the sensitive inner part, follow these steps:
+
+**Pain Control:**
+1. Administer two (2) tablets of Ibuprofen (Motrin) at 400mg each.
+2. Administer one (1) tablet of Hydrocodone and Acetaminophen (Vicodin HP) at 10mg/300mg.
+
+**Eugenol Application:**
+1. Don Nitrile Gloves.
+2. Moisten a small portion of a Gauze 4"x4" with Eugenol.
+3. Squeeze excess Eugenol onto a second Gauze 4"x4" or a Dry Wipe.
+4. Place the moistened gauze over the exposed pulp.
+5. Have the patient hold the gauze with their teeth for 1 to 2 minutes.
+
+**Tissue Contact Warning:**
+- Minimize contact between Eugenol and skin or gums to prevent tissue damage.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 4
+Answer:
+For a crewmate with a broken tooth exposing the sensitive inner part, follow these steps:
+
+**Pain Control:**
+1. Administer two (2) tablets of Ibuprofen (Motrin) at 400 mg each from the Convenience Medication Pack (White).
+2. Administer one (1) tablet of Hydrocodone and Acetaminophen (Vicodin HP) at 10 mg/300 mg from the Oral Medication Pack (Purple).
+
+**Eugenol Treatment:**
+1. Don Nitrile Gloves.
+2. Moisten a small portion of a Gauze 4" x 4" with Eugenol from the Topical & Injectable Medication Pack (Brown).
+3. Squeeze excess Eugenol onto a second Gauze 4" x 4" or a Dry Wipe.
+4. Place the moistened gauze over the exposed pulp.
+5. Have the patient hold the gauze in place with their teeth for 1 to 2 minutes.
+
+**Precautions:**
+- Minimize contact between Eugenol and skin or gums to prevent tissue damage.
+- Additional Eugenol placements do not require further local anesthesia.
+- Advise the patient to avoid chewing on the affected side and keep food out of the cavity.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+For a crewmate with a broken tooth exposing the sensitive inner part, follow these steps:
+
+**Pain Control:**
+1. Administer two (2) Ibuprofen tablets (400mg each) from the Convenience Medication Pack (White).
+2. Administer one (1) Hydrocodone and Acetaminophen tablet (10mg/300mg) from the Oral Medication Pack (Purple).
+
+**Eugenol Application:**
+1. Don Nitrile Gloves.
+2. Moisten a small portion of a Gauze 4"x4" with Eugenol from the Topical & Injectable Medication Pack (Brown).
+3. Squeeze excess Eugenol onto another Gauze 4"x4" or a Dry Wipe.
+4. Place the moistened Gauze over the exposed pulp and have the patient hold it for 1 to 2 minutes.
+
+**Tissue Contact to Avoid:**
+- Minimize contact between Eugenol and skin or gums to prevent tissue damage.
+

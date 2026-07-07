@@ -1,0 +1,64 @@
+Model       : medgemma-27b-it
+Category    : steps
+Question ID : steps_q01
+Question    : What are the steps to treat a severe allergic reaction?
+Timestamp   : 2026-07-06 14:35:45
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1.  Remove Epinephrine (EpiPen) from protective plastic tubing.
+2.  Form a fist around Epinephrine (EpiPen) with thumb closest to safety cap.
+3.  Activate auto injector by pulling off safety cap.
+4.  Using a jabbing motion, press the needle end perpendicular to and firmly against patient's outer thigh until a click is heard or felt.
+5.  Hold firmly against thigh for 10 seconds.
+6.  Discard used Epinephrine (EpiPen) in original protective plastic tubing; secure in tube with Gray Tape and discard.
+7.  Call MCC-H to request PMC.
+8.  Epinephrine (EpiPen) may be repeated every 20 minutes if symptoms recur or progress.
+9.  Go to 2.0.403 ALLERGIC REACTION, all.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1.  Remove Epinephrine (EpiPen) from protective plastic tubing.
+2.  Form a fist around Epinephrine (EpiPen) with thumb closest to safety cap.
+3.  Activate auto injector by pulling off safety cap.
+4.  Using a jabbing motion, press the needle end perpendicular to and firmly against patient's outer thigh until a click is heard or felt. Hold firmly against thigh for 10 seconds.
+5.  Discard used Epinephrine (EpiPen) in original protective plastic tubing; secure in tube with Gray Tape and discard.
+6.  Call MCC-H to request PMC.
+7.  Epinephrine (EpiPen) may be repeated every 20 minutes if symptoms recur or progress.
+8.  Go to 2.0.403 ALLERGIC REACTION, all (SODF: MED CL: EXAMS, PROCEDURES, AND TREATMENT).
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1.  Remove Epinephrine (EpiPen) from protective plastic tubing.
+2.  Form a fist around Epinephrine (EpiPen) with thumb closest to safety cap.
+3.  Activate auto injector by pulling off safety cap.
+4.  Using a jabbing motion, press the needle end perpendicular to and firmly against patient's outer thigh until a click is heard or felt.
+5.  Hold firmly against thigh for 10 seconds.
+
+Warnings:
+*   Do not put fingers over needle end of Epinephrine (EpiPen) to prevent injection into finger.
+*   Do not give shot through clothing to prevent needle contamination.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1.  Remove Epinephrine (EpiPen) from protective plastic tubing.
+2.  Form a fist around Epinephrine (EpiPen) with thumb closest to safety cap.
+3.  Activate auto injector by pulling off safety cap.
+    *   WARNING: Do not put fingers over needle end of Epinephrine (EpiPen) to prevent injection into finger.
+    *   WARNING: Do not give shot through clothing to prevent needle contamination.
+4.  Using a jabbing motion, press the needle end perpendicular to and firmly against patient's outer thigh until a click is heard or felt.
+5.  Hold firmly against thigh for 10 seconds.
+6.  Discard used Epinephrine (EpiPen) in original protective plastic tubing; secure in tube with Gray Tape and discard.
+7.  Call MCC-H to request PMC.
+8.  Epinephrine (EpiPen) may be repeated every 20 minutes if symptoms recur or progress.
+9.  Go to 2.0.403 ALLERGIC REACTION, all (SODF: MED CL: EXAMS, PROCEDURES, AND TREATMENT).
+

@@ -1,0 +1,94 @@
+Model       : openai-gpt-oss-120b
+Category    : steps
+Question ID : steps_q12
+Question    : A crewmate broke a tooth and I can see the sensitive inner part. What pain control and Eugenol steps do we use, and what tissue contact should I avoid?
+Timestamp   : 2026-07-06 13:14:13
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**Pain control**
+
+1. Give the crewmate **2 tablets of Ibuprofen (Motrin) – 400 mg each** (Convenience Medication Pack, White).  
+2. Give **1 tablet of Hydrocodone/Acetaminophen (Vicodin HP) – 10 mg/300 mg** (Oral Medication Pack, Purple).  
+
+*(If additional analgesia is needed, refer to the “Treating Pain” procedure and consider a nerve block as directed by the Surgeon.)*  
+
+**Eugenol application**
+
+1. **Don nitrile gloves**.  
+2. Moisten a small portion of a **4 × 4 in gauze** with Eugenol (Topical & Injectable Medication Pack, Brown).  
+3. **Squeeze excess Eugenol** from that gauze onto a second 4 × 4 in gauze or a dry wipe.  
+4. Place the **moistened gauze over the exposed pulp**.  
+5. Have the patient **hold the gauze with the teeth for 1–2 minutes**.  
+6. No additional local anesthesia is required for further Eugenol placement.
+
+**Tissue‑contact warning**
+
+- **Minimize contact of Eugenol with skin or gums** to prevent tissue damage.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**Pain‑control steps**
+
+1. Give the crewmate **2 tablets of Ibuprofen (Motrin) – 400 mg each** and **1 tablet of Hydrocodone‑Acetaminophen (Vicodin HP) – 10 mg/300 mg** for pain relief.  
+2. If needed, consult the Surgeon and perform a **dental nerve block** (procedure 2.6.301) before applying Eugenol.
+
+**Eugenol application steps**
+
+1. **Don nitrile gloves.**  
+2. Moisten a small portion of a **4 × 4 in gauze** with Eugenol (from the Topical & Injectable Medication Pack, brown).  
+3. Squeeze excess Eugenol from that gauze onto a second 4 × 4 in gauze or a dry wipe.  
+4. Place the moistened gauze **directly over the exposed pulp** and have the patient hold it with the teeth for **1–2 minutes**.  
+5. No additional local anesthesia is required for further Eugenol placements.
+
+**Tissue‑contact warning**
+
+- **Minimize contact of Eugenol with skin or gums** to prevent tissue damage.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 4
+Answer:
+**Pain control**  
+1. Give the crewmate **two (2) tablets Ibuprofen (Motrin) – 400 mg each**.  
+2. Give **one (1) tablet Hydrocodone‑Acetaminophen (Vicodin HP) – 10 mg/300 mg**.  
+
+**Eugenol treatment**  
+1. **Don nitrile gloves.**  
+2. Moisten a small portion of a **4 in × 4 in gauze** with Eugenol (Topical & Injectable Medication Pack, brown).  
+3. **Squeeze excess Eugenol** onto a second 4 in × 4 in gauze or a dry wipe.  
+4. **Place the moistened gauze over the exposed pulp** and have the patient hold it with the teeth for **1–2 minutes**.  
+5. **Do not give additional local anesthesia** for further Eugenol placement.  
+6. Instruct the crewmate to **avoid chewing on the affected side and keep food out of the cavity**.  
+
+**Tissue contact to avoid**  
+- **Minimize contact between Eugenol and skin or gums** to prevent tissue damage.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**Pain control**
+
+1. Give the crewmate **2 tablets of Ibuprofen (Motrin) – 400 mg each** (Convenience Medication Pack, White).  
+2. Give **1 tablet of Hydrocodone + Acetaminophen (Vicodin HP) – 10 mg/300 mg** (Oral Medication Pack, Purple).  
+3. If additional relief is needed, consult the Surgeon and consider a dental nerve block (procedure 2.6.301).
+
+**Eugenol application**
+
+1. **Don nitrile gloves.**  
+2. Moisten a small portion of a **4 in × 4 in gauze** with Eugenol (Topical & Injectable Medication Pack, Brown).  
+3. **Squeeze excess Eugenol** from that gauze onto a second 4 in × 4 in gauze or a dry wipe.  
+4. Place the **moistened gauze over the exposed pulp**.  
+5. Have the patient **hold the gauze with the teeth for 1–2 minutes**.  
+6. **Additional Eugenol placement does not require further local anesthesia**.
+
+**Tissue‑contact warning**
+
+- **Minimize contact between Eugenol and skin or gums** to prevent tissue damage.
+

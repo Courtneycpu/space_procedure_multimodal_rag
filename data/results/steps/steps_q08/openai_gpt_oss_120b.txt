@@ -1,0 +1,42 @@
+Model       : openai-gpt-oss-120b
+Category    : steps
+Question ID : steps_q08
+Question    : During a seizure, how should I protect the patient from injury and what should I never do with the patient's mouth?
+Timestamp   : 2026-07-06 13:11:55
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1. Protect the patient from injury by preventing the body from striking hard structures—move the patient to the center of a module, away from any objects.  
+2. **Never** attempt to pry open the patient’s mouth or place anything in the mouth during a seizure.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+- Protect the patient by preventing the body from striking hard structures; move the patient to the center of a module and keep them away from nearby objects.  
+- **Never** pry open the patient’s mouth or place anything in the mouth during a seizure.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 3
+Answer:
+1. Protect the patient from injury by preventing the body from striking hard structures.  
+   • Move the patient, if possible, to the center of a module away from walls, equipment, or other hard surfaces.  
+
+2. **Never** attempt to pry open the patient’s mouth or place anything in the mouth during a seizure.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1. **Protect the patient from injury**  
+   - Move the patient, if possible, to the center of a module away from hard structures.  
+   - Prevent the body from striking or impacting any hard surfaces.
+
+2. **What never to do with the mouth**  
+   - Do **not** attempt to pry the patient’s mouth open.  
+   - Do **not** place anything in the patient’s mouth during a seizure.
+

@@ -1,0 +1,95 @@
+Model       : openai-gpt-oss-120b
+Category    : steps
+Question ID : steps_q10
+Question    : For difficulty breathing, how do I count pulse and respiratory rate, administer oxygen, and give inhaled Albuterol?
+Timestamp   : 2026-07-06 13:13:03
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+**1. Count pulse and respiratory rate**  
+1. Measure the pulse for **15 seconds** and multiply the count by 4.  
+2. Measure the respiratory rate for **15 seconds** and multiply the count by 4.  
+3. Record both values for later reporting to the Surgeon.  
+
+**2. Administer oxygen**  
+1. Retrieve the **Respiratory Support Pack**.  
+2. Locate the **Cue Card** in the pack’s lid pocket.  
+3. Provide oxygen using a **Low‑Flow Non‑Rebreather Mask** as shown on the cue card.  
+
+**3. Give inhaled Albuterol (Proventil HFA)**  
+1. Shake the Albuterol inhaler to mix the medication.  
+2. Remove the cap (inhaler is stored in the **Topical & Injectable Medication Pack (Brown)**).  
+3. Have the patient **fully exhale** and place the inhaler in the mouth.  
+4. Instruct the patient to **inhale slowly** through the mouth and **activate** the inhaler.  
+5. Have the patient **hold the breath for 8–10 seconds**, then exhale.  
+6. **Deliver a second dose** following the same procedure.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+**1. Count pulse and respiratory rate**  
+1. Measure the pulse for 15 seconds and multiply the count by 4.  
+2. Measure the respiratory rate for 15 seconds and multiply the count by 4.  
+3. Record both values for later reporting to the Surgeon.  
+
+**2. Administer oxygen**  
+1. Retrieve the Respiratory Support Pack.  
+2. Locate the cue card in the lid pocket.  
+3. Provide oxygen using a Low‑Flow Non‑Rebreather Mask as shown on the cue card (procedure 3.201 RESPIRATORY SUPPORT PACK – CUE CARD).  
+
+**3. Give inhaled Albuterol (Proventil HFA)**  
+1. Shake the Albuterol inhaler to mix the medication and remove the cap (from the Topical & Injectable Medication Pack, brown).  
+2. Have the patient fully exhale, then place the inhaler in the mouth.  
+3. Instruct the patient to begin a slow inhalation and activate the inhaler.  
+4. Have the patient hold the breath for 8–10 seconds, then exhale.  
+5. Deliver a second identical dose.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**Difficulty Breathing – Initial Treatment**
+
+1. **Count Pulse and Respiratory Rate**  
+   - Measure each by counting for **15 seconds** and multiply the count by **four**.  
+   - Record the data for later reporting to the Surgeon.
+
+2. **Administer Oxygen**  
+   - Retrieve the **Respiratory Support Pack**.  
+   - Locate the **Cue Card** in the lid pocket.  
+   - Provide oxygen via a **Low Flow Non‑Rebreather Mask**.  
+   - Follow the cue‑card instructions (3.201 RESPIRATORY SUPPORT PACK – CUE CARD, Oxygen via Low Flow Non‑Rebreather Mask).
+
+3. **Administer Inhaled Albuterol (Proventil HFA)**  
+   - Shake the Albuterol (Proventil HFA) inhaler to mix the medication, then remove the cap (from the Topical & Injectable Medication Pack, brown).  
+   - Have the patient fully exhale and place the inhaler in the mouth.  
+   - Instruct the patient to begin inhaling slowly through the mouth and **activate the inhaler**.  
+   - Have the patient **hold the breath for 8–10 seconds** before exhaling.  
+   - Deliver a **second dose** using the same technique.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+**Difficulty Breathing – Initial Treatment**
+
+1. **Count Pulse and Respiratory Rate**  
+   - Measure each by counting for **15 seconds** and multiply the count by **four**.  
+   - Record the data for later reporting to the Surgeon.  
+
+2. **Administer Oxygen**  
+   - Retrieve the **Respiratory Support Pack**.  
+   - Locate the **Cue Card** in the lid pocket of the pack.  
+   - Provide oxygen to the patient **via a Low‑Flow Non‑Rebreather Mask**.  
+
+3. **Administer Inhaled Albuterol (Proventil HFA)**  
+   - **Shake** the Albuterol inhaler to mix the medication, then **remove the cap** (from the Topical & Injectable Medication Pack, Brown).  
+   - Have the patient **fully exhale** and place the inhaler in the mouth.  
+   - Instruct the patient to **begin inhaling slowly** through the mouth and **activate the inhaler**.  
+   - Have the patient **hold the breath for 8–10 seconds** before exhaling.  
+   - **Deliver a second dose** using the same technique.
+
