@@ -1,0 +1,41 @@
+Model       : qwen3.5-122b-a10b
+Category    : steps
+Question ID : steps_q07
+Question    : If the choking patient is awake, how do I perform abdominal thrusts and when do I stop?
+Timestamp   : 2026-07-06 15:27:20
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+Error: LLM call failed.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+Error: LLM call failed.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+Error: LLM call failed.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**How to Perform Abdominal Thrusts (Awake Patient):**
+
+1. Position behind patient.
+2. Make fist.
+3. Place fist above belly button but below ribcage.
+4. Pull sharply inward and upward.
+5. Repeat until object clears or patient becomes unconscious.
+
+**When to Stop:**
+- Stop when the object clears
+- Stop if the patient becomes unconscious (then proceed to step 3: CLEAR AIRWAY/GIVE BREATHS)
+

@@ -1,0 +1,82 @@
+Model       : qwen3.5-122b-a10b
+Category    : figure_description
+Question ID : figure_q02
+Question    : What anatomical landmarks are labeled in the mouth anatomy figures?
+Timestamp   : 2026-07-06 16:21:30
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 5
+Answer:
+Error: LLM call failed.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+Error: LLM call failed.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+Based on the retrieved context, the anatomical landmarks labeled in the mouth anatomy figures are:
+
+**Figure 1 - Mouth Anatomy:**
+- Teeth
+- Tonsil
+- Gingiva (gum)
+- Tongue
+- Uvula
+
+**Figure 2 - Tooth Numbering:**
+- Maxillary Upper (upper jaw)
+- Mandibular Lower (lower jaw)
+- Anteriors (teeth 1-12)
+- Posteriors (teeth 13-32)
+- Numbered teeth 1 through 32
+
+**Figure 3 - Tooth Anatomy:**
+- Enamel
+- Dentin
+- Pulp
+- Cementum
+- Periodontal Ligament
+- Jawbone
+
+**Additional Figure from Dental Procedure (Figure 3 - Nerve Block):**
+- Coronoid Notch
+- Seam of cheek and throat
+- Point of Insertion
+- Target Area
+- Inferior Alveolar Nerve
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 5
+Answer:
+Based on the retrieved context, the mouth anatomy figures (2.6.001 MOUTH ANATOMY) contain the following labeled anatomical landmarks:
+
+**Figure 1 - Mouth Anatomy:**
+- Teeth
+- Tonsil
+- Gingiva (gum)
+- Tongue
+- Uvula
+
+**Figure 2 - Tooth Numbering:**
+- Maxillary (Upper) jaw model
+- Mandibular (Lower) jaw model
+- Teeth (numbered 1-32)
+- Anterior teeth regions
+- Posterior teeth regions
+
+**Figure 3 - Tooth Anatomy:**
+- Enamel
+- Dentin
+- Pulp
+- Cementum
+- Periodontal Ligament
+- Jawbone
+

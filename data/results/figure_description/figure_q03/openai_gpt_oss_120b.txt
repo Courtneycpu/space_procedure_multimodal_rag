@@ -1,0 +1,113 @@
+Model       : openai-gpt-oss-120b
+Category    : figure_description
+Question ID : figure_q03
+Question    : We need emergency bone access for medication. Where is the leg insertion site and what are the main setup and activation steps for the IO device?
+Timestamp   : 2026-07-06 16:37:01
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**Leg insertion site**  
+1. Locate the bony protrusion on the leg (shown as a circle).  
+2. Move your finger **2 cm toward the inner leg** from that point.  
+3. Then move the finger **1 cm upward toward the knee** (the “+” marker).  
+
+**Main setup steps for the intra‑osseous (IO) device**  
+
+1. **Unstow the Emergency Medical Treatment Pack (Red)** and retrieve:  
+   - Scissors – Trauma  
+   - Intra‑osseous Device Start Kit (IO injection device, IV cap, medical tape, 10 mL syringe)  
+2. **Prepare tape:** tear off two 10 cm pieces of medical tape and set aside.  
+3. **Assemble the syringe:** attach the IV cap to the 10 mL syringe.  
+4. **Expose the insertion leg** (cut clothing as needed with the trauma scissors).  
+
+**Activation (post‑insertion) steps**  
+
+1. Place the **safety latch** between the skin and the hub of the IO needle.  
+2. Secure the latch with **medical tape**.  
+3. **Stabilize the IO needle** with one hand; with the other hand, remove the inner needle.  
+4. Remove the sterile cover from the IV cap, then **attach the syringe‑IV‑cap assembly** to the IO needle.  
+5. Pull back the syringe plunger **≥ 5 mL** (to clear bone fragments) and then disconnect the syringe as needed for medication administration.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+**Leg insertion site**  
+1. Locate the **bony protrusion** on the leg (circled on the skin).  
+2. Move **2 cm toward the inner leg** from that protrusion.  
+3. Move **1 cm upward toward the knee** to the point marked with a **“+”** sign.  
+   – This spot is the intra‑osseous (IO) insertion point.
+
+**Main setup steps for the IO device**  
+
+1. **Prepare the device kit**  
+   - Unstow the Emergency Medical Treatment Pack (Red).  
+   - Gather scissors, intra‑osseous device start kit (device, IV cap, medical tape, 10 mL syringe).  
+   - Tear off two 10 cm pieces of medical tape.  
+   - Attach the IV cap to the syringe.  
+   - Expose the leg to the knee using the trauma scissors.  
+
+2. **Position the intra‑osseous device**  
+   - Remove the intra‑osseous device from its packaging.  
+   - Place the **blue barrel** of the device **perpendicular** to the skin at the identified insertion point.  
+
+3. **Activate the intra‑osseous device**  
+   - Remove the safety latch (store it for later).  
+   - Keep the blue barrel pressed **positively** against the skin.  
+   - Place the palm of the other hand over the **gray end** of the device and apply gentle pressure.  
+   - A **click** indicates activation; then gently lift the device to expose the needle.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**Leg insertion site**  
+- Locate the bony protrusion on the lower leg (tibia).  
+- Place a finger on the protrusion (marked by a circle in Figure 2).  
+- Move the finger **≈ 2 cm toward the inner (medial) side of the leg**.  
+- Then move the finger **≈ 1 cm upward toward the knee** (marked by a “+” in Figure 2).  
+This point is the intra‑osseous (IO) insertion site.
+
+**Main setup and activation steps for the IO device**  
+
+1. **Remove the intra‑osseous device from its packaging.**  
+2. **Place the blue barrel of the device on the identified insertion point** (the site described above).  
+3. **Activate the device** (as illustrated in Figure 4, “Activating Intraosseous Device”).  
+
+*Safety warning:* The needle can eject from the end of the blue barrel and become a projectile; handle the device carefully during removal and placement.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**Leg insertion site**  
+- Identify the bony protrusion on the lower leg (tibia) shown in Figure 2.  
+- Place a finger on the marked protrusion, move **≈ 2 cm toward the inner (medial) leg**, then **≈ 1 cm upward toward the knee** (the “+” mark). This is the intra‑osseous insertion point.
+
+**Main setup steps for the intra‑osseous (IO) device**
+
+1. **Unstow the Emergency Medical Treatment Pack (Red).**  
+   - Scissors – Trauma  
+   - Intra‑osseous Device Start Kit (Intra‑osseous Injection Device, IV Cap, Medical Tape, 10 mL Syringe)
+
+2. **Prepare the syringe assembly.**  
+   - Tear off two 10 cm pieces of Medical Tape and set aside.  
+   - Attach the IV Cap to the 10 mL Syringe (Figure 1).
+
+3. **Expose the leg.**  
+   - Use the Trauma Scissors to cut away clothing and expose the area from the knee to the identified insertion point.
+
+**Activation (insertion and post‑insertion) steps**
+
+1. **Insert the IO needle** at the identified tibial site.  
+2. **Place the safety latch** between the skin and the hub of the needle (Figure 5).  
+3. **Secure the latch** with a piece of Medical Tape (Figure 6).  
+4. **Stabilize the needle** with one hand; with the other hand, **remove the inner needle**.  
+5. **Remove the sterile cover** from the IV Cap, then **attach the pre‑assembled Syringe + IV Cap** to the intra‑osseous needle.  
+6. **Flush the line** by pulling the syringe plunger back ≥ 5 mL (to clear bone fragments) and then delivering the medication.  
+
+These steps provide the location, preparation, and activation of the intra‑osseous device for emergency medication delivery.
+

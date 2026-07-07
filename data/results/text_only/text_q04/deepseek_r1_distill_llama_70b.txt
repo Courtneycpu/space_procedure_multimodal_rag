@@ -1,0 +1,47 @@
+Model       : deepseek-r1-distill-llama-70b
+Category    : text_only
+Question ID : text_q04
+Question    : What actions should I take if the AED gives a CONNECT ELECTRODES voice prompt?
+Timestamp   : 2026-07-06 13:10:06
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. Firmly press the AED Electrodes on the patient's skin.
+2. If the problem persists and there is a large amount of chest hair:
+   - Swiftly remove the AED Electrodes and any attached chest hair.
+   - Place a new set of AED Electrodes on the chest.
+3. If the AED Electrodes are dry or damaged, replace the AED Electrode pads.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. Firmly press the AED Electrodes on the patient's skin.
+2. If the problem persists and there is a large amount of chest hair present:
+   - Swiftly remove the AED Electrodes and any attached chest hair.
+   - Place a new set of AED Electrodes on the chest.
+3. Ensure the AED Electrodes are removed from the liner before application.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. Firmly press the AED Electrodes on the patient's skin.
+2. If the issue persists and there is a large amount of chest hair present:
+   - Swiftly remove the AED Electrodes and any attached chest hair.
+   - Place a new set of AED Electrodes on the chest.
+3. Replace the AED Electrode pads if they are dry or damaged.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. Firmly press the AED Electrodes on the patient's skin.
+2. If the problem persists and there is a large amount of chest hair present:
+   - Swiftly remove the AED Electrodes and any attached chest hair.
+   - Place a new set of AED Electrodes on the chest.
+3. If the AED Electrodes are dry or damaged, replace the electrode pads.
+

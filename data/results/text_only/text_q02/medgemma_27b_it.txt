@@ -1,0 +1,36 @@
+Model       : medgemma-27b-it
+Category    : text_only
+Question ID : text_q02
+Question    : What procedure should you follow after completing AED assisted CPR?
+Timestamp   : 2026-07-06 14:36:52
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+The provided context does not contain enough information.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+The provided context does not contain enough information.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1.  **MONITOR PATIENT RESPONSE**
+    *   After AED prompts 'Start CPR'
+    *   Perform a 10-second pulse check.
+    *   Is pulse detected?
+        *   -> Yes -> 6
+        *   -> No -> 7
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+The provided context does not contain enough information.
+

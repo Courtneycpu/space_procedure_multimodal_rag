@@ -1,0 +1,51 @@
+Model       : qwen3.5-122b-a10b
+Category    : text_only
+Question ID : text_q03
+Question    : The AED just told us to start CPR, but I think I might feel a pulse. What is the check and when do we stop compressions?
+Timestamp   : 2026-07-06 13:15:40
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+Error: LLM call failed.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+Error: LLM call failed.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**Pulse Check:**
+- After the AED prompts "Start CPR," perform a **10-second pulse check**
+
+**When to Stop Compressions:**
+- Stop chest compressions if a **pulse is detected**
+- Stop chest compressions if the **patient begins spontaneous breathing**
+- If pulse returns, also stop medication administration and give breaths
+
+**If No Pulse is Detected:**
+- Continue performing CPR (30 chest compressions for every 2 breaths, 1 second each breath)
+- Repeat the pulse check after each "Start CPR" prompt from the AED
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**Pulse Check Procedure:**
+- After AED prompts "Start CPR," perform a 10-second pulse check.
+
+**When to Stop Compressions:**
+- Stop chest compressions if a pulse is detected.
+- Stop chest compressions if the patient begins spontaneous breathing.
+
+**Next Steps After Pulse Detected:**
+- Assist breathing as necessary.
+- If a second rescuer is assisting, stop medication administration.
+- Go to 1.103 ALS ALGORITHM, block 13, page 5, Respiratory Assessment (SODF: MED CL: EMERGENCY).
+

@@ -1,0 +1,54 @@
+Model       : deepseek-r1-distill-llama-70b
+Category    : natural_language
+Question ID : natural_q05
+Question    : A crewmate says they cannot breathe well, and I need to quickly report useful vitals to the Surgeon. What should I measure first and how?
+Timestamp   : 2026-07-06 17:20:32
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. Measure the pulse by counting for 15 seconds and multiplying by four.  
+2. Measure the respiratory rate by counting for 15 seconds and multiplying by four.  
+3. Record the data for later reporting to the Surgeon.  
+4. Call MCC-H to request a Procedure Monitoring Conference (PMC).
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+To quickly report useful vitals to the Surgeon for a crewmate having difficulty breathing, follow these steps:
+
+1. **Measure Pulse and Respiratory Rate**  
+   - Count each for 15 seconds and multiply by four to get the rate per minute.  
+   - Record the data for later reporting.
+
+2. **Obtain Blood Pressure**  
+   - Use the Blood Pressure Cuff and Blood Pressure Monitor from the Medical Diagnostic Pack (Blue).  
+   - Record the blood pressure reading.
+
+These measurements provide essential initial data for the Surgeon.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 3
+Answer:
+To address the crewmate's difficulty breathing and report useful vitals to the Surgeon, follow these steps:
+
+1. **Obtain History**: Collect information about the crewmate's symptoms, including the development of events, use of medications, history of fever, cough, and the severity of breathing difficulty.
+
+2. **Contact Mission Control**: Call MCC-H to request a Private Medical Conference (PMC) for further guidance.
+
+3. **Measure Vital Signs**: When directed by the Surgeon, use the Blood Oximeter to measure the crewmate's oxygen saturation and heart rate. Ensure the device is ready for use and restow it properly after the measurement.
+
+These steps provide essential data for the Surgeon to assess the situation effectively.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. Count the pulse rate by measuring for 15 seconds and multiplying by four.
+2. Count the respiratory rate by measuring for 15 seconds and multiplying by four.
+3. Record these data for later reporting to the Surgeon.
+

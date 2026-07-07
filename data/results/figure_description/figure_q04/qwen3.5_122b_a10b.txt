@@ -1,0 +1,72 @@
+Model       : qwen3.5-122b-a10b
+Category    : figure_description
+Question ID : figure_q04
+Question    : The Surgeon wants pictures of a dental issue. What exactly should I inspect, photograph, and downlink, and where do I look for tooth-numbering references?
+Timestamp   : 2026-07-06 16:24:47
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 4
+Answer:
+Error: LLM call failed.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 3
+Answer:
+Error: LLM call failed.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 5
+Answer:
+Based on the retrieved dental procedures, here is what you should inspect, photograph, and downlink:
+
+**What to Photograph (depends on the dental issue):**
+- **Temporary Dental Filling:** Photo document tooth and repaired filling
+- **Dental Crown Replacement:** Photo document tooth and repaired crown
+- **Exposed Dental Pulp:** Photo document tooth and broken fragment
+- **Loss of Tooth:** Photo document tooth and mouth
+
+**Tooth-Numbering References:**
+- To view anatomic reference images of the mouth and teeth, refer to **Mouth Anatomy**
+
+**Downlink Instructions:**
+- Downlink photos for Surgeon
+- If required, refer to **1.480 D4 SETUP - MEDICAL IMAGERY, all (SODF: ISS PTV: NIKON D4)**
+
+**Equipment:**
+- Digital Camera
+
+**Additional Note:**
+- It is important to keep individuals' data separate by making separate folders that are labeled with crewname and GMT day.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 4
+Answer:
+**What to Inspect, Photograph, and Downlink:**
+
+1. **Inspect:**
+   - Mouth and teeth
+   - Specific tooth with the dental issue (e.g., tooth cavity, displaced dental filling, broken fragment, exposed dental pulp)
+
+2. **Photograph (using Digital Camera):**
+   - Tooth and the dental issue (repaired filling, broken fragment, or displaced dental filling)
+   - Use equipment: ISS PTV: NIKON D4 (refer to 1.480 D4 SETUP - MEDICAL IMAGERY if required)
+
+3. **Downlink:**
+   - Photos for Surgeon
+
+**Tooth-Numbering References:**
+
+- **Location:** Refer to **Mouth Anatomy** document (2.6.001)
+- **Figure 2 - Tooth Numbering:** Shows numbered teeth 1-32 on maxillary (upper) and mandibular (lower) jaws
+  - Anteriors: 1x6 or 2x6 (1x12 upper/lower)
+  - Posteriors: 1x8 or 2x8 (1x16 upper/lower)
+- **Figure 1 - Mouth Anatomy:** Shows key structures (Teeth, Tonsil, Gingiva/gum, Tongue, Uvula)
+- **Figure 3 - Tooth Anatomy:** Shows tooth structures (Enamel, Dentin, Pulp, Cementum, Periodontal Ligament, Jawbone)
+
+All dental procedures reference "To view anatomic reference images of the mouth and teeth, refer to Mouth Anatomy."
+

@@ -1,0 +1,75 @@
+Model       : qwen3.5-122b-a10b
+Category    : figure_description
+Question ID : figure_q06
+Question    : What should I do after a lost dental crown, and how do I replace and confirm seating of the crown with Dental Adhesive?
+Timestamp   : 2026-07-06 16:27:25
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+Error: LLM call failed.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+Error: LLM call failed.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+The provided context does not contain enough information.
+
+The retrieved context includes:
+- Equipment list for dental crown replacement (Dental Adhesive, Dental Adhesive Tip, Gauze 4"x4", Nitrile Gloves, etc.)
+- Step 2.1: Preparing Dental Adhesive (detailed instructions for removing cap, dispensing material, aligning notches with tip)
+- Step 3: REPLACING DENTAL CROWN (only shows "Don Nitrile Gloves" as the step text)
+
+However, the context is missing:
+- Complete steps for actually replacing the dental crown
+- Instructions for confirming seating of the crown
+- The full procedure sequence after preparing the adhesive
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+**After a Lost Dental Crown:**
+
+1. **Photo document** the tooth and broken fragment using Digital Camera
+2. **Assess for dental pain or sensitivity:**
+   - If no dental pain or sensitivity: Place crown in a Ziplock Bag and stow in a known location in sleep station, then go to step 4
+   - If dental pain or sensitivity present: Proceed to equipment preparation
+
+**Replacing and Confirming Crown Seating with Dental Adhesive:**
+
+1. **Prepare Equipment:**
+   - Create workstation using Gray Tape and temporarily stow hardware on tape
+   - Don Nitrile Gloves
+
+2. **Prepare Dental Adhesive:**
+   - Remove Dental Adhesive from packaging
+   - Remove cap from Dental Adhesive
+   - Press on the plunger to dispense small amount of material onto a Gauze 4"x4", ensuring flow from both chambers of the Dental Adhesive syringe
+   - Wipe residual material away from syringe
+   - Align v-shaped notches on the Dental Adhesive syringe and Dental Adhesive Tip
+
+3. **Prepare Loose Crown:**
+   - Remove residual cement from crown and tooth utilizing Dental Carver File (G)
+   - Carefully check fit of crown by placing on tooth and having subject bite down
+   - Remove crown and dry off with Gauze 4"x4"
+   - Temporarily stow crown in Gauze 4"x4"
+
+4. **Replace Crown:**
+   - Coat the surfaces of the crown that will contact tooth with Dental Adhesive
+   - Place crown over tooth, ensuring proper orientation
+   - Place a Cotton Swab over crown and have subject gently bite down on Cotton Swab and crown for 3 to 5 seconds to fully seat the crown
+   - Remove Cotton Swab and have subject bite down a second time to determine if crown is fully seated
+
+5. **Confirm Crown Placement:**
+   - If crown fully seated: Place Cotton Swab back over crown and have subject bite down and apply moderate pressure for 2 to 3 minutes
+   - If crown not fully seated: Carefully remove crown by prying up at crown margins with Dental Crown Remover (D), then repeat steps 3.1 to 3.3
+

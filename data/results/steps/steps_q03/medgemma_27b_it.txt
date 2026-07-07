@@ -1,0 +1,64 @@
+Model       : medgemma-27b-it
+Category    : steps
+Question ID : steps_q03
+Question    : What medication is used to treat a seizure and how is it administered?
+Timestamp   : 2026-07-06 14:37:13
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+The provided context does not contain enough information.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1.  **PROTECTING FROM INJURY**
+    *   Protect patient from injury by preventing impact of the body with hard structures.
+    *   Attempt to locate the patient in the center of a module away from structures.
+    *   Never attempt to pry open or put anything in the mouth during a seizure.
+    *   Seizures typically last less than a minute.
+
+2.  **ADMINISTERING INTRAMUSCULAR SHOT**
+    *   **2.1 Configure Medication for Injection**
+        *   Prepare 2 mL Diazepam (Valium) 5 mg/mL for a total of 10 mg [Topical & Injectable Medication Pack (Brown)].
+        *   If Diazepam (Valium) supplied in a prefilled syringe, perform 2.14.302 INJECTIONS AND IV – MEDICINE PREPARATION FOR INJECTION, all (SODF: MED CL: EXAMS, PROCEDURES, AND TREATMENT), then: Go to step 2.2.
+        *   If Diazepam (Valium) supplied in a vial, perform 2.14.303 INJECTIONS AND IV - DRAWING UP MEDICINE FROM VIAL, all (SODF: MED CL: EXAMS, PROCEDURES, AND TREATMENT), then: Go to step 2.2.
+    *   **2.2 Administer Injection of Medication**
+        *   Give 2 mL intramuscular shot of Diazepam (Valium) 5 mg/mL.
+        *   If required, refer to 2.14.304 INJECTIONS AND IV - INTRAMUSCULAR SHOT, all (SODF: MED CL: EXAMS, PROCEDURES, AND TREATMENT).
+    *   If seizure continues for > 5 minutes or for repeated seizures, repeat medication administration in 10 minutes.
+
+3.  **ADMINISTERING MEDICATION**
+    *   **7.2** When awake, coherent, and able to swallow, give one capsule of Phenytoin (Dilantin ER) by mouth, as directed by Surgeon [Oral Medication Pack (Purple)].
+    *   **7.3** After two hours, give a second dose of Phenytoin (Dilantin ER) by mouth, or as directed by Surgeon.
+
+Medications used:
+*   Diazepam (Valium) 5 mg/mL: Administered as a 2 mL intramuscular shot (10 mg total).
+*   Phenytoin (Dilantin ER): Administered orally (one capsule, then a second dose after two hours, or as directed by Surgeon).
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1.  **Medication:** Diazepam (Valium) 5 mg/mL.
+2.  **Dosage:** Prepare 2 mL for a total of 10 mg.
+3.  **Administration:**
+    *   Configure medication for injection (Step 2.1).
+    *   Administer injection of medication (Step 2.2).
+    *   If seizure continues for > 5 minutes or for repeated seizures, repeat medication administration in 10 minutes.
+    *   When awake, coherent, and able to swallow, give one capsule of Phenytoin.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1.  **Diazepam (Valium):**
+    *   Prepare 2 mL of Diazepam (Valium) 5 mg/mL for a total of 10 mg [Topical & Injectable Medication Pack (Brown)].
+    *   Administer 2 mL intramuscular shot of Diazepam (Valium) 5 mg/mL.
+2.  **Phenytoin (Dilantin ER):**
+    *   When awake, coherent, and able to swallow, give one capsule of Phenytoin (Dilantin ER) by mouth, as directed by Surgeon [Oral Medication Pack (Purple)].
+    *   After two hours, give a second dose of Phenytoin (Dilantin ER) by mouth, or as directed by Surgeon.
+

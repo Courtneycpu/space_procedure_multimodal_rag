@@ -1,0 +1,47 @@
+Model       : openai-gpt-oss-120b
+Category    : text_only
+Question ID : text_q07
+Question    : Under what conditions should CPR termination be considered in the ALS Algorithm?
+Timestamp   : 2026-07-06 12:53:21
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**CPR termination is considered when all of the following conditions are met (after coordinating with the Surgeon, if available):**
+
+- At least **10 minutes of CPR** have elapsed since the last dose of medication, **and**
+- The patient has **no pulse and no spontaneous breathing**, **and**
+- At least **45 minutes have elapsed** since the start of resuscitation.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**CPR termination should be considered when all of the following are true:**
+
+- At least 10 minutes have passed since the last dose of medication.  
+- No pulse and no spontaneous breathing are present.  
+- At least 45 minutes have elapsed since the start of resuscitation.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**CPR termination should be considered in the ALS Algorithm when all of the following conditions are met:**
+
+- At least 10 minutes of CPR have been performed since the last dose of medication, **and**  
+- No pulse is present and there is no spontaneous breathing, **and**  
+- At least 45 minutes have elapsed since the start of resuscitation.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+- Coordinate with the Surgeon, if available.  
+- Consider CPR termination **only if all** of the following are true:  
+  1. At least **10 minutes** of CPR have been performed since the last dose of medication.  
+  2. The patient has **no pulse and no spontaneous breathing**.  
+  3. At least **45 minutes** have elapsed since the start of resuscitation.
+

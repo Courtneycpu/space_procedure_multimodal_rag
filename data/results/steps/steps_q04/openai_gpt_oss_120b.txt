@@ -1,0 +1,62 @@
+Model       : openai-gpt-oss-120b
+Category    : steps
+Question ID : steps_q04
+Question    : How do you help someone who is choking and no longer conscious?
+Timestamp   : 2026-07-06 13:09:24
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**Steps to assist an unconscious choking patient**
+
+1. **Perform abdominal thrusts**  
+   1. Position yourself behind the patient.  
+   2. Make a fist.  
+   3. Place the fist above the belly button but below the ribcage.  
+   4. Pull sharply inward and upward.  
+   5. Repeat until the object clears **or** the patient becomes unconscious.  
+
+2. **If the patient becomes unconscious, clear the airway and give breaths**  
+   1. Open the airway using a **head‑tilt, chin‑lift**.  
+   2. Inspect the mouth for a foreign object and remove it **if it is easily accessible**.  
+   3. Pinch the patient’s nose and give breaths.  
+
+3. **Proceed to AED‑assisted CPR** (follow the AED‑assisted CPR procedure after giving breaths).
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+**Help an unconscious choking patient**
+
+1. **Open the airway** – Perform a Head‑Tilt Chin‑Lift.  
+2. **Inspect the mouth** – Look for a foreign object and remove it only if it is easily reachable.  
+3. **Give rescue breaths** – Pinch the patient’s nose and deliver breaths.  
+4. **Proceed to CPR** – If the airway remains blocked or the patient does not respond, go to the AED‑assisted CPR protocol.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. Open the airway using the **head‑tilt, chin‑lift** maneuver.  
+   *Figure 2 illustrates this maneuver, showing the head, neck, chin, and hands used to open the airway.*
+
+2. Inspect the mouth and airway for a foreign object and remove it **if it is easily accessible**.
+
+3. Pinch the nose and attempt to give breaths.
+
+4. After these steps, proceed to **AED‑assisted CPR** as indicated in the emergency protocol.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**Steps for a choking patient who is no longer conscious**
+
+1. **Open the airway** – perform a head‑tilt, chin‑lift maneuver.  
+2. **Inspect the airway** – look for a foreign object and remove it **if it is easily accessible**.  
+3. **Pinch the nose** and attempt to give breaths.  
+4. **Proceed to AED‑assisted CPR** (refer to procedure 1.102 AED ASSISTED CPR).
+

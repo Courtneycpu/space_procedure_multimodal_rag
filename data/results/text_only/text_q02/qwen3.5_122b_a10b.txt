@@ -1,0 +1,64 @@
+Model       : qwen3.5-122b-a10b
+Category    : text_only
+Question ID : text_q02
+Question    : What procedure should you follow after completing AED assisted CPR?
+Timestamp   : 2026-07-06 13:14:25
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+Error: LLM call failed.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+Error: LLM call failed.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+Based on the retrieved context, after AED assisted CPR, the procedure depends on patient response:
+
+**If patient begins spontaneous breathing or a pulse is detected:**
+1. Stop chest compressions
+2. Assist breathing as necessary
+3. If second rescuer assisting, stop medication administration
+4. Go to 1.103 ALS ALGORITHM, block 13, page 5, Respiratory Assessment (SODF: MED CL: EMERGENCY)
+
+**If no pulse is detected:**
+1. Perform 30 chest compressions for every 2 breaths (1 second each breath) until prompted by AED
+2. Repeat monitoring (block 5) after each 'Start CPR' prompt from AED
+
+**Monitoring Process:**
+- After AED prompts 'Start CPR', perform a 10-second pulse check
+- If pulse detected → proceed to ASSIST PATIENT (Step 6)
+- If no pulse → continue PERFORM CPR (Step 7)
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+Based on the retrieved context, after completing AED assisted CPR, follow these procedures:
+
+**Step 5 - MONITOR PATIENT RESPONSE:**
+1. After AED prompts 'Start CPR', perform a 10-second pulse check.
+2. Is pulse detected?
+   - **Yes** → Go to Step 6 (ASSIST PATIENT)
+   - **No** → Go to Step 7 (PERFORM CPR)
+
+**Step 6 - ASSIST PATIENT (if pulse detected):**
+1. Stop chest compressions.
+2. Assist breathing as necessary.
+3. If second rescuer assisting, stop medication administration.
+4. Go to 1.103 ALS ALGORITHM, block 13, page 5, Respiratory Assessment (SODF: MED CL: EMERGENCY).
+
+**Step 7 - PERFORM CPR (if no pulse detected):**
+1. Perform 30 chest compressions for every 2 breaths (1 second each breath) until prompted by AED.
+2. Repeat block 5 after each 'Start CPR' prompt from AED.
+
+**Additional Note:** If two rescuers are available and AED is deployed, go to 1.103 ALS ALGORITHM, block 1 (SODF: MED CL: EMERGENCY).
+

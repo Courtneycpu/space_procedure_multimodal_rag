@@ -1,0 +1,40 @@
+Model       : openai-gpt-oss-120b
+Category    : natural_language
+Question ID : natural_q05
+Question    : A crewmate says they cannot breathe well, and I need to quickly report useful vitals to the Surgeon. What should I measure first and how?
+Timestamp   : 2026-07-06 16:57:33
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. **Measure pulse and respiratory rate first** – count each for 15 seconds and then multiply the count by 4.  
+2. Record these values for later reporting to the Surgeon.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. **Measure pulse and respiratory rate first**  
+   - Count each for 15 seconds.  
+   - Multiply the count by 4 to obtain beats‑per‑minute (pulse) and breaths‑per‑minute (respiratory rate).  
+   - Record these values for later reporting to the Surgeon.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 3
+Answer:
+1. **Measure blood‑oxygen saturation** – use the **Blood Oximeter** (ensure the unit has batteries installed).  
+2. **Report the reading** to the Surgeon when directed (downlink the value as part of the surgeon’s instructions).
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. **Measure pulse and respiratory rate** – the first vital signs required.  
+2. **How to measure:**  
+   - Count the pulse for **15 seconds** and multiply the count by **4** to obtain beats per minute.  
+   - Count the respiratory rate for **15 seconds** and multiply the count by **4** to obtain breaths per minute.  
+3. **Record the values** immediately so they can be reported to the Surgeon.
+

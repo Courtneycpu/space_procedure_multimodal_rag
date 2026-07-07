@@ -1,0 +1,47 @@
+Model       : medgemma-27b-it
+Category    : text_only
+Question ID : text_q07
+Question    : Under what conditions should CPR termination be considered in the ALS Algorithm?
+Timestamp   : 2026-07-06 14:39:36
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. Coordinate with Surgeon, if available.
+2. Consider CPR termination if all of the following conditions apply:
+*   At least 10 minutes of CPR since last dose of medication, and
+*   No pulse or spontaneous breathing, and
+*   At least 45 minutes elapsed since start of resuscitation.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1.  Coordinate with Surgeon, if available.
+2.  Consider CPR termination if all of the following conditions apply:
+    *   At least 10 minutes of CPR since last dose of medication, and
+    *   No pulse or spontaneous breathing, and
+    *   At least 45 minutes elapsed since start of resuscitation.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1.  Coordinate with Surgeon, if available.
+2.  Consider CPR termination if all of the following conditions apply:
+    *   At least 10 minutes of CPR since last dose of medication, and
+    *   No pulse or spontaneous breathing, and
+    *   At least 45 minutes elapsed since start of resuscitation.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1.  Coordinate with Surgeon, if available.
+2.  Consider CPR termination if all of the following conditions apply:
+    *   At least 10 minutes of CPR since last dose of medication, and
+    *   No pulse or spontaneous breathing, and
+    *   At least 45 minutes elapsed since start of resuscitation.
+

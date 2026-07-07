@@ -1,0 +1,72 @@
+Model       : deepseek-r1-distill-llama-70b
+Category    : text_only
+Question ID : text_q08
+Question    : For loss of tooth, how do I control bleeding, treat pain, and document the injury?
+Timestamp   : 2026-07-06 13:03:37
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 3
+Answer:
+For loss of tooth, follow these steps:
+
+1. **Controlling Bleeding**  
+   - Apply direct pressure to the tooth socket with Gauze 4"x4".  
+   - Hold continuous pressure until bleeding stops.  
+
+2. **Treating Pain**  
+   - Take two (2) tablets of Ibuprofen (Motrin) (400 mg per tablet) from the Convenience Medication Pack (White).  
+   - Take one (1) tablet of Hydrocodone and Acetaminophen (Vicodin HP) (10 mg/300 mg per tablet) from the Oral Medication Pack (Purple).  
+   - If pain is severe or immediate relief is required, perform procedure 2.6.301 DENTAL PROCEDURE - NERVE BLOCK.  
+
+3. **Documenting the Injury**  
+   - Photo document the tooth and mouth using a Digital Camera.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 3
+Answer:
+**Controlling Bleeding:**
+1. Apply direct pressure to the tooth socket with Gauze 4"x4".
+2. Hold continuous pressure until bleeding stops.
+
+**Treating Pain:**
+1. Take two (2) tablets of Ibuprofen (Motrin) (400 mg per tablet) from the Convenience Medication Pack (White).
+2. Take one (1) tablet of Hydrocodone and Acetaminophen (Vicodin HP) (10 mg/300 mg per tablet) from the Oral Medication Pack (Purple).
+
+**Documenting the Injury:**
+1. Photo document the tooth and mouth using a Digital Camera.
+2. Downlink the photos for the Surgeon using the SSC.
+3. Place the tooth in a Ziplock Bag and temporarily stow it.
+4. Discard the Ziplock Bag after documentation.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 3
+Answer:
+1. **Controlling Bleeding**  
+   Apply direct pressure to the tooth socket with Gauze 4\"x4\". Hold continuous pressure until bleeding stops.
+
+2. **Treating Pain**  
+   Take two (2) tablets of Ibuprofen (Motrin) (400 mg per tablet) from the Convenience Medication Pack (White) and one (1) tablet of Hydrocodone and Acetaminophen (Vicodin HP) (10 mg/300 mg per tablet) from the Oral Medication Pack (Purple) for pain control.
+
+3. **Documenting the Injury**  
+   Use a Digital Camera to photo document the tooth and mouth.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 3
+Answer:
+1. **Control Bleeding**:  
+   - Apply direct pressure to the tooth socket with Gauze 4\"x4\".  
+   - Hold continuous pressure until bleeding stops.  
+
+2. **Treat Pain**:  
+   - Take two (2) tablets of Ibuprofen (Motrin) (400 mg per tablet) from the Convenience Medication Pack (White).  
+   - Take one (1) tablet of Hydrocodone and Acetaminophen (Vicodin HP) (10 mg/300 mg per tablet) from the Oral Medication Pack (Purple).  
+
+3. **Document Injury**:  
+   - Use the Digital Camera to photo document the tooth and mouth.  
+   - Downlink the photos for the Surgeon.
+

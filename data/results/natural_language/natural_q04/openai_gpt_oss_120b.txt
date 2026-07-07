@@ -1,0 +1,31 @@
+Model       : openai-gpt-oss-120b
+Category    : natural_language
+Question ID : natural_q04
+Question    : The patient has a pulse again but looks blue and is breathing badly. How do I decide between just giving oxygen and actively bagging them?
+Timestamp   : 2026-07-06 16:57:01
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The provided context does not contain enough information.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The provided context does not contain enough information.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The provided context does not contain enough information.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The provided context does not contain enough information.
+

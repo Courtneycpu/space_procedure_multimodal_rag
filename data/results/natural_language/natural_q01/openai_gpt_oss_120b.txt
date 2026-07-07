@@ -1,0 +1,43 @@
+Model       : openai-gpt-oss-120b
+Category    : natural_language
+Question ID : natural_q01
+Question    : My crewmate is showing signs of a serious allergic reaction and I have the EpiPen. Where exactly do I inject it, how long do I hold it, and can I give another dose if symptoms come back?
+Timestamp   : 2026-07-06 16:55:25
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. **Injection site** – Place the needle end of the Epinephrine (EpiPen) **perpendicular to and firmly against the patient’s outer thigh**.  
+2. **Hold time** – Keep the injector pressed against the thigh for **10 seconds** (until a click is heard or felt).  
+3. **Additional dose** – If symptoms recur or worsen, the Epinephrine (EpiPen) **may be administered again every 20 minutes**.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1. **Injection site** – Press the needle end of the Epinephrine (EpiPen) **perpendicular to and firmly against the patient’s outer thigh**.  
+
+2. **Hold time** – Keep the device pressed against the thigh **for 10 seconds** (or until a click is heard/ felt).  
+
+3. **Additional dose** – A second dose may be given **if symptoms recur or progress, but wait at least 20 minutes before repeating**.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+The provided context does not contain enough information.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. **Injection site** – Press the needle end of the Epinephrine auto‑injector **perpendicular to and firmly against the patient’s outer thigh** (mid‑outer thigh).  
+
+2. **Hold time** – After the injector clicks, **hold it firmly against the thigh for 10 seconds**.  
+
+3. **Repeat dose** – If the allergic symptoms recur or worsen, **a second dose may be given after 20 minutes**.  
+
+*Safety notes:* Do not place fingers over the needle end and do not inject through clothing.
+

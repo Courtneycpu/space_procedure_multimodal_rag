@@ -1,0 +1,69 @@
+Model       : qwen3.5-122b-a10b
+Category    : figure_description
+Question ID : figure_q03
+Question    : We need emergency bone access for medication. Where is the leg insertion site and what are the main setup and activation steps for the IO device?
+Timestamp   : 2026-07-06 16:22:53
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+Error: LLM call failed.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+Error: LLM call failed.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**Leg Insertion Site Location:**
+
+1. Place finger on bony protrusion identified by circle (Figure 2)
+2. Move finger 2 cm towards the inner leg
+3. Move finger 1 cm up towards knee, identified by "+" (Figure 2)
+
+**Setup Steps:**
+
+- Remove Intraosseous Device from packaging
+- Place blue barrel on insertion point (Figure 3)
+
+**Warning:**
+- Needle could eject from end of blue barrel becoming a projectile
+
+**Activation:**
+- Figure 4 is referenced as "Activating Intraosseous Device" but the specific activation steps are not fully provided in the retrieved context.
+
+**Note:** The retrieved context contains site identification and initial setup information, but complete activation steps are not fully detailed in the available context.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**Leg Insertion Site:**
+- Place finger on bony protrusion identified by circle (Figure 2)
+- Move finger 2 cm towards the inner leg
+- Move finger 1 cm up towards knee, identified by "+" (Figure 2)
+
+**Setup Steps:**
+1. Unstow Emergency Medical Treatment Pack (Red) containing:
+   - Scissors - Trauma
+   - Intraosseous Device Start Kit (Intraosseous Injection Device, IV Cap, Medical Tape, Syringe 10 mL)
+2. Tear off two 10 cm pieces of Medical Tape and set aside
+3. Attach IV Cap to Syringe (Figure 1)
+4. Expose leg to knee using Scissors - Trauma
+
+**Activation/Insertion Steps:**
+1. Remove Intraosseous Device from packaging and place blue barrel on insertion point (Figure 3)
+   - **WARNING:** Needle could eject from end of blue barrel becoming a projectile
+
+**Post-Insertion Steps:**
+1. Place safety latch between skin and hub of Intraosseous needle (Figure 5)
+2. Place Medical Tape over safety latch to secure (Figure 6)
+3. Stabilize Intraosseous needle with hand; with other hand, remove inner needle
+4. Remove sterile cover from IV Cap, then attach Syringe and IV Cap assembly to Intraosseous needle (Figure 6)
+

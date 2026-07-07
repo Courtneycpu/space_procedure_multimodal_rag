@@ -1,0 +1,59 @@
+Model       : deepseek-r1-distill-llama-70b
+Category    : steps
+Question ID : steps_q03
+Question    : What medication is used to treat a seizure and how is it administered?
+Timestamp   : 2026-07-06 14:08:50
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+The medications used to treat a seizure are Diazepam (Valium) and Phenytoin (Dilantin ER). 
+
+1. **Diazepam (Valium)** is administered as an intramuscular injection. The dosage is 2 mL at 5 mg/mL, totaling 10 mg. If supplied in a prefilled syringe, follow procedure 2.14.302. If in a vial, follow procedure 2.14.303. 
+
+2. **Phenytoin (Dilantin ER)** is given orally. One capsule is administered when the patient is awake and able to swallow. A second dose is given two hours later or as directed by the surgeon.
+
+If the seizure continues for more than 5 minutes or recurs, the medication administration is repeated after 10 minutes.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+The medications used to treat a seizure are Diazepam (Valium) and Phenytoin (Dilantin ER). 
+
+1. **Diazepam (Valium)** is administered as an intramuscular injection. The dosage is 2 mL of Diazepam 5 mg/mL, totaling 10 mg. If the seizure continues for more than 5 minutes or recurs, the dose may be repeated after 10 minutes.
+
+2. **Phenytoin (Dilantin ER)** is given orally. One capsule is administered when the patient is awake, coherent, and able to swallow. A second dose is given two hours later, also by mouth.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+The medication used to treat a seizure is Diazepam (Valium). It is administered as follows:
+
+1. **Medication Preparation**: Prepare 2 mL of Diazepam (Valium) at a concentration of 5 mg/mL, for a total dose of 10 mg. This is sourced from the Topical & Injectable Medication Pack (Brown).
+
+2. **Administration Route**: The medication is administered via intramuscular injection.
+
+3. **Repeat Dose (if necessary)**: If the seizure continues for more than 5 minutes or if there are repeated seizures, the medication administration may be repeated in 10 minutes.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+The medications used to treat a seizure are:
+
+1. **Diazepam (Valium)**:
+   - **Administration**: Given as a 2 mL intramuscular injection at a concentration of 5 mg/mL, totaling 10 mg.
+   - **Source**: Topical & Injectable Medication Pack (Brown).
+
+2. **Phenytoin (Dilantin ER)**:
+   - **Administration**: 
+     - One capsule is given orally when the patient is awake, coherent, and able to swallow.
+     - A second dose is administered two hours later, as directed by the Surgeon.
+   - **Source**: Oral Medication Pack (Purple).
+
+If the seizure continues for more than 5 minutes or recurs, the medication administration may be repeated after 10 minutes.
+

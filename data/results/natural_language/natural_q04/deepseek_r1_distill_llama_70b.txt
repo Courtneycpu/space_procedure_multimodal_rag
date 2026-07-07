@@ -1,0 +1,36 @@
+Model       : deepseek-r1-distill-llama-70b
+Category    : natural_language
+Question ID : natural_q04
+Question    : The patient has a pulse again but looks blue and is breathing badly. How do I decide between just giving oxygen and actively bagging them?
+Timestamp   : 2026-07-06 17:19:29
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The provided context does not contain enough information.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. Use the Blood Oximeter from the Medical Diagnostic Pack (Blue) to measure the patient's SpO2 level.  
+2. If the SpO2 level is below 90%:  
+   - Proceed to actively bag the patient with oxygen.  
+3. If the SpO2 level is 90% or higher:  
+   - Provide oxygen via the Low Flow Non-Rebreather Mask as described in the procedure.  
+4. If SpO2 reading is not available, default to active bagging.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The provided context does not contain enough information.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+Error: LLM call failed.
+

@@ -1,0 +1,78 @@
+Model       : qwen3.5-122b-a10b
+Category    : steps
+Question ID : steps_q02
+Question    : How do you perform CPR with one rescuer available?
+Timestamp   : 2026-07-06 13:18:17
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+Error: LLM call failed.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+Error: LLM call failed.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+Based on the retrieved context for AED-Assisted CPR with one rescuer available:
+
+**One Rescuer CPR Procedure:**
+
+1. **1 ASSESS**
+   - Assess environment for safety hazards
+   - Assess patient status
+
+2. **Deploy AED**
+   - Connect AED electrodes to patient's chest
+   - Turn AED 'ON' (green) and press
+   - Follow verbal prompts (or read prompts on screen if inaudible)
+
+3. **Perform CPR**
+   - Perform 30 chest compressions for every 2 breaths (1 second each breath)
+   - Continue until prompted by AED
+   - Repeat after each 'Start CPR' prompt from AED
+
+4. **Monitor Patient Response**
+   - After AED prompts 'Start CPR', perform a 10-second pulse check
+   - If pulse detected: Stop chest compressions, assist breathing as necessary
+   - If no pulse detected: Continue CPR (go to step 7)
+
+**Note:** This procedure is specifically for AED-assisted CPR. If patient begins spontaneous breathing or pulse is detected, stop chest compressions and assist breathing as necessary.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. **ASSESS** (for one rescuer):
+   - Assess environment for safety hazards
+   - Assess patient status
+
+2. **If patient unresponsive and not breathing or no normal breathing (only gasping)**:
+   - Relocate to and restrain patient on the Crew Medical Restraint System (as required)
+   - Page additional crewmember for assistance
+   - Call MCC-H to request PMC
+
+3. **PERFORM CPR**:
+   - Perform 30 chest compressions for every 2 breaths (1 second each breath) for 5 cycles (approximately 2 minutes)
+
+4. **DEPLOY AED**:
+   - Connect AED electrodes to patient's chest
+   - Turn AED 'ON' (green) and press
+   - Follow verbal prompts
+   - If verbal prompts inaudible, read prompts on screen
+
+5. **Continue CPR**:
+   - Perform 30 chest compressions for every 2 breaths (1 second each breath) until prompted by AED
+   - Repeat after each 'Start CPR' prompt from AED
+
+6. **If patient begins spontaneous breathing or a pulse is detected**:
+   - Stop chest compressions
+   - Assist breathing as necessary
+

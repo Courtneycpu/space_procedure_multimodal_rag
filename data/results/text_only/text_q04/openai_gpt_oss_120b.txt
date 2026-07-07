@@ -1,0 +1,43 @@
+Model       : openai-gpt-oss-120b
+Category    : text_only
+Question ID : text_q04
+Question    : What actions should I take if the AED gives a CONNECT ELECTRODES voice prompt?
+Timestamp   : 2026-07-06 12:51:58
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. Firmly press the AED electrodes onto the patient’s skin.  
+2. If the problem persists and the patient has a large amount of chest hair, quickly remove the electrodes and any attached hair.  
+3. Apply a new set of AED electrodes to the chest.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**Actions for a “CONNECT ELECTRODES” voice prompt**
+
+1. Firmly press the AED electrodes onto the patient’s skin.  
+2. If the problem persists **and** a large amount of chest hair is present:  
+   a. Swiftly remove the electrodes and any attached chest hair.  
+   b. Apply a new set of AED electrodes to the chest.  
+3. If the electrodes are dry or damaged, replace the AED electrode pads.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. Firmly press the AED electrodes onto the patient’s skin.  
+2. If the problem persists and the patient has a large amount of chest hair, quickly remove the AED electrodes and any attached hair.  
+3. Apply a new set of AED electrodes to the chest.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. Firmly press the AED electrodes onto the patient’s skin.  
+2. If the problem persists and a large amount of chest hair is present, quickly remove the electrodes and any attached hair.  
+3. Place a new set of AED electrodes on the chest.
+

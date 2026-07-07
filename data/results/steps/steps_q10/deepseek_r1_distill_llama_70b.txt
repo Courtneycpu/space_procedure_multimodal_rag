@@ -1,0 +1,87 @@
+Model       : deepseek-r1-distill-llama-70b
+Category    : steps
+Question ID : steps_q10
+Question    : For difficulty breathing, how do I count pulse and respiratory rate, administer oxygen, and give inhaled Albuterol?
+Timestamp   : 2026-07-06 14:56:42
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1. **Count Pulse and Respiratory Rate**  
+   - Measure each by counting for 15 seconds and multiplying by four.  
+   - Record the data for later reporting to the Surgeon.  
+
+2. **Administer Oxygen**  
+   - Retrieve the Respiratory Support Pack.  
+   - Locate the Cue Card in the lid pocket.  
+   - Provide oxygen via a Low Flow Non-Rebreather Mask.  
+
+3. **Administer Inhaled Albuterol (Proventil HFA)**  
+   - Shake the Albuterol (Proventil HFA) Inhaler to mix the medication and remove the cap.  
+   - Have the patient fully exhale and place the inhaler in their mouth.  
+   - Have the patient begin to inhale slowly through the mouth and activate the inhaler.  
+   - Have the patient hold their breath for 8 to 10 seconds before exhaling.  
+   - Deliver a second dose.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1. Count Pulse and Respiratory Rate:  
+   - Measure each by counting for 15 seconds and multiplying by four.  
+   - Record data for later reporting to Surgeon.  
+
+2. Administer Oxygen:  
+   - Retrieve Respiratory Support Pack.  
+   - Locate Cue Card in lid pocket.  
+   - Provide oxygen via Low Flow Non-Rebreather Mask.  
+
+3. Administer Inhaled Albuterol (Proventil HFA):  
+   - Shake the Albuterol (Proventil HFA) Inhaler to mix medication and remove cap.  
+   - Have patient fully exhale and place inhaler in mouth.  
+   - Have patient begin to inhale slowly through the mouth and activate the inhaler.  
+   - Have patient hold breath for 8 to 10 seconds before exhaling.  
+   - Deliver a second dose.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. **Count Pulse and Respiratory Rate**  
+   - Measure each by counting for 15 seconds and multiplying by four.  
+   - Record data for later reporting to Surgeon.  
+
+2. **Administer Oxygen**  
+   - Retrieve Respiratory Support Pack.  
+   - Locate Cue Card in lid pocket.  
+   - Provide oxygen via Low Flow Non-Rebreather Mask.  
+
+3. **Administer Inhaled Albuterol (Proventil HFA)**  
+   - Shake the Albuterol (Proventil HFA) Inhaler to mix medication and remove cap.  
+   - Have patient fully exhale and place inhaler in mouth.  
+   - Have patient begin to inhale slowly through the mouth and activate the inhaler.  
+   - Have patient hold breath for 8 to 10 seconds before exhaling.  
+   - Deliver a second dose.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1. **Count Pulse and Respiratory Rate**  
+   - Measure each by counting for 15 seconds and multiplying by four.  
+   - Record data for later reporting to Surgeon.  
+
+2. **Administer Oxygen**  
+   - Retrieve Respiratory Support Pack.  
+   - Locate Cue Card in lid pocket.  
+   - Provide oxygen via Low Flow Non-Rebreather Mask.  
+
+3. **Administer Inhaled Albuterol (Proventil HFA)**  
+   - Shake the Albuterol (Proventil HFA) Inhaler to mix medication and remove cap.  
+   - Have patient fully exhale and place inhaler in mouth.  
+   - Have patient begin to inhale slowly through the mouth and activate the inhaler.  
+   - Have patient hold breath for 8 to 10 seconds before exhaling.  
+   - Deliver a second dose.
+

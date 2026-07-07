@@ -1,0 +1,34 @@
+Model       : medgemma-27b-it
+Category    : steps
+Question ID : steps_q04
+Question    : How do you help someone who is choking and no longer conscious?
+Timestamp   : 2026-07-06 14:37:43
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1.  Open airway using Head tilt-Chin lift. (Figure 2)
+2.  Inspect for foreign object and remove, if easily accessible.
+3.  Pinch nose and attempt to give breaths.
+Go to 1.102 AED ASSISTED CPR, all (SODF: MED CL: EMERGENCY).
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+The provided context does not contain enough information.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The provided context does not contain enough information.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The provided context does not contain enough information.
+

@@ -1,0 +1,43 @@
+Model       : medgemma-27b-it
+Category    : natural_language
+Question ID : natural_q03
+Question    : Someone got splashed with a possible toxic substance, maybe in the eyes and on clothing. What should we do first to avoid exposing more crew and clean them up?
+Timestamp   : 2026-07-06 17:44:33
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1.  **RESCUER SAFETY**: To minimize the number of crew exposed, take respiratory, eye, and skin precautions prior to removing patient from exposure.
+2.  **DECONTAMINATING PATIENT**:
+    *   **2.1 Skin Exposure**: Quickly remove soiled clothes. Brush off visible particulate and wipe liquids off patient with Towel. Irrigate contaminated areas with water.
+    *   **2.2 Eye Exposure**: If wearing contact lenses, remove and discard. Immediately flush with water from Drink Bag. Configure eyewash station in the SM at the CBO-3B port, then irrigate eye until pain resolves or directed to stop by Surgeon.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1.  **RESCUER SAFETY**: To minimize the number of crew exposed, take respiratory, eye, and skin precautions prior to removing patient from exposure.
+2.  **DECONTAMINATING PATIENT**:
+    *   **2.1 Skin Exposure**: Quickly remove soiled clothes. Brush off visible particulate and wipe liquids off patient with Towel. Irrigate contaminated areas with water.
+    *   **2.2 Eye Exposure**: If wearing contact lenses, remove and discard. If eye exposure occurs, immediately flush with water from Drink Bag. Configure eyewash station in the SM at the CBO-3B port, then irrigate eye until pain resolves or directed to stop by Surgeon.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1.  **RESCUER SAFETY**: To minimize the number of crew exposed, take respiratory, eye, and skin precautions prior to removing patient from exposure.
+2.  **DECONTAMINATING PATIENT**:
+    *   **2.1 Skin Exposure**: Quickly remove soiled clothes. Brush off visible particulate and wipe liquids off patient with Towel. Irrigate contaminated areas with water.
+    *   **2.2 Eye Exposure**: If wearing contact lenses, remove and discard. Immediately flush with water from Drink Bag. Configure eyewash station in the SM at the CBO-3B port, then irrigate eye until pain resolves or directed to stop by Surgeon. If required, refer to 2.3.304 EYE PROCEDURE - EYEWASH KIT USE, all (SODF: MED CL: EXAMS, PROCEDURES, AND TREATMENT).
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1.  **RESCUER SAFETY**: To minimize the number of crew exposed, take respiratory, eye, and skin precautions prior to removing patient from exposure.
+2.  **DECONTAMINATING PATIENT**:
+    *   **2.1 Skin Exposure**: Quickly remove soiled clothes. Brush off visible particulate and wipe liquids off patient with Towel. Irrigate contaminated areas with water.
+    *   **2.2 Eye Exposure**: If wearing contact lenses, Remove and discard. Immediately flush with water from Drink Bag. Configure eyewash station in the SM at the CBO-3B port, then irrigate eye until pain resolves or directed to stop by Surgeon. If required, refer to 2.3.304 EYE PROCEDURE - EYEWASH KIT USE, all (SODF: MED CL: EXAMS, PROCEDURES, AND TREATMENT).
+

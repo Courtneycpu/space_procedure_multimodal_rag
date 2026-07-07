@@ -1,0 +1,77 @@
+Model       : deepseek-r1-distill-llama-70b
+Category    : steps
+Question ID : steps_q06
+Question    : In AED Assisted CPR, what should I do if the patient is unresponsive and not breathing or has no normal breathing, only gasping?
+Timestamp   : 2026-07-06 14:13:13
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+In AED Assisted CPR, if the patient is unresponsive and not breathing or has no normal breathing (only gasping), follow these steps:
+
+1. Perform 30 chest compressions for every 2 breaths (1 second each breath) for 5 cycles (approximately 2 minutes).
+2. Relocate the patient to and restrain them on the Crew Medical Restraint System.
+3. Page an additional crewmember for assistance.
+4. Call MCC-H to request PMC.
+5. Deploy the AED:
+   - Connect AED electrodes to the patient's chest.
+   - Turn the AED on (press the green button).
+   - Follow the verbal prompts or read the screen if prompts are inaudible.
+6. Continue performing CPR as directed by the AED, repeating the cycle of 30 compressions for every 2 breaths until further instructed.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+In AED Assisted CPR, if the patient is unresponsive and not breathing or has no normal breathing (only gasping), follow these steps:
+
+1. Perform 30 chest compressions for every 2 breaths (1 second each breath) for 5 cycles (approximately 2 minutes).
+2. Relocate the patient to and restrain them on the Crew Medical Restraint System.
+3. Page an additional crewmember for assistance.
+4. Call MCC-H to request PMC.
+
+Next, deploy the AED:
+
+5. Connect AED electrodes to the patient's chest.
+6. Turn the AED on (press the green 'ON' button).
+7. Follow the verbal prompts or read the screen prompts if inaudible.
+
+After the AED prompts to start CPR, perform a 10-second pulse check. If no pulse is detected, continue CPR as directed by the AED.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+In AED Assisted CPR, if the patient is unresponsive and not breathing or has no normal breathing (only gasping), follow these steps:
+
+1. Relocate the patient to and restrain them on the Crew Medical Restraint System if required.
+2. Page an additional crewmember for assistance.
+3. Call MCC-H to request PMC.
+4. Deploy the AED:
+   - Connect the AED electrodes to the patient's chest.
+   - Turn the AED on (press the green button).
+   - Follow the verbal prompts or read the screen if prompts are inaudible.
+5. Perform CPR as directed by the AED, which typically involves 30 chest compressions followed by 2 breaths, repeated for 5 cycles (approximately 2 minutes).
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+In AED Assisted CPR, if the patient is unresponsive and not breathing or has no normal breathing (only gasping), follow these steps:
+
+1. **Assess the environment for safety hazards.**
+2. **Assess the patient's status.**
+3. **Perform CPR:**
+   - Perform 30 chest compressions for every 2 breaths (1 second each breath) for 5 cycles (approximately 2 minutes).
+4. **Relocate the patient to the Crew Medical Restraint System if required.**
+5. **Page an additional crewmember for assistance.**
+6. **Call MCC-H to request PMC.**
+7. **Deploy the AED:**
+   - Connect AED electrodes to the patient's chest.
+   - Turn the AED on (press the green button).
+   - Follow the verbal prompts or read the screen if prompts are inaudible.
+
+Continue CPR as directed by the AED prompts. If the AED advises starting CPR, repeat the CPR process after each AED prompt.
+

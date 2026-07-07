@@ -1,0 +1,95 @@
+Model       : deepseek-r1-distill-llama-70b
+Category    : text_only
+Question ID : text_q02
+Question    : What procedure should you follow after completing AED assisted CPR?
+Timestamp   : 2026-07-06 13:08:06
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+After completing AED assisted CPR, follow these steps:
+
+1. **Monitor Patient Response:**
+   - After the AED prompts 'Start CPR', perform a 10-second pulse check.
+
+2. **Assess Pulse:**
+   - If a pulse is detected:
+     - Stop chest compressions.
+     - Assist breathing as necessary.
+     - If a second rescuer is assisting, stop medication administration.
+     - Proceed to **1.103 ALS ALGORITHM, block 13, page 5, Respiratory Assessment**.
+   - If no pulse is detected:
+     - Continue performing CPR as instructed by the AED.
+
+This procedure ensures appropriate care based on the patient's response after AED use.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+After completing AED assisted CPR, follow these steps:
+
+1. **Monitor Patient Response:**
+   - Perform a 10-second pulse check after the AED prompts to start CPR.
+
+2. **Assess Pulse:**
+   - If a pulse is detected:
+     - Stop chest compressions.
+     - Assist breathing if necessary.
+     - If a second rescuer is present, stop medication administration.
+     - Proceed to **1.103 ALS Algorithm, block 13, page 5, Respiratory Assessment**.
+   - If no pulse is detected:
+     - Perform 30 chest compressions for every 2 breaths (1 second each breath).
+     - Continue this process until the AED provides further prompts.
+
+3. **Follow AED Prompts:**
+   - Continue CPR as directed by the AED's verbal or screen instructions.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+After completing AED-assisted CPR, follow these steps:
+
+1. **Monitor Patient Response**:  
+   - After the AED prompts 'Start CPR', perform a 10-second pulse check.  
+   - If a pulse is detected, proceed to step 6.  
+   - If no pulse is detected, proceed to step 7.  
+
+2. **Assist Patient (Step 6)**:  
+   - If the patient begins spontaneous breathing or a pulse is detected, stop chest compressions.  
+   - Assist breathing as necessary.  
+   - If a second rescuer is assisting, stop medication administration.  
+   - Proceed to 1.103 ALS ALGORITHM, block 13, page 5, Respiratory Assessment (SODF: MED CL: EMERGENCY).  
+
+3. **Perform CPR (Step 7)**:  
+   - Perform 30 chest compressions for every 2 breaths (1 second each breath) until prompted by AED.  
+   - Repeat block 5 after each 'Start CPR' prompt from AED.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+After completing AED-assisted CPR, follow these steps:
+
+1. **Monitor Patient Response:**
+   - Perform a 10-second pulse check.
+   - If a pulse is detected, proceed to step 6.
+   - If no pulse is detected, continue CPR as per step 7.
+
+2. **Assist Patient (Step 6):**
+   - If the patient begins spontaneous breathing or a pulse is detected, stop chest compressions.
+   - Assist breathing as necessary.
+   - If a second rescuer is assisting, stop medication administration.
+   - Proceed to **1.103 ALS ALGORITHM, block 13, page 5, Respiratory Assessment**.
+
+3. **Transport/Provide Care (Step 2):**
+   - Relocate the patient to and restrain them on the Crew Medical Restraint System.
+   - Page additional crewmembers for assistance.
+   - Call MCC-H to request PMC.
+   - Proceed to **1.103 ALS ALGORITHM, block 13, page 5, Respiratory Assessment**.
+
+These steps ensure appropriate follow-up care after AED-assisted CPR, focusing on patient assessment and transitioning to advanced life support protocols.
+

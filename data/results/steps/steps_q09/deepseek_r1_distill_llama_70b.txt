@@ -1,0 +1,39 @@
+Model       : deepseek-r1-distill-llama-70b
+Category    : steps
+Question ID : steps_q09
+Question    : The seizure is not stopping after several minutes. What dose of Valium do we prepare, when do we repeat it, and what should we check afterward?
+Timestamp   : 2026-07-06 14:54:50
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1. **Prepare 10 mg of Diazepam (Valium)**: Administer 2 mL intramuscularly at a concentration of 5 mg/mL.  
+2. **Repeat the dose if necessary**: If the seizure continues for more than 5 minutes or recurs, repeat the administration in 10 minutes.  
+3. **Check and document afterward**:  
+   - Collect information about the seizure event and medication usage.  
+   - Maintain separate, labeled folders for each crew member's data, including their name and GMT day.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1. Prepare 2 mL of Diazepam (Valium) at 5 mg/mL for a total of 10 mg.  
+2. If the seizure continues for more than 5 minutes or recurs, repeat the medication administration in 10 minutes.  
+3. After administration, check the patient's SpO2 using the Blood Oximeter and provide oxygen via a Low Flow Non-Rebreather Mask if necessary.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The provided context does not contain enough information.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1. Prepare 2 mL of Diazepam (Valium) at 5 mg/mL for a total dose of 10 mg.  
+2. If the seizure continues for more than 5 minutes or recurs, repeat the administration after 10 minutes.  
+3. After administration, apply a blood oximeter and collect information about the seizure event and medication use.
+

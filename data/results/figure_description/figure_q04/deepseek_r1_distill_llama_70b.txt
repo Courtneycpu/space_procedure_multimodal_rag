@@ -1,0 +1,60 @@
+Model       : deepseek-r1-distill-llama-70b
+Category    : figure_description
+Question ID : figure_q04
+Question    : The Surgeon wants pictures of a dental issue. What exactly should I inspect, photograph, and downlink, and where do I look for tooth-numbering references?
+Timestamp   : 2026-07-06 16:07:17
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 4
+Answer:
+1. **Inspect and photograph** the specific tooth and the dental issue (e.g., broken fragment, displaced filling, or repaired area) using the **Digital Camera**.  
+2. **Downlink** the photos for the Surgeon using the procedure in **1.480 D4 SETUP - MEDICAL IMAGERY** (SODF: ISS PTV: NIKON D4).  
+3. Refer to **Mouth Anatomy (2.6.001)** for tooth-numbering references.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 3
+Answer:
+To address the Surgeon's request for pictures of a dental issue, follow these steps:
+
+1. **Inspect and Photograph:**
+   - Inspect the mouth and teeth.
+   - Photo document the affected area using a Digital Camera.
+
+2. **Downlink Photos:**
+   - Downlink the photos for the Surgeon.
+
+3. **Tooth-Numbering References:**
+   - Refer to the Mouth Anatomy section for tooth-numbering guidance. The upper jaw teeth are numbered 1 through 16, and the lower jaw teeth are numbered 17 through 32.
+
+This procedure ensures proper documentation and reference for the dental issue.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 5
+Answer:
+To address the Surgeon's request for pictures of a dental issue, follow these steps:
+
+1. **Inspect and Photograph:**
+   - Focus on the affected tooth and any associated issues such as fillings, crowns, or broken fragments.
+   - Use a Digital Camera to capture clear images of the tooth and the specific dental problem.
+
+2. **Downlink Photos:**
+   - After photographing, downlink the images to the Surgeon using the procedure outlined in 1.480 D4 SETUP – MEDICAL IMAGERY with the Nikon D4 camera.
+
+3. **Tooth-Numbering References:**
+   - Refer to "Mouth Anatomy" for anatomic reference images and tooth numbering guidance, accessible through the SSC system.
+
+This process ensures that the Surgeon receives the necessary visual information for assessment.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 4
+Answer:
+1. Inspect the tooth and the dental issue (e.g., repaired filling, broken fragment).  
+2. Photograph the tooth and the dental issue using a Digital Camera.  
+3. Downlink the photos for the Surgeon.  
+4. Refer to Mouth Anatomy (Figure 2) for tooth-numbering references.
+

@@ -1,0 +1,54 @@
+Model       : medgemma-27b-it
+Category    : figure_description
+Question ID : figure_q04
+Question    : The Surgeon wants pictures of a dental issue. What exactly should I inspect, photograph, and downlink, and where do I look for tooth-numbering references?
+Timestamp   : 2026-07-06 15:58:51
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 4
+Answer:
+1.  **Inspect, photograph, and downlink:**
+    *   Mouth and the specific dental issue (e.g., repaired filling, broken tooth, exposed pulp, displaced filling).
+    *   Use the [Digital Camera].
+    *   Downlink photos for the Surgeon.
+    *   If required, refer to 1.480 D4 SETUP - MEDICAL IMAGERY, all (SODF: ISS PTV: NIKON D4).
+2.  **Tooth-numbering references:**
+    *   Refer to Mouth Anatomy (2.6.001).
+    *   Figure 2 in Mouth Anatomy (2.6.001) shows Tooth Numbering.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 3
+Answer:
+1.  Inspect the mouth and photo document the findings using the [Digital Camera].
+2.  Downlink the photos for the Surgeon.
+3.  Refer to Mouth Anatomy for anatomic reference images of the mouth and teeth.
+4.  Tooth numbering references can be found in Mouth Anatomy.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 5
+Answer:
+1.  **Photo Documenting Repair/Issue:**
+    *   Photo document the tooth and the repaired filling or crown or broken fragment or exposed pulp (depending on the specific dental procedure). Use the [Digital Camera].
+    *   For Exposed Dental Pulp: Photo document the tooth and broken fragment [Digital Camera].
+    *   For Temporary Dental Filling: Photo document the tooth and repaired filling [Digital Camera].
+    *   For Dental Crown Replacement: Photo document the tooth and repaired crown [Digital Camera].
+    *   For Loss Of Tooth: Photo document the tooth and mouth [Digital Camera].
+2.  **Downlink Photos:** Downlink the photos for the Surgeon.
+3.  **Reference for Medical Imagery:** If required, refer to 1.480 D4 SETUP - MEDICAL IMAGERY, all (SODF: ISS PTV: NIKON D4).
+4.  **Anatomic References:** To view anatomic reference images of the mouth and teeth, refer to Mouth Anatomy.
+5.  **Tooth Numbering:** The provided context does not contain information on tooth-numbering references.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 4
+Answer:
+To view anatomic reference images of the mouth and teeth, refer to Mouth Anatomy.
+To photograph the tooth and repaired filling, refer to step 3.1 in the Temporary Dental Filling procedure.
+To photograph the tooth and broken fragment, refer to step 1.1 in the Exposed Dental Pulp procedure.
+To photograph the tooth and displaced dental filling, refer to step 1 in the Temporary Dental Filling procedure.
+Tooth numbering references can be found in Mouth Anatomy, specifically in Figure 2.
+

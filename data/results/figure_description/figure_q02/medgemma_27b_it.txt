@@ -1,0 +1,66 @@
+Model       : medgemma-27b-it
+Category    : figure_description
+Question ID : figure_q02
+Question    : What anatomical landmarks are labeled in the mouth anatomy figures?
+Timestamp   : 2026-07-06 15:56:11
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 5
+Answer:
+The provided context does not contain enough information.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+The following anatomical landmarks are labeled in the mouth anatomy figures:
+- Teeth
+- Tonsil
+- Uvula
+- Tongue
+- Gingiva (gum)
+- Enamel
+- Dentin
+- Pulp
+- Cementum
+- Periodontal Ligament
+- Jawbone
+- Maxillary Upper Horseshoe
+- Mandibular Lower Lingual bar
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The following anatomical landmarks are labeled in the mouth anatomy figures:
+- Teeth
+- Tonsil
+- Gingiva (gum)
+- Tongue
+- Uvula
+- Enamel
+- Dentin
+- Pulp
+- Cementum
+- Periodontal Ligament
+- Jawbone
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 5
+Answer:
+The following anatomical landmarks are labeled in the mouth anatomy figures:
+- Teeth
+- Tonsil
+- Gingiva (gum)
+- Tongue
+- Uvula
+- Enamel
+- Dentin
+- Pulp
+- Cementum
+- Periodontal Ligament
+- Jawbone
+

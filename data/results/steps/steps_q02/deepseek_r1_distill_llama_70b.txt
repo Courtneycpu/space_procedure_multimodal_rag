@@ -1,0 +1,105 @@
+Model       : deepseek-r1-distill-llama-70b
+Category    : steps
+Question ID : steps_q02
+Question    : How do you perform CPR with one rescuer available?
+Timestamp   : 2026-07-06 14:07:17
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+To perform CPR with one rescuer available, follow these steps:
+
+1. **ASSESS**  
+   - Assess the environment for safety hazards.  
+   - Assess the patient's status.  
+
+2. **PERFORM CPR**  
+   - Perform 30 chest compressions for every 2 breaths (1 second each breath) for 5 cycles (approximately 2 minutes).  
+   - As required, relocate the patient to and restrain them on the Crew Medical Restraint System.  
+   - Page an additional crewmember for assistance.  
+   - Call MCC-H to request PMC.  
+
+3. **CONTINUE CPR**  
+   - Repeat the CPR cycle after each 'Start CPR' prompt from the AED.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+To perform CPR with one rescuer available, follow these steps:
+
+1. **ASSESS**  
+   - Assess the environment for safety hazards.  
+   - Assess the patient's status.  
+
+2. **PERFORM CPR**  
+   - Perform 30 chest compressions for every 2 breaths (1 second each breath) for 5 cycles (approximately 2 minutes).  
+
+3. **RELOCATE AND RESTRAIN PATIENT**  
+   - Relocate the patient to and restrain them on the Crew Medical Restraint System.  
+
+4. **CALL FOR ASSISTANCE**  
+   - Page an additional crewmember for assistance.  
+   - Call MCC-H to request PMC.  
+
+5. **DEPLOY AED**  
+   - Connect AED electrodes to the patient's chest.  
+   - Turn the AED on (press the green "ON" button).  
+   - Follow verbal prompts or read prompts on the screen if inaudible.  
+
+6. **MONITOR PATIENT RESPONSE**  
+   - After the AED prompts "Start CPR," perform a 10-second pulse check.  
+   - If no pulse is detected, continue CPR as directed by the AED.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+To perform CPR with one rescuer available, follow these steps:
+
+1. **ASSESS**  
+   - Assess the environment for safety hazards.  
+   - Assess the patient's status.  
+
+2. **DEPLOY AED**  
+   - Connect AED electrodes to the patient's chest.  
+   - Turn the AED on (press the green button).  
+   - Follow the verbal prompts from the AED. If inaudible, read the prompts on the screen.  
+
+3. **MONITOR PATIENT RESPONSE**  
+   - After the AED prompts "Start CPR," perform a 10-second pulse check.  
+     - If a pulse is detected, stop chest compressions and assist breathing as necessary.  
+     - If no pulse is detected, proceed to perform CPR.  
+
+4. **PERFORM CPR**  
+   - Perform 30 chest compressions for every 2 breaths (1 second each breath).  
+   - Repeat this process after each "Start CPR" prompt from the AED.  
+
+If the patient begins spontaneous breathing or a pulse is detected during CPR, stop chest compressions and assist breathing as necessary.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+To perform CPR with one rescuer available, follow these steps:
+
+1. **ASSESS**  
+   - Assess the environment for safety hazards.  
+   - Assess the patient's status.  
+
+2. **DEPLOY AED**  
+   - Connect AED electrodes to the patient's chest.  
+   - Turn on the AED (press the green button).  
+   - Follow the verbal prompts from the AED. If the prompts are inaudible, read them from the screen.  
+
+3. **PERFORM CPR**  
+   - Perform 30 chest compressions for every 2 breaths (1 second each breath).  
+   - Continue this cycle until the AED prompts you to start CPR again.  
+
+4. **FOLLOW AED INSTRUCTIONS**  
+   - After each "Start CPR" prompt from the AED, repeat the CPR cycle.  
+
+This procedure is supported by the visual details in Figure 1, which shows the correct placement of AED electrodes on the patient's chest.
+

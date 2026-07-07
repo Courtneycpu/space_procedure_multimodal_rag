@@ -20,7 +20,7 @@ env/
 
 
 # Generated vector stores and database artifacts
-data
+
 data/chroma_baseline/
 data/chroma_enriched/
 

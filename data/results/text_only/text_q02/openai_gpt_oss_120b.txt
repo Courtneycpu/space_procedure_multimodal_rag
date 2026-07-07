@@ -1,0 +1,48 @@
+Model       : openai-gpt-oss-120b
+Category    : text_only
+Question ID : text_q02
+Question    : What procedure should you follow after completing AED assisted CPR?
+Timestamp   : 2026-07-06 12:51:00
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+- After finishing AED‑assisted CPR, proceed to **1.103 ALS ALGORITHM, block 13 – Respiratory Assessment** (page 5).
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+After you have finished the AED‑assisted CPR sequence, transition to the Advanced Life Support (ALS) algorithm:
+
+- **Go to the “1.103 ALS ALGORITHM” document.**  
+  - If two rescuers were present, proceed to **block 1** of the ALS algorithm.  
+  - If the patient was unresponsive and not breathing (or only gasping), proceed to **block 13**, page 5, “Respiratory Assessment.”  
+
+This ALS algorithm provides the next steps for continued emergency care.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+**After completing AED‑assisted CPR, follow the “Monitor Patient Response” block:**
+
+1. **Perform a 10‑second pulse check** after the AED prompts “Start CPR.”  
+2. **If a pulse is detected** → go to **Step 6 – Assist Patient** (stop chest compressions, assist breathing as needed, and discontinue any medication administration if a second rescuer is present).  
+3. **If no pulse is detected** → go to **Step 7 – Perform CPR** (30 compressions / 2 breaths) and repeat the monitoring block after each subsequent “Start CPR” prompt from the AED.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+**After completing AED‑assisted CPR:**
+
+1. **Monitor patient response** – after the AED prompts “Start CPR,” perform a 10‑second pulse check.  
+2. **If a pulse or spontaneous breathing is detected:**  
+   a. Stop chest compressions.  
+   b. Assist breathing as necessary.  
+   c. If a second rescuer was administering medication, stop the medication.  
+3. **Proceed to the ALS algorithm** – go to 1.103 ALS ALGORITHM, block 13, page 5, Respiratory Assessment.
+

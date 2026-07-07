@@ -38,10 +38,10 @@ from generation import generate_text
 
 
 DEFAULT_MODELS = [
-    "medgemma-27b-it",
-    "deepseek-r1-distill-llama-70b",
-    "qwen3.5-122b-a10b",
-    "openai-gpt-oss-120b",
+    #"medgemma-27b-it",
+   #"deepseek-r1-distill-llama-70b",
+   "qwen3.5-122b-a10b",
+    #"openai-gpt-oss-120b",
 ]
 
 

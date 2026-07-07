@@ -1,0 +1,67 @@
+Model       : openai-gpt-oss-120b
+Category    : figure_description
+Question ID : figure_q04
+Question    : The Surgeon wants pictures of a dental issue. What exactly should I inspect, photograph, and downlink, and where do I look for tooth-numbering references?
+Timestamp   : 2026-07-06 16:37:35
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 4
+Answer:
+**What to inspect, photograph, and downlink**
+
+1. **Inspect the affected tooth** (and any displaced filling or broken fragment; remove debris if present).  
+2. **Photograph the tooth and the dental issue** (e.g., displaced dental filling or broken fragment) with the **Digital Camera**.  
+3. **Downlink the photos** to the Surgeon using the medical‑imagery procedure (see *1.480 D4 SETUP – MEDICAL IMAGERY*, ISS PTV: NIKON D4).
+
+**Where to find tooth‑numbering references**
+
+- Consult the **Mouth Anatomy** reference; the tooth‑numbering chart is shown in **Figure 2 – “Tooth Numbering.”**
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 3
+Answer:
+**What to inspect, photograph, and downlink**
+
+1. **Inspect** the affected tooth and the temporary filling (the repaired area).  
+2. **Photograph** the tooth and the repaired filling with a **Digital Camera**.  
+3. **Downlink** the images to the Surgeon using the medical‑imagery procedure (refer to **1.480 D4 SETUP – MEDICAL IMAGERY**, SODF: ISS PTV: NIKON D4).
+
+**Where to find tooth‑numbering references**
+
+- Consult the **Mouth Anatomy** reference in the dental documents. It contains the tooth‑numbering diagram (teeth numbered 1‑16 for the maxillary arch and 17‑32 for the mandibular arch).
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 5
+Answer:
+**What to inspect, photograph, and downlink**
+
+1. **Inspect** the affected tooth and the dental problem (e.g.,  
+   • repaired temporary filling,  
+   • repaired crown, or  
+   • broken tooth fragment).  
+2. **Photograph** the tooth and the repair/lesion with the **Digital Camera** (the same camera used for all dental photo‑documenting steps).  
+3. **Downlink** the images to the Surgeon using the standard medical‑imagery procedure: refer to **1.480 D4 SETUP – MEDICAL IMAGERY** (SODF: ISS PTV: NIKON D4).
+
+**Where to find tooth‑numbering references**
+
+- Consult the **“Mouth Anatomy”** reference images, which contain the anatomic tooth‑numbering charts used for identifying and labeling the photographed teeth.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 4
+Answer:
+**What to inspect, photograph, and downlink**
+
+1. **Inspect** the affected tooth (e.g., the tooth with a displaced or broken filling).  
+2. **Photograph** the tooth and the dental material (filling, fragment, or repair) with a **Digital Camera**.  
+3. **Downlink** the images to the Surgeon. Use the medical‑imagery downlink procedure **1.480 D4 SETUP – MEDICAL IMAGERY** (SODF: ISS PTV NIKON D4).
+
+**Where to find tooth‑numbering references**
+
+- Consult the **Mouth Anatomy** reference (document 2.6.001 MOUTH ANATOMY).  
+- See **Figure 2 – “Tooth Numbering”** for the complete numbering scheme of the upper and lower teeth.
+

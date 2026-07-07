@@ -1,0 +1,69 @@
+Model       : qwen3.5-122b-a10b
+Category    : natural_language
+Question ID : natural_q03
+Question    : Someone got splashed with a possible toxic substance, maybe in the eyes and on clothing. What should we do first to avoid exposing more crew and clean them up?
+Timestamp   : 2026-07-06 17:06:22
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+Error: LLM call failed.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+Error: LLM call failed.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+Based on the Toxic Exposure procedure (1.106), here are the first steps to avoid exposing more crew and clean up:
+
+**1. RESCUER SAFETY (First Priority)**
+- Take respiratory, eye, and skin precautions prior to removing patient from exposure
+- This minimizes the number of crew exposed
+
+**2. DECONTAMINATING PATIENT**
+
+**For Skin/Clothing Exposure:**
+- Quickly remove soiled clothes
+- Brush off visible particulate and wipe liquids off patient with Towel
+- Irrigate contaminated areas with water
+
+**For Eye Exposure:**
+- If wearing contact lenses, remove and discard
+- Immediately flush with water from Drink Bag
+- Configure eyewash station in the SM at the CBO-3B port, then irrigate eye until pain resolves or directed to stop by Surgeon
+- If required, refer to 2.3.304 EYE PROCEDURE - EYEWASH KIT USE
+
+**Required Items:**
+- Drink Bag
+- Towel
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+**First - Rescuer Safety (to minimize crew exposure):**
+- Take respiratory, eye, and skin precautions prior to removing patient from exposure.
+
+**Then - Decontaminate the Patient:**
+
+**For Skin/Clothing Exposure:**
+1. Quickly remove soiled clothes.
+2. Brush off visible particulate and wipe liquids off patient with Towel.
+3. Irrigate contaminated areas with water.
+
+**For Eye Exposure:**
+1. If wearing contact lenses, remove and discard.
+2. Immediately flush with water from Drink Bag.
+3. Configure eyewash station in the SM at the CBO-3B port, then irrigate eye until pain resolves or directed to stop by Surgeon.
+
+**Required Items:**
+- Drink Bag
+- Towel
+

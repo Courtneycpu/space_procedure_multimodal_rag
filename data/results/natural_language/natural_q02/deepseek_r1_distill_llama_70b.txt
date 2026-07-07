@@ -1,0 +1,42 @@
+Model       : deepseek-r1-distill-llama-70b
+Category    : natural_language
+Question ID : natural_q02
+Question    : During CPR the AED battery warning came on. Should we stop resuscitation to change it, or keep working while handling the battery problem?
+Timestamp   : 2026-07-06 17:17:24
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. Continue CPR if the patient is not responding, not breathing normally, and showing no signs of circulation.
+2. Replace the AED battery at the earliest opportunity.
+3. Notify MCC-H.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. Continue CPR if the patient is not responding, not breathing normally, and showing no signs of circulation.
+2. Check the Battery indicator in the MAIN DISPLAY.
+3. Replace the AED Battery at the earliest opportunity.
+4. Notify MCC-H.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+- Continue CPR if the patient is not responding, not breathing normally, and showing no signs of circulation.
+- Check the Battery indicator in the MAIN DISPLAY.
+- Replace the AED Battery at the earliest opportunity.
+- Notify MCC-H.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. Continue CPR if the patient is not responding, not breathing normally, and showing no signs of circulation.
+2. Check the Battery indicator in the MAIN DISPLAY.
+3. Replace the AED Battery at the earliest opportunity.
+4. Notify MCC-H.
+

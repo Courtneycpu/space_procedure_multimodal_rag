@@ -1,0 +1,51 @@
+Model       : medgemma-27b-it
+Category    : steps
+Question ID : steps_q07
+Question    : If the choking patient is awake, how do I perform abdominal thrusts and when do I stop?
+Timestamp   : 2026-07-06 14:43:12
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1.  Position behind patient.
+2.  Make fist.
+3.  Place fist above belly button but below ribcage. (Figure 1)
+4.  Pull sharply inward and upward.
+5.  Repeat until object clears or patient becomes unconscious.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1.  Position behind patient.
+2.  Make fist.
+3.  Place fist above belly button but below ribcage.
+4.  Pull sharply inward and upward.
+5.  Repeat until object clears or patient becomes unconscious.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1.  Position behind patient.
+2.  Make fist.
+3.  Place fist above belly button but below ribcage. (Figure 1)
+4.  Pull sharply inward and upward.
+5.  Repeat until object clears or patient becomes unconscious.
+    *   If the object clears, go to step 4.
+    *   If the patient becomes unconscious, go to step 3.
+
+Figure 1.- Abdominal Thrust. The figure shows illustrations demonstrating the proper hand placement for performing the Heimlich maneuver on a person. Visual entities include a person, rib cage, hands, and abdomen.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1.  Position behind patient.
+2.  Make fist.
+3.  Place fist above belly button but below ribcage. (Figure 1)
+4.  Pull sharply inward and upward.
+5.  Repeat until object clears or patient becomes unconscious.
+

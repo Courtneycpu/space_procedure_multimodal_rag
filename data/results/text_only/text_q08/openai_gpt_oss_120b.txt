@@ -1,0 +1,76 @@
+Model       : openai-gpt-oss-120b
+Category    : text_only
+Question ID : text_q08
+Question    : For loss of tooth, how do I control bleeding, treat pain, and document the injury?
+Timestamp   : 2026-07-06 12:53:54
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 3
+Answer:
+**Loss of Tooth – Bleeding, Pain, and Documentation**
+
+1. **Control bleeding**  
+   - Apply direct pressure to the tooth socket with a **4" × 4" gauze pad**.  
+   - Maintain continuous pressure until bleeding stops.
+
+2. **Treat pain**  
+   - **Mild‑to‑moderate pain:**  
+     - Take **2 tablets Ibuprofen (Motrin) – 400 mg each** (Convenience Medication Pack, White).  
+     - Take **1 tablet Hydrocodone/Acetaminophen (Vicodin HP) – 10 mg/300 mg** (Oral Medication Pack, Purple).  
+   - **Severe or immediate relief needed:**  
+     - Perform the **Nerve Block procedure (2.6.301 DENTAL PROCEDURE – NERVE BLOCK)** before or in addition to medication.
+
+3. **Document the injury**  
+   - Place the extracted tooth in a **Ziplock bag** and temporarily stow it.  
+   - **Photo‑document** the tooth and surrounding mouth using a **digital camera**.  
+
+*All items listed (gauze, medication packs, Ziplock bag, digital camera) are provided in the standard dental kits.*
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 3
+Answer:
+**Loss of Tooth – Procedure**
+
+1. **Control bleeding**  
+   - Apply direct pressure to the tooth socket with a **Gauze 4"x4"**.  
+   - Hold continuous pressure until bleeding stops.
+
+2. **Treat pain**  
+   - Take **two (2) tablets Ibuprofen (Motrin) – 400 mg each** from the **Convenience Medication Pack (White)**.  
+   - Take **one (1) tablet Hydrocodone and Acetaminophen (Vicodin HP) – 10 mg/300 mg** from the **Oral Medication Pack (Purple)**.  
+   - *If pain is severe or immediate relief is required*: perform a **dental nerve block (procedure 2.6.301)** before medication.
+
+3. **Document the injury**  
+   - **Place the extracted tooth in a Ziplock bag** and temporarily stow it.  
+   - **Photo‑document the tooth and mouth** using a **Digital Camera**.  
+   - **Downlink the photos to the Surgeon** via the **SSC** (refer to 1.480 D4 SETUP – MEDICAL IMAGERY).  
+   - After downlink, **discard the Ziplock bag**.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 3
+Answer:
+1. **Control bleeding** – Apply direct pressure to the tooth socket with **Gauze 4"x4"** and hold continuous pressure until bleeding stops.  
+
+2. **Treat pain** – Take **two (2) tablets Ibuprofen (Motrin) (400 mg per tablet)** and **one (1) tablet Hydrocodone‑Acetaminophen (Vicodin HP) (10 mg/300 mg per tablet)** for pain control.  
+
+3. **Document the injury** –  
+   a. Place the extracted tooth in a **Ziplock bag** and temporarily stow it.  
+   b. **Photo‑document** the tooth and the mouth using a **Digital Camera**.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 3
+Answer:
+1. **Control bleeding** – Apply direct pressure to the tooth socket with **Gauze 4"x4"**. Hold continuous pressure until bleeding stops.  
+
+2. **Treat pain** – Take **two (2) tablets Ibuprofen (Motrin) 400 mg per tablet** (Convenience Medication Pack, White) **and one (1) tablet Hydrocodone‑Acetaminophen (Vicodin HP) 10 mg/300 mg per tablet** (Oral Medication Pack, Purple).  
+
+3. **Document the injury** –  
+   - Place the extracted tooth in a **Ziplock bag** and temporarily stow it.  
+   - **Photo‑document** the tooth and mouth using the **Digital Camera**.  
+   - **Downlink** the photos to the Surgeon.
+

@@ -1,0 +1,35 @@
+Model       : medgemma-27b-it
+Category    : steps
+Question ID : steps_q09
+Question    : The seizure is not stopping after several minutes. What dose of Valium do we prepare, when do we repeat it, and what should we check afterward?
+Timestamp   : 2026-07-06 14:44:20
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+The provided context does not contain enough information.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1.  Prepare 2 mL Diazepam (Valium) 5 mg/mL for a total of 10 mg [Topical & Injectable Medication Pack (Brown)].
+2.  If seizure continues for > 5 minutes or for repeated seizures, repeat medication administration in 10 minutes.
+3.  After a seizure, the patient will be confused for several minutes. Examine the head, extremities, teeth and tongue for injuries.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The provided context does not contain enough information.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1.  Prepare 2 mL Diazepam (Valium) 5 mg/mL for a total of 10 mg [Topical & Injectable Medication Pack (Brown)].
+2.  If seizure continues for > 5 minutes or for repeated seizures, repeat medication administration in 10 minutes.
+3.  The context does not specify what to check afterward.
+

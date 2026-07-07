@@ -1,0 +1,45 @@
+Model       : medgemma-27b-it
+Category    : steps
+Question ID : steps_q05
+Question    : My crewmate is showing signs of a serious allergic reaction and I have the EpiPen. Where exactly do I inject it, how long do I hold it, and can I give another dose if symptoms come back?
+Timestamp   : 2026-07-06 14:38:24
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1.  **Injection Location:** Press the needle end perpendicular to and firmly against the patient's outer thigh.
+2.  **Hold Time:** Hold firmly against the thigh for 10 seconds.
+3.  **Repeat Dose:** Epinephrine (EpiPen) may be repeated every 20 minutes if symptoms recur or progress.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1.  **Where to inject:** Press the needle end perpendicular to and firmly against the patient's outer thigh.
+2.  **How long to hold:** Hold firmly against the thigh for 10 seconds.
+3.  **Repeat dose:** Epinephrine (EpiPen) may be repeated every 20 minutes if symptoms recur or progress.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1.  **Where exactly do I inject it?**
+    Using a jabbing motion, press the needle end perpendicular to and firmly against patient's outer thigh until a click is heard or felt.
+2.  **How long do I hold it?**
+    Hold firmly against thigh for 10 seconds.
+3.  **Can I give another dose if symptoms come back?**
+    Epinephrine (EpiPen) may be repeated every 20 minutes if symptoms recur or progress.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1.  **Where exactly do I inject it?**
+    The provided context does not specify the exact injection location.
+2.  **How long do I hold it?**
+    The provided context does not specify how long to hold the EpiPen.
+3.  **Can I give another dose if symptoms come back?**
+    Epinephrine (EpiPen) may be repeated every 20 minutes if symptoms recur or progress.
+

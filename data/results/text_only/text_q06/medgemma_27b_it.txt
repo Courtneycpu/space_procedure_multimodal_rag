@@ -1,0 +1,32 @@
+Model       : medgemma-27b-it
+Category    : text_only
+Question ID : text_q06
+Question    : What should I do if the medicine does not flow through the Intraosseous needle?
+Timestamp   : 2026-07-06 14:38:59
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. Go to block 20, page 7, Intraosseous Needle Troubleshooting.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1.  Go to block 20, page 7, Intraosseous Needle Troubleshooting.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1.  Go to block 20, page 7, Intraosseous Needle Troubleshooting.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. Attach Syringe 10 mL to IV Cap on failed Intraosseous Device(s).
+2. Pull back on plunger of Syringe 10 mL >= 5 mL, then disconnect Syringe 10 mL from blue IV Cap. Blood or fluid may or may not be seen. This action will potentially clear bone fragments from the needle.
+

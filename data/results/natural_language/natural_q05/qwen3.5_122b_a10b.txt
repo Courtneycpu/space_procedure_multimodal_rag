@@ -1,0 +1,51 @@
+Model       : qwen3.5-122b-a10b
+Category    : natural_language
+Question ID : natural_q05
+Question    : A crewmate says they cannot breathe well, and I need to quickly report useful vitals to the Surgeon. What should I measure first and how?
+Timestamp   : 2026-07-06 17:08:01
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+Error: LLM call failed.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+Error: LLM call failed.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 3
+Answer:
+The provided context does not contain enough information.
+
+The retrieved context for the "Difficulty Breathing" emergency procedure (1.108) mentions:
+- Collecting information about symptoms, medications, fever, cough, and breathing severity (Step 5.1)
+- Calling MCC-H to request PMC (Step 5.2)
+- Using a Blood Oximeter only "When directed by Surgeon" (Step 6)
+
+However, the context does not specify:
+- What vitals to measure FIRST before Surgeon direction
+- How to measure those vitals (specific measurement procedure)
+- Any initial vital measurement steps prior to contacting the Surgeon
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**First Vitals to Measure:**
+
+1. **Pulse and Respiratory Rate**
+
+**How to Measure:**
+
+1. Count Pulse for 15 seconds and multiply by four
+2. Count Respiratory Rate for 15 seconds and multiply by four
+3. Record data for later reporting to Surgeon
+
+**Procedure Reference:** Emergency Procedure: Difficulty Breathing, Step 1.1 - Count Pulse and Respiratory Rate
+

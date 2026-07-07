@@ -1,0 +1,37 @@
+Model       : medgemma-27b-it
+Category    : steps
+Question ID : steps_q08
+Question    : During a seizure, how should I protect the patient from injury and what should I never do with the patient's mouth?
+Timestamp   : 2026-07-06 14:43:47
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1.  Protect patient from injury by preventing impact of the body with hard structures.
+2.  Attempt to locate the patient in the center of a module away from structures.
+3.  Never attempt to pry open or put anything in the mouth during a seizure.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1.  Protect patient from injury by preventing impact of the body with hard structures.
+2.  Attempt to locate the patient in the center of a module away from structures.
+3.  Never attempt to pry open or put anything in the mouth during a seizure.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 3
+Answer:
+1.  **Protecting from injury:** Protect the patient from injury by preventing impact of the body with hard structures. Attempt to locate the patient in the center of a module away from structures.
+2.  **What to never do with the patient's mouth:** Never attempt to pry open or put anything in the mouth during a seizure.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1.  **Protecting from injury:** Protect patient from injury by preventing impact of the body with hard structures. Attempt to locate the patient in the center of a module away from structures.
+2.  **What should I never do with the patient's mouth?:** Never attempt to pry open or put anything in the mouth during a seizure.
+

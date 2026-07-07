@@ -1,0 +1,54 @@
+Model       : medgemma-27b-it
+Category    : steps
+Question ID : steps_q11
+Question    : A crewmate lost a filling and there is a cavity. How do we pack the temporary filling material, and how long should they avoid food or drinking afterward?
+Timestamp   : 2026-07-06 14:46:04
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1.  Puncture end of Temporary Tooth Filling.
+2.  Squeeze Temporary Tooth Filling material onto finger.
+3.  Roll material into a ball.
+Subject may resume drinking in approximately 1 hour.
+Limit solid or hard food consumption on the affected side of the mouth for first 12 to 24 hours as filling hardens.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1.  Puncture end of Temporary Tooth Filling.
+2.  Squeeze Temporary Tooth Filling material onto finger.
+3.  Roll material into a ball.
+4.  Subject may resume drinking in approximately 1 hour.
+5.  Limit solid or hard food consumption on the affected side of the mouth for first 12 to 24 hours as filling hardens.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1.  Puncture end of Temporary Tooth Filling.
+2.  Place Temporary Tooth Filling into the tooth cavity and gently form to tooth.
+3.  Wipe off excess with Gauze 4"x4".
+4.  Have subject firmly bite down on Temporary Tooth Filling for 2 minutes, allowing the Temporary Tooth Filling to form to the surfaces of the tooth and to harden.
+5.  Adjust filling by removing and smoothing excess filling using Gauze 4"x4" and Dental Carver File (G).
+6.  The filling will achieve initial set in 5 minutes.
+7.  Subject may resume drinking in approximately 1 hour.
+8.  Limit solid or hard food consumption on the affected side of the mouth for first 12 to 24 hours as filling hardens.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1.  Puncture end of Temporary Tooth Filling.
+2.  Squeeze Temporary Tooth Filling material onto finger.
+3.  Roll material into a ball.
+4.  Place Temporary Tooth Filling into the tooth cavity and gently form to tooth.
+5.  Wipe off excess with Gauze 4"x4".
+6.  Have subject firmly bite down on Temporary Tooth Filling for 2 minutes, allowing the Temporary Tooth Filling to form to the surfaces of the tooth and to harden.
+7.  Adjust filling by removing and smoothing excess filling using Gauze 4"x4" and Dental Carver File (G).
+8.  Subject may resume drinking in approximately 1 hour.
+9.  Limit solid or hard food consumption on the affected side of the mouth for first 12 to 24 hours as filling hardens.
+

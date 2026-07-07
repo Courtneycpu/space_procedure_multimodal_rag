@@ -1,0 +1,38 @@
+Model       : medgemma-27b-it
+Category    : steps
+Question ID : steps_q02
+Question    : How do you perform CPR with one rescuer available?
+Timestamp   : 2026-07-06 14:36:17
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1.  Assess environment for safety hazards.
+2.  Assess patient status.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1.  Assess environment for safety hazards.
+2.  Assess patient status.
+    *   If patient unresponsive and breathing normally -> 2
+    *   If patient unresponsive and not breathing or no normal breathing (only gasping) -> 3
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1.  Assess environment for safety hazards.
+2.  Assess patient status.
+3.  Perform 30 chest compressions for every 2 breaths (1 second each breath) until prompted by AED.
+4.  Repeat block 5 after each 'Start CPR' prompt from AED.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The provided context does not contain enough information.
+

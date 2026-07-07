@@ -1,0 +1,36 @@
+Model       : medgemma-27b-it
+Category    : figure_description
+Question ID : figure_q01
+Question    : What does the upper injection technique figure show and what labels are visible?
+Timestamp   : 2026-07-06 15:51:48
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The provided context does not contain enough information.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The upper injection technique figure shows the placement of a dental syringe for an upper nerve block.
+The labels visible are:
+- "Moveable Membrane (mucobuccal fold)"
+- "Dental Syringe"
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The upper injection technique figure (Figure 2) shows an image demonstrating the placement of a dental syringe for an injection into the mucobuccal fold of the mouth. Visible labels include:
+- Moveable Membrane (mucobuccal fold)
+- Dental Syringe
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The upper injection technique figure (Figure 2) shows an image demonstrating the placement of a dental syringe for an injection into the mucobuccal fold of the mouth. Visible labels include: Moveable Membrane (mucobuccal fold), Dental Syringe.
+

@@ -1,0 +1,87 @@
+Model       : openai-gpt-oss-120b
+Category    : steps
+Question ID : steps_q02
+Question    : How do you perform CPR with one rescuer available?
+Timestamp   : 2026-07-06 13:08:19
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**CPR with a single rescuer**
+
+1. **Assess**  
+   1.1. Assess the environment for safety hazards.  
+   1.2. Assess the patient’s status.
+
+2. **Perform CPR**  
+   2.1. Deliver **30 chest compressions**.  
+   2.2. Give **2 rescue breaths** (1 second each).  
+   2.3. Continue the 30‑compressions/2‑breaths cycle for **5 cycles** (≈ 2 minutes) or until prompted by the AED.  
+   2.4. Repeat the cycle after each “Start CPR” prompt from the AED.
+
+3. **Additional actions as needed**  
+   - Relocate and restrain the patient on the Crew Medical Restraint System if required.  
+   - Page an additional crewmember for assistance.  
+   - Call MCC‑H to request PMC.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1. **ASSESS** – Assess the environment for safety hazards and assess the patient’s status. (One rescuer proceeds directly to this step.)
+
+2. **TRANSPORT / PROVIDE CARE** –  
+   - Relocate and restrain the patient on the Crew Medical Restraint System.  
+   - Page an additional crewmember for assistance.  
+   - Call MCC‑H to request PMC.
+
+3. **PERFORM CPR** – Perform 30 chest compressions for every 2 breaths (1 second each breath) for 5 cycles (approximately 2 minutes).
+
+4. **DEPLOY AED** –  
+   - Connect AED electrodes to the patient’s chest.  
+   - Press the green “ON” button.  
+   - Follow the verbal prompts (or read the prompts on the screen if inaudible).
+
+5. **MONITOR PATIENT RESPONSE** – After the AED prompts “Start CPR,” perform a 10‑second pulse check and proceed according to whether a pulse is detected.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**CPR with a single rescuer**
+
+1. **Assess** – Check the environment for safety hazards and assess the patient’s status.  
+2. **Deploy the AED** – Connect the AED electrodes to the patient’s chest, turn the AED ON, and follow its verbal (or visual) prompts.  
+3. **Perform CPR** – When the AED prompts “Start CPR,” give **30 chest compressions** followed by **2 breaths** (each breath ≈ 1 second).  
+4. **Repeat** – After each “Start CPR” prompt from the AED, repeat the 30‑compressions/2‑breaths cycle until the AED advises otherwise or a pulse/spontaneous breathing is detected.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**One‑rescuer CPR (AED‑assisted)**  
+
+1. **Assess**  
+   - Assess the environment for safety hazards.  
+   - Assess the patient’s status.  
+
+2. **Prepare the patient** (as required)  
+   - Relocate and restrain the patient on the Crew Medical Restraint System.  
+
+3. **Deploy the AED**  
+   - Connect the AED electrodes to the patient’s chest.  
+   - Turn the AED “ON” (green) and press the power button.  
+   - Follow the AED’s verbal prompts; if the prompts are inaudible, read them on the screen.  
+
+4. **Perform CPR**  
+   - Deliver **30 chest compressions** followed by **2 rescue breaths** (each breath ≈ 1 second).  
+   - Continue this 30‑compressions/2‑breaths cycle until the AED prompts you to pause or to resume compressions.  
+   - After each “Start CPR” prompt from the AED, repeat the cycle.  
+
+5. **Re‑assess**  
+   - If the patient begins spontaneous breathing or a pulse is detected, **stop chest compressions** and provide assisted breathing as needed.  
+
+(Repeat steps 3–4 as directed by the AED until advanced care is available.)
+

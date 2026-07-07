@@ -1,0 +1,89 @@
+Model       : deepseek-r1-distill-llama-70b
+Category    : figure_description
+Question ID : figure_q03
+Question    : We need emergency bone access for medication. Where is the leg insertion site and what are the main setup and activation steps for the IO device?
+Timestamp   : 2026-07-06 16:06:05
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The leg insertion site for the intraosseous (IO) device is located by placing a finger on the bony protrusion identified by a circle, moving 2 cm towards the inner leg, and then 1 cm up towards the knee, marked by a plus (as shown in Figure 2).
+
+The main setup and activation steps are as follows:
+
+1. **Prepare the Intraosseous Device:**
+   - Unstow the Emergency Medical Treatment Pack (Red) and the Intraosseous Device Start Kit.
+   - Attach the IV Cap to the Syringe 10 mL (Figure 1).
+   - Expose the leg to the knee using scissors.
+
+2. **Post-Insertion Steps:**
+   - Place the safety latch between the skin and the hub of the Intraosseous needle (Figure 5).
+   - Secure the safety latch with Medical Tape (Figure 6).
+   - Stabilize the Intraosseous needle and remove the inner needle.
+   - Attach the Syringe and IV Cap assembly to the Intraosseous needle (Figure 6).
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+**Insertion Site:**
+- Place finger on the bony protrusion identified by a circle.
+- Move finger 2 cm towards the inner leg.
+- Move finger 1 cm up towards the knee, identified by a "+".
+
+**Setup Steps:**
+1. Unstow the Emergency Medical Treatment Pack (Red) and Intraosseous Device Start Kit.
+2. Attach the IV Cap to the Syringe 10 mL.
+3. Expose the leg to the knee using Scissors - Trauma.
+4. Tear off two 10 cm pieces of Medical Tape and set aside.
+
+**Activation Steps:**
+1. Remove the safety latch and stow it for later use.
+2. Maintain positive pressure on the blue barrel, keeping it perpendicular to the skin at the insertion point.
+3. Place the palm of your other hand over the gray end of the Intraosseous Device and apply gentle pressure to activate. A click will sound when activated.
+4. Gently lift the Intraosseous Device, exposing the needle unit.
+
+**Warning:** The needle could eject from the blue barrel and become a projectile.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. **Leg Insertion Site**:  
+   - Place finger on the bony protrusion (identified by a circle).  
+   - Move finger 2 cm towards the inner leg.  
+   - Move finger 1 cm up towards the knee (identified by a "+").  
+
+2. **Setup and Activation Steps for the IO Device**:  
+   - Remove the Intraosseous Device from packaging and place the blue barrel on the insertion point.  
+   - Insert the needle at a 90-degree angle with gentle pressure until it seats.  
+   - Activate the device according to the manufacturer's instructions.  
+
+**Warning**: The needle could eject from the end of the blue barrel, becoming a projectile.  
+
+If unsuccessful, attempt to re-administer medication using the other leg.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. **Leg Insertion Site:**
+   - Place finger on the bony protrusion identified by a circle.
+   - Move finger 2 cm towards the inner leg.
+   - Move finger 1 cm up towards the knee, identified by a "+".
+
+2. **Setup Steps:**
+   1. Unstow the Emergency Medical Treatment Pack (Red).
+   2. Tear off two 10 cm pieces of Medical Tape and set aside.
+   3. Attach IV Cap to Syringe (refer to Figure 1).
+   4. Expose leg to knee using Scissors - Trauma.
+
+3. **Activation Steps:**
+   1. Attach Syringe 10 mL to IV Cap on the Intraosseous Device.
+   2. Pull back on the plunger of the Syringe 10 mL by at least 5 mL, then disconnect it from the blue IV Cap. (This may clear bone fragments.)
+   3. Remove Intraosseous Device from packaging and place the blue barrel on the insertion point.
+
+**Warning:** The needle could eject from the end of the blue barrel, becoming a projectile. Ensure the blue barrel is securely placed on the insertion point.
+

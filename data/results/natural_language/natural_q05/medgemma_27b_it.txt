@@ -1,0 +1,49 @@
+Model       : medgemma-27b-it
+Category    : natural_language
+Question ID : natural_q05
+Question    : A crewmate says they cannot breathe well, and I need to quickly report useful vitals to the Surgeon. What should I measure first and how?
+Timestamp   : 2026-07-06 17:45:59
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1.  Count Pulse and Respiratory Rate.
+2.  Measure each by counting for 15 seconds and multiplying by four.
+3.  Record data for later reporting to Surgeon.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1.  **Count Pulse and Respiratory Rate:** Measure each by counting for 15 seconds and multiplying by four.
+2.  **Record SpO2 reading:**
+    *   Retrieve Blood Oximeter from Medical Diagnostic Pack (Blue).
+    *   Connect the Blood Oximeter Sensor to the Blood Oximeter.
+    *   Place the sensor on the patient.
+    *   Press the Power button.
+    *   Press the [Display] button until the red dot is shown over SpO2 in the top display window.
+    *   Record the SpO2 reading from the display.
+    *   Press and hold the Power button.
+3.  **Obtain Blood Pressure:**
+    *   Retrieve Blood Pressure Cuff and Blood Pressure Monitor from Medical Diagnostic Pack (Blue).
+    *   Place the Blood Pressure Cuff on the patient's bare arm.
+    *   Press the [On/Off] button.
+    *   Record the pulse and blood pressure from the display.
+4.  **Record data:** Record all the measured data (Pulse, Respiratory Rate, SpO2, Blood Pressure) for later reporting to the Surgeon.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 3
+Answer:
+The provided context does not contain enough information.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1.  **Count Pulse and Respiratory Rate**
+    *   Measure each by counting for 15 seconds and multiplying by four.
+    *   Record data for later reporting to Surgeon.
+

@@ -1,0 +1,69 @@
+Model       : qwen3.5-122b-a10b
+Category    : text_only
+Question ID : text_q08
+Question    : For loss of tooth, how do I control bleeding, treat pain, and document the injury?
+Timestamp   : 2026-07-06 13:21:21
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 3
+Answer:
+Error: LLM call failed.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 3
+Answer:
+Error: LLM call failed.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 3
+Answer:
+**1. CONTROLLING BLEEDING**
+1. Apply direct pressure to the tooth socket with Gauze 4"x4"
+2. Hold continuous pressure until bleeding stops
+
+**2. TREATING PAIN**
+1. Take two (2) tablets Ibuprofen (Motrin) (400 mg per tablet) from Convenience Medication Pack (White)
+2. Take one (1) tablet Hydrocodone and Acetaminophen (Vicodin HP) (10 mg/300 mg per tablet) from Oral Medication Pack (Purple)
+3. If pain severe or immediate relief required, perform 2.6.301 DENTAL PROCEDURE - NERVE BLOCK
+
+**3. DOCUMENTING THE INJURY**
+1. Place tooth in Ziplock Bag and temporarily stow
+2. Photo document tooth and mouth using Digital Camera
+3. Downlink photos for Surgeon
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 3
+Answer:
+**DENTAL PROCEDURE - LOSS OF TOOTH (2.6.305)**
+
+**1. CONTROLLING BLEEDING**
+- Apply direct pressure to the tooth socket with Gauze 4"x4"
+- Hold continuous pressure until bleeding stops
+
+**2. TREATING PAIN**
+- Take two (2) tablets Ibuprofen (Motrin) (400 mg per tablet) from Convenience Medication Pack (White)
+- Take one (1) tablet Hydrocodone and Acetaminophen (Vicodin HP) (10 mg/300 mg per tablet) from Oral Medication Pack (Purple)
+- If pain severe or immediate relief required, perform 2.6.301 DENTAL PROCEDURE - NERVE BLOCK
+- If required, refer to 2.0.402 TREATING PAIN
+
+**3. TOOTH STORAGE**
+- Place tooth in Ziplock Bag and temporarily stow
+
+**4. PHOTO DOCUMENTING BROKEN TOOTH**
+- Photo document tooth and mouth using Digital Camera
+- Downlink photos for Surgeon
+- To view anatomic reference images of the mouth and teeth, refer to Mouth Anatomy
+
+**ITEMS NEEDED:**
+- Convenience Medication Pack (White): Ibuprofen (Motrin)
+- Medical Supply Pack (Green): Gauze 4"x4"
+- Oral Medication Pack (Purple): Hydrocodone and Acetaminophen (Vicodin HP)
+- Digital Camera
+- SSC
+- Ziplock Bag
+

@@ -1,0 +1,43 @@
+Model       : medgemma-27b-it
+Category    : steps
+Question ID : steps_q06
+Question    : In AED Assisted CPR, what should I do if the patient is unresponsive and not breathing or has no normal breathing, only gasping?
+Timestamp   : 2026-07-06 14:39:01
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1.  Relocate to and restrain patient on the Crew Medical Restraint System.
+2.  Page additional crewmember for assistance.
+3.  Call MCC-H to request PMC.
+4.  Go to 1.103 ALS ALGORITHM, block 13, page 5, Respiratory Assessment (SODF: MED CL: EMERGENCY).
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1.  Perform 30 chest compressions for every 2 breaths (1 second each breath) for 5 cycles (approximately 2 minutes).
+2.  As required, relocate to and restrain patient on the Crew Medical Restraint System.
+3.  Page additional crewmember for assistance.
+4.  Call MCC-H to request PMC. -> 4
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1.  Relocate to and restrain patient on the Crew Medical Restraint System.
+2.  Page additional crewmember for assistance.
+3.  Call MCC-H to request PMC.
+4.  Go to 1.103 ALS ALGORITHM, block 13, page 5, Respiratory Assessment (SODF: MED CL: EMERGENCY).
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1.  Relocate to and restrain patient on the Crew Medical Restraint System.
+2.  Page additional crewmember for assistance.
+3.  Call MCC-H to request PMC.
+4.  Go to 1.103 ALS ALGORITHM, block 13, page 5, Respiratory Assessment (SODF: MED CL: EMERGENCY).
+

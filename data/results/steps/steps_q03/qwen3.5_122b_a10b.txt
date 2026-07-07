@@ -1,0 +1,63 @@
+Model       : qwen3.5-122b-a10b
+Category    : steps
+Question ID : steps_q03
+Question    : What medication is used to treat a seizure and how is it administered?
+Timestamp   : 2026-07-06 13:19:17
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+Error: LLM call failed.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+Error: LLM call failed.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+Based on the retrieved context, the following medications are used to treat a seizure:
+
+**Primary Medication:**
+- **Diazepam (Valium)**
+  - Dosage: 2 mL at 5 mg/mL for a total of 10 mg
+  - Location: Topical & Injectable Medication Pack (Brown)
+  - Administration: Intramuscular injection
+  - If supplied in a prefilled syringe, perform 2.14.302 INJECTIONS AND IV – MEDICINE PREPARATION FOR INJECTION
+
+**Secondary Medication:**
+- **Phenytoin**
+  - Dosage: One capsule
+  - Administration: Oral (when patient is awake, coherent, and able to swallow)
+
+**Repeat Dosing:**
+- If seizure continues for > 5 minutes or for repeated seizures, repeat medication administration in 10 minutes.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+Based on the retrieved emergency procedure documents, two medications are used to treat a seizure:
+
+**Diazepam (Valium)**
+- **Administration:** Intramuscular injection
+- **Dosage:** 2 mL of Diazepam (Valium) 5 mg/mL for a total of 10 mg
+- **Pack:** Topical & Injectable Medication Pack (Brown)
+- **Preparation:**
+  - If supplied in a prefilled syringe: Perform 2.14.302 INJECTIONS AND IV – MEDICINE PREPARATION FOR INJECTION
+  - If supplied in a vial: Perform 2.14.303 INJECTIONS AND IV - DRAWING UP MEDICINE FROM VIAL
+
+**Phenytoin (Dilantin ER)**
+- **Administration:** By mouth (oral)
+- **Dosage:** One capsule initially, then a second dose after two hours
+- **Condition:** Only when the patient is awake, coherent, and able to swallow
+- **Pack:** Oral Medication Pack (Purple)
+- **Direction:** As directed by Surgeon
+
+**Additional Note:** If seizure continues for > 5 minutes or for repeated seizures, repeat medication administration in 10 minutes.
+

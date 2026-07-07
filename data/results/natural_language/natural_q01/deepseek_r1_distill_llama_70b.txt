@@ -1,0 +1,58 @@
+Model       : deepseek-r1-distill-llama-70b
+Category    : natural_language
+Question ID : natural_q01
+Question    : My crewmate is showing signs of a serious allergic reaction and I have the EpiPen. Where exactly do I inject it, how long do I hold it, and can I give another dose if symptoms come back?
+Timestamp   : 2026-07-06 17:16:17
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+Error: LLM call failed.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1. **Injection Location and Technique**:  
+   - Press the needle end of the Epinephrine (EpiPen) perpendicular to and firmly against the patient's **outer thigh**.  
+   - Use a jabbing motion to ensure proper administration.
+
+2. **Hold Duration**:  
+   - Hold the EpiPen firmly against the thigh for **10 seconds**.
+
+3. **Repeat Dose**:  
+   - A second dose may be administered if symptoms **recur or progress**, but it should only be given **every 20 minutes**.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+To administer the EpiPen to your crewmate showing signs of a serious allergic reaction, follow these steps:
+
+1. **Remove the EpiPen** from its protective plastic tubing.
+2. **Hold the EpiPen** by forming a fist with your thumb closest to the safety cap.
+3. **Activate the auto-injector** by pulling off the safety cap.
+4. **Inject into the outer thigh** using a jabbing motion, pressing the needle end perpendicular and firmly against the thigh until a click is heard or felt.
+5. **Hold the EpiPen** against the thigh for 10 seconds to ensure the full dose is administered.
+6. **Discard the used EpiPen** in its original protective plastic tubing.
+
+**Warnings:**
+- Do not place fingers over the needle end to prevent self-injection.
+- Avoid injecting through clothing to prevent needle contamination.
+
+If symptoms return, a second dose may be administered if another EpiPen is available. Always seek medical help immediately after administration.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. **Injection Location**: Inject the EpiPen into the **outer thigh**.  
+2. **Hold Time**: Hold the EpiPen firmly against the thigh for **10 seconds**.  
+3. **Repeat Dose**: Yes, if symptoms recur or progress, you can give another dose every **20 minutes**.  
+
+**Warnings**:  
+- Do not put fingers over the needle end to prevent injection into your finger.  
+- Do not give the shot through clothing to prevent needle contamination.
+

@@ -1,0 +1,47 @@
+Model       : deepseek-r1-distill-llama-70b
+Category    : text_only
+Question ID : text_q06
+Question    : What should I do if the medicine does not flow through the Intraosseous needle?
+Timestamp   : 2026-07-06 13:01:36
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The provided context does not contain enough information.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+If the medicine does not flow through the Intraosseous needle, follow these steps:
+
+1. Go to block 20, page 7, Intraosseous Needle Troubleshooting.
+2. If two attempts at placing the Intraosseous device have not been made:
+   - Prepare for a second Intraosseous device insertion using the other leg.
+   - Retrieve the Intraosseous Device Start Kit with the second Intraosseous Device [Emergency Medical Treatment Pack (Red)].
+   - Proceed to block 1, page 1, Intraosseous Device Insertion, and perform the steps using the other leg.
+3. If two attempts have been made:
+   - Attach a Syringe 10 mL to the IV Cap on the failed Intraosseous Device(s).
+   - Pull back on the plunger of the Syringe 10 mL by at least 5 mL, then disconnect the Syringe 10 mL from the blue IV Cap. Blood or fluid may or may not be seen. This action will potentially clear bone fragments from the needle.
+   - Attempt to re-administer the medication.
+     - If successful, go to block 9, page 3.
+     - If unsuccessful, support AED Assisted CPR and report the results to the Surgeon if able.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+If the medicine does not flow through the Intraosseous needle, go to block 20, page 7, for Intraosseous Needle Troubleshooting.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. Attach a Syringe 10 mL to the IV Cap on the failed Intraosseous Device(s).
+2. Pull back on the plunger of the Syringe 10 mL by at least 5 mL, then disconnect the Syringe 10 mL from the blue IV Cap. Blood or fluid may or may not be seen. This action will potentially clear bone fragments from the needle.
+3. If the medicine still does not flow, go to block 20, page 7, Intraosseous Needle Troubleshooting.
+
+**Warning:** Needle could eject from end of blue barrel becoming a projectile. Ensure safety when handling the device.
+

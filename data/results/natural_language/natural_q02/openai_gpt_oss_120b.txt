@@ -1,0 +1,47 @@
+Model       : openai-gpt-oss-120b
+Category    : natural_language
+Question ID : natural_q02
+Question    : During CPR the AED battery warning came on. Should we stop resuscitation to change it, or keep working while handling the battery problem?
+Timestamp   : 2026-07-06 16:55:55
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**Keep performing CPR.**  
+
+1. Continue CPR while the patient is unresponsive, not breathing normally, and shows no signs of circulation.  
+2. Check the battery indicator on the MAIN DISPLAY.  
+3. Replace the AED battery at the earliest opportunity (do not pause chest compressions).  
+4. Notify MCC‑H of the battery condition.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. Continue CPR – do not stop chest compressions while the patient is unresponsive, not breathing normally, and has no signs of circulation.  
+2. While CPR is ongoing, check the battery indicator on the MAIN DISPLAY.  
+3. Replace the AED battery as soon as practicable (at the earliest opportunity).  
+4. Notify MCC‑H of the battery issue.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**Do not stop resuscitation.**  
+
+1. Continue CPR while the patient remains unresponsive, not breathing normally, and shows no signs of circulation.  
+2. Check the battery indicator on the AED’s main display.  
+3. Replace the AED battery as soon as practicable (at the earliest opportunity).  
+4. Notify MCC‑H of the low‑battery condition.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. **Continue CPR** – do not stop chest compressions while the patient is unresponsive, not breathing normally, and showing no signs of circulation.  
+2. **Check the battery indicator** on the AED’s main display to confirm the low‑battery condition.  
+3. **Replace the AED battery at the earliest opportunity** (as soon as you can safely do so).  
+4. **Notify MCC‑H** of the battery issue and the replacement.
+

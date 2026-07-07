@@ -1,0 +1,67 @@
+Model       : deepseek-r1-distill-llama-70b
+Category    : figure_description
+Question ID : figure_q02
+Question    : What anatomical landmarks are labeled in the mouth anatomy figures?
+Timestamp   : 2026-07-06 16:04:43
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 5
+Answer:
+The provided context does not contain enough information.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+The mouth anatomy figures label the following anatomical landmarks:
+
+**Mouth Structures:**
+1. Teeth
+2. Tonsil
+3. Uvula
+4. Tongue
+5. Gingiva (gum)
+6. Upper and lower dental arches
+7. Soft palate
+
+**Tooth Structures:**
+1. Enamel
+2. Dentin
+3. Pulp
+4. Cementum
+5. Periodontal Ligament
+6. Jawbone
+
+Additionally, the figures include a tooth numbering system with the maxillary (upper) jaw teeth numbered 1 through 16 and the mandibular (lower) jaw teeth numbered 17 through 32.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The anatomical landmarks labeled in the mouth anatomy figures are as follows:
+
+- **Figure 1**: Teeth, Tonsil, Gingiva (gum), Tongue, Uvula.
+- **Figure 2**: Numbered teeth (1-32), Anterior (1-6, 11-16 upper; 21-26 lower) and Posterior (7-12 upper, 27-32 lower) regions.
+- **Figure 3**: Enamel, Dentin, Pulp, Cementum, Periodontal Ligament, Jawbone.
+- **Additional Figure (from dental procedure)**: Coronoid Notch, Inferior Alveolar Nerve.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 5
+Answer:
+The anatomical landmarks labeled in the mouth anatomy figures include:
+
+- Teeth
+- Tonsil
+- Gingiva (gum)
+- Tongue
+- Uvula
+- Enamel
+- Dentin
+- Pulp
+- Cementum
+- Periodontal Ligament
+- Jawbone
+

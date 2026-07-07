@@ -1,0 +1,70 @@
+Model       : qwen3.5-122b-a10b
+Category    : steps
+Question ID : steps_q06
+Question    : In AED Assisted CPR, what should I do if the patient is unresponsive and not breathing or has no normal breathing, only gasping?
+Timestamp   : 2026-07-06 13:22:20
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+Error: LLM call failed.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+Error: LLM call failed.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+Based on the retrieved context, if the patient is unresponsive and not breathing or has no normal breathing (only gasping) during AED Assisted CPR, follow these steps:
+
+**3 PERFORM CPR**
+1. Perform 30 chest compressions for every 2 breaths (1 second each breath) for 5 cycles (approximately 2 minutes).
+2. As required, relocate to and restrain patient on the Crew Medical Restraint System.
+3. Page additional crewmember for assistance.
+4. Call MCC-H to request PMC.
+
+**4 DEPLOY AED**
+1. Connect AED electrodes to patient's chest.
+2. Turn AED 'ON' (green) and press.
+3. Follow verbal prompts.
+4. If verbal prompts inaudible, read prompts on screen.
+
+**5 MONITOR PATIENT RESPONSE**
+- After AED prompts 'Start CPR', perform a 10-second pulse check.
+- If pulse is detected, proceed to step 6.
+- If no pulse is detected, proceed to step 7.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+Based on the retrieved context, if the patient is unresponsive and not breathing or has no normal breathing (only gasping) during AED Assisted CPR, follow these steps:
+
+**Step 3 - PERFORM CPR:**
+1. Perform 30 chest compressions for every 2 breaths (1 second each breath) for 5 cycles (approximately 2 minutes)
+2. As required, relocate to and restrain patient on the Crew Medical Restraint System
+3. Page additional crewmember for assistance
+4. Call MCC-H to request PMC
+
+**Step 4 - DEPLOY AED:**
+1. Connect AED electrodes to patient's chest
+2. Turn AED 'ON' (green) and press
+3. Follow verbal prompts
+4. If verbal prompts inaudible, read prompts on screen
+
+**Step 7 - Continue CPR:**
+- Perform 30 chest compressions for every 2 breaths (1 second each breath) until prompted by AED
+- Repeat after each 'Start CPR' prompt from AED
+
+**If patient begins spontaneous breathing or a pulse is detected:**
+- Stop chest compressions
+- Assist breathing as necessary
+- If second rescuer assisting, stop medication administration
+- Go to 1.103 ALS ALGORITHM, block 13, page 5, Respiratory Assessment
+

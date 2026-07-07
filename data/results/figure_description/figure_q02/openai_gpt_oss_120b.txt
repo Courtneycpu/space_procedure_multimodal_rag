@@ -1,0 +1,71 @@
+Model       : openai-gpt-oss-120b
+Category    : figure_description
+Question ID : figure_q02
+Question    : What anatomical landmarks are labeled in the mouth anatomy figures?
+Timestamp   : 2026-07-06 16:36:24
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 5
+Answer:
+The visual details of the labeled anatomical landmarks in the mouth anatomy figures are not available in the provided context.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+- Teeth  
+- Tonsil  
+- Uvula  
+- Tongue  
+- Gingiva (gum)  
+
+Additional tooth‑specific landmarks shown in the tooth‑anatomy figures:  
+
+- Enamel (outer crown layer)  
+- Dentin (underlying bulk of the tooth)  
+- Pulp (central core with vessels and nerves)  
+- Cementum (root covering)  
+- Periodontal ligament (between cementum and jawbone)  
+- Jawbone (surrounding the tooth root)  
+
+Jaw‑model landmarks used for tooth numbering:  
+
+- Maxillary Upper Horseshoe (upper jaw)  
+- Anteriors (front teeth)  
+- Posteriors (back teeth)  
+- Mandibular Lower Lingual bar (lower jaw)
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+- **Figure 1 (Mouth Anatomy)** – Teeth, Tonsil, Gingiva (gum), Tongue, Uvula  
+- **Figure 2 (Tooth Numbering)** – Anterior teeth, Posterior teeth, Maxillary (upper) arch, Mandibular (lower) arch, associated numbering for each tooth (1‑32)  
+- **Figure 3 (Tooth Anatomy)** – Enamel, Dentin, Pulp, Cementum, Periodontal ligament, Jawbone
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 5
+Answer:
+**Figure 1 – Mouth Anatomy**  
+- Teeth  
+- Tonsil  
+- Gingiva (gum)  
+- Tongue  
+- Uvula  
+
+**Figure 2 – Tooth Numbering**  
+- Maxillary jaw model  
+- Mandibular jaw model  
+- Numbered teeth (1 – 32) showing anterior and posterior regions, upper/lower arches, maxillary upper, mandibular lower, lingual bar, etc.  
+
+**Figure 3 – Tooth Anatomy**  
+- Enamel  
+- Dentin  
+- Pulp  
+- Cementum  
+- Periodontal ligament  
+- Jawbone
+

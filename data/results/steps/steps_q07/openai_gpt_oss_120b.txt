@@ -1,0 +1,61 @@
+Model       : openai-gpt-oss-120b
+Category    : steps
+Question ID : steps_q07
+Question    : If the choking patient is awake, how do I perform abdominal thrusts and when do I stop?
+Timestamp   : 2026-07-06 13:11:27
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**Abdominal thrusts (patient is awake)**  
+
+1. Position yourself behind the patient.  
+2. Make a fist.  
+3. Place the fist **above the belly button but below the ribcage**.  
+4. Pull sharply **inward and upward**.  
+5. **Repeat** the thrusts **until**:  
+   - the obstructing object clears, **or**  
+   - the patient becomes unconscious.  
+
+Stop the maneuver as soon as either the airway is cleared or the patient loses consciousness.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+**Performing abdominal thrusts (patient is awake)**  
+
+1. Position yourself behind the patient.  
+2. Make a fist.  
+3. Place the fist **above the belly button but below the ribcage**.  
+4. Pull sharply **inward and upward**.  
+5. **Repeat** the thrusts until **the object clears** or **the patient becomes unconscious** (if unconscious, proceed to the next step of the choking procedure).
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1. Position yourself behind the patient.  
+2. Make a fist.  
+3. Place the fist above the belly button but below the ribcage.  
+4. Pull sharply inward and upward.  
+5. Repeat the thrusts **until the object clears or the patient becomes unconscious**.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+**Abdominal thrusts for an awake choking patient**
+
+1. Position yourself behind the patient.  
+2. Make a fist.  
+3. Place the fist **above the belly button but below the ribcage**.  
+4. Pull sharply **inward and upward**.  
+5. **Repeat** the thrusts **until** either:  
+   - the foreign object clears, **or**  
+   - the patient becomes unconscious.  
+
+Stop the maneuver as soon as one of those conditions occurs.
+

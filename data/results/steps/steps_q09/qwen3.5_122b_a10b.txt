@@ -1,0 +1,49 @@
+Model       : qwen3.5-122b-a10b
+Category    : steps
+Question ID : steps_q09
+Question    : The seizure is not stopping after several minutes. What dose of Valium do we prepare, when do we repeat it, and what should we check afterward?
+Timestamp   : 2026-07-06 15:31:58
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+Error: LLM call failed.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+Error: LLM call failed.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The provided context does not contain enough information.
+
+The retrieved seizure procedure (1.107_SEIZURE) mentions that Diazepam (Valium) is available in the Topical & Injectable Medication Pack (Brown) and references administering an intramuscular shot (Step 2), but it does not specify:
+- The exact dose of Valium to prepare
+- When to repeat the Valium dose
+- What to check afterward following Valium administration
+
+The context only provides detailed dosing information for Phenytoin (Dilantin ER) in steps 7.2 and 7.3, not for Valium.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+**Valium Dose to Prepare:**
+- Prepare 2 mL Diazepam (Valium) 5 mg/mL for a total of 10 mg
+- Source: Topical & Injectable Medication Pack (Brown)
+
+**When to Repeat:**
+- If seizure continues for > 5 minutes or for repeated seizures, repeat medication administration in 10 minutes
+
+**What to Check Afterward:**
+- Apply Blood Oximeter (Step 3)
+- Collect information about the seizure event and the use of medications (Step 8.1)
+- When awake, coherent, and able to swallow, give one capsule of Phenytoin (Dilantin ER) by mouth as directed by Surgeon (Step 7.2)
+- After two hours, give a second dose of Phenytoin (Dilantin ER) by mouth, or as directed by Surgeon (Step 7.3)
+

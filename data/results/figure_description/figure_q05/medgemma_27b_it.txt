@@ -1,0 +1,107 @@
+Model       : medgemma-27b-it
+Category    : figure_description
+Question ID : figure_q05
+Question    : How do I prepare a dental nerve block, configure the syringe for one-handed aspiration, and inject Lidocaine for upper or lower nerve block?
+Timestamp   : 2026-07-06 16:00:48
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1.  **Draw up Lidocaine:** Draw up 10 mL of Lidocaine (Xylocaine) into a Syringe 10 mL. Refer to section 2.14.303 for instructions if needed.
+2.  **Configure Syringe for Aspiration:**
+    *   Tear off an 8-inch strip of Medical Tape [Medical Supply Pack (Green)].
+    *   Twist the middle of the tape around itself.
+    *   Pull the plunger out of the syringe.
+    *   Apply the ends of the tape to the plunger. (See Figure 1)
+3.  **Upper Nerve Block Injection:**
+    *   Insert the needle, directing it toward the root of the tooth to be anesthetized.
+    *   Gently pull back on the syringe plunger and inspect the chamber to ensure no blood is present.
+    *   Inject 2 to 3 mL of Lidocaine (Xylocaine) directly over the root of the tooth.
+    *   Withdraw the needle, recap it using one-handed technique, and temporarily stow.
+    *   Wait 5 minutes. If pain does not subside, repeat the injection step.
+4.  **Lower Nerve Block Injection:**
+    *   Insert the needle just anterior at the point where the seam between the cheek and throat turns upward toward the maxilla. Keep the barrel of the syringe over teeth 3 and 4 on the opposite side of the injection. (See Figure 3)
+    *   Insert the needle until bone is contacted, leaving only 5 to 10 mm of the needle exposed.
+        *   If no bone contact is made, withdraw the needle slightly and reposition it with the syringe barrel over teeth 4 and 5.
+        *   If bone is contacted but more than 5 to 10 mm of the needle is exposed, reposition the needle with the syringe barrel over teeth 2 and 3.
+    *   Gently pull back on the syringe plunger and inspect the chamber to ensure no blood is present.
+    *   Inject 2 to 3 mL of Lidocaine (Xylocaine) directly over the root of the tooth.
+    *   Withdraw the needle, recap it using one-handed technique, and temporarily stow.
+    *   Wait 5 minutes. If pain does not subside, repeat the injection step.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1.  **Prepare the Workspace:** Create a workstation using Gray Tape and temporarily stow hardware on the tape. Use a Ziplock Bag for trash stowage.
+2.  **Apply Topical Anesthetic:** Place a Benzocaine Swabstick on the injection site. Leave it in place for 5 to 10 minutes.
+3.  **Configure Syringe for One-Handed Aspiration:**
+    *   Tear off an 8-inch strip of Medical Tape.
+    *   Twist the middle of the tape around itself.
+    *   Pull the plunger out of the Syringe 10 mL.
+    *   Apply the ends of the tape to the plunger.
+4.  **Draw up Lidocaine:** Draw up 10 mL of Lidocaine (Xylocaine) into Syringe 10 mL.
+5.  **Prepare the Patient:** Don Nitrile Gloves and LED Headlamp. Pack Gauze 4"x4" between the gum and teeth to assist in visualizing the injection location.
+6.  **Select Injection Location:**
+    *   If using an upper nerve block, go to step 5.1.
+    *   If using a lower nerve block, go to step 5.2.
+7.  **Upper Injection Technique (5.1):**
+    *   Needle 25G →|← Syringe 10 mL
+    *   Remove needle cap and temporarily stow.
+    *   Place needle at the height of the moveable membrane (muccobuccal fold) above fixed gum tissue.
+    *   Insert needle, directing it toward the root of the tooth to be anesthetized.
+    *   Gently pull back on the syringe plunger and inspect the chamber to ensure no blood is present.
+    *   Inject 2 to 3 mL of Lidocaine (Xylocaine) directly over the root of the tooth.
+    *   Withdraw the needle, recap it using a one-handed technique, and temporarily stow.
+    *   Wait 5 minutes. If pain does not subside, repeat step 5.1.
+8.  **Lower Injection Technique (5.2):**
+    *   Needle 25G →|← Syringe 10 mL
+    *   Remove needle cap and temporarily stow.
+    *   Place thumb in the deepest portion of the coronoid notch.
+    *   Insert needle just anterior at the point where the seam between the cheek and throat turns upward toward the maxilla.
+    *   Ensure the barrel of the syringe is kept over teeth 3 and 4 on the opposite side of the injection.
+    *   Gently pull back on the syringe plunger and inspect the chamber to ensure no blood is present.
+    *   Inject 2 to 3 mL of Lidocaine (Xylocaine) directly over the root of the tooth.
+    *   Withdraw the needle, recap it using a one-handed technique, and temporarily stow.
+    *   Wait 5 minutes. If pain does not subside, repeat step 5.2.
+9.  **Post-Procedure:** Place used hardware, contaminated gloves, and packaging materials in a Ziplock Bag and discard.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+1.  Tear off an 8-inch strip of Medical Tape [Medical Supply Pack (Green)].
+2.  Draw up 10 mL of Lidocaine (Xylocaine) into Syringe 10 mL.
+3.  Figure 1 shows the modification to make an aspirating syringe.
+4.  Figure 2 shows an upper nerve block procedure: Insert needle, directing needle toward root of tooth to be anesthetized. Gently pull back on syringe plunger and inspect chamber to ensure no blood in chamber. Inject 2 to 3 mL of Lidocaine (Xylocaine) directly over the root of the tooth. Withdraw needle; recap it using one-handed technique and temporarily stow.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1.  **Configure Syringe for One-Handed Aspiration:**
+    *   Tear off an 8-inch strip of Medical Tape [Medical Supply Pack (Green)]. (Step 3.1)
+    *   Twist the middle of the tape around itself. (Step 3.1)
+    *   Pull plunger out of syringe. (Step 3.1)
+    *   Apply the ends of the tape to the plunger. (Step 3.1) (Figure 1)
+2.  **Draw up Lidocaine:**
+    *   Draw up 10 mL of Lidocaine (Xylocaine) into Syringe 10 mL. (Step 3.2)
+3.  **Inject Lidocaine for Upper Nerve Block:**
+    *   Insert needle, directing needle toward root of tooth to be anesthetized. (Figure 2)
+    *   Gently pull back on syringe plunger and inspect chamber to ensure no blood in chamber. (Figure 2)
+    *   Inject 2 to 3 mL of Lidocaine (Xylocaine) directly over the root of the tooth. (Figure 2)
+    *   Withdraw needle; recap it using one-handed technique and temporarily stow. (Figure 2)
+4.  **Inject Lidocaine for Lower Nerve Block:**
+    *   Insert needle just anterior at point where seam between cheek and throat turns upward toward maxilla. (Figure 3)
+    *   Barrel of syringe is kept over teeth 3 and 4 on opposite side of injection. (Figure 3)
+    *   Insert needle until bone is contacted (and only 5 to 10 mm of needle is left exposed). (Figure 3)
+    *   If no bone contact, withdraw needle slightly, reposition needle with syringe barrel over teeth 4 and 5. (Figure 3)
+    *   If bone is contacted and more than 5 to 10 mm of needle exposed, reposition needle with syringe barrel over teeth 2 and 3. (Figure 3)
+    *   Gently pull back on syringe plunger and inspect chamber to ensure no blood in chamber. (Figure 3)
+    *   Inject 2 to 3 mL of Lidocaine (Xylocaine) directly over the root of the tooth. (Figure 3)
+    *   Withdraw needle; recap it using one-handed technique and temporarily stow. (Figure 3)
+    *   Wait 5 minutes. Pain should subside. (Figure 3)
+    *   If pain does not subside, repeat step 5.2. (Figure 3)
+
