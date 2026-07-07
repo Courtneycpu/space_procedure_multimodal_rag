@@ -1,0 +1,39 @@
+Model       : medgemma-27b-it
+Category    : general
+Question ID : general_q05
+Question    : What tools are needed to perform a mouth exam and send photos to the Surgeon?
+Timestamp   : 2026-07-07 19:23:15
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 4
+Answer:
+The tools needed to perform a mouth exam and send photos to the Surgeon are:
+*   Digital Camera
+*   SSC
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 4
+Answer:
+1.  **TOOLS:**
+    *   Digital Camera
+    *   SSC
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 5
+Answer:
+1.  **TOOLS:**
+    *   Digital Camera
+    *   SSC
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 4
+Answer:
+The tools needed are:
+*   Digital Camera
+*   SSC
+

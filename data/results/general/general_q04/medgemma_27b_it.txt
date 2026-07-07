@@ -1,0 +1,43 @@
+Model       : medgemma-27b-it
+Category    : general
+Question ID : general_q04
+Question    : What is the objective of the toxic exposure procedure and what supplies are listed for it?
+Timestamp   : 2026-07-07 19:22:47
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+The objective is to decontaminate and treat after toxic exposure.
+ITEMS:
+*   Drink Bag
+*   Towel
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+The objective is to decontaminate and treat after toxic exposure.
+ITEMS:
+*   Drink Bag
+*   Towel
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+The objective is to decontaminate and treat after toxic exposure.
+The listed items are:
+- Drink Bag
+- Towel
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+The objective is to decontaminate and treat after toxic exposure.
+The listed items are:
+*   Drink Bag
+*   Towel
+

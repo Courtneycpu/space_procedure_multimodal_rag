@@ -1,0 +1,43 @@
+Model       : deepseek-r1-distill-llama-70b
+Category    : general
+Question ID : general_q02
+Question    : What equipment is needed for treating a choking patient?
+Timestamp   : 2026-07-07 19:16:24
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The equipment needed for treating a choking patient includes:
+
+- Medical Diagnostic Pack (Blue)
+  - Blood Pressure Cuff (appropriate size)
+  - Blood Pressure Monitor
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+The equipment needed for treating a choking patient includes:
+
+- Medical Diagnostic Pack (Blue)
+  - Blood Pressure Cuff (appropriate size)
+  - Blood Pressure Monitor
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The provided context does not contain enough information to answer the question about the equipment needed for treating a choking patient.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The equipment needed for treating a choking patient includes:
+
+- Medical Diagnostic Pack (Blue)
+  - Blood Pressure Cuff (select appropriate size)
+  - Blood Pressure Monitor
+

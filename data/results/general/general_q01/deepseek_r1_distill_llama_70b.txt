@@ -1,0 +1,59 @@
+Model       : deepseek-r1-distill-llama-70b
+Category    : general
+Question ID : general_q01
+Question    : What equipment is needed for an intraosseous device insertion?
+Timestamp   : 2026-07-07 19:15:26
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+The equipment needed for intraosseous device insertion includes:
+
+1. Intraosseous Injection Device
+2. IV Cap
+3. Syringe 10 mL
+4. Medical Tape
+5. Scissors - Trauma
+6. Safety latch
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+The equipment needed for an intraosseous device insertion includes:
+
+- Intraosseous Device
+- Syringe 10 mL
+- IV Cap
+- Medical Tape
+- Safety Latch
+- Scissors - Trauma
+- Intraosseous Device Start Kit
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+The equipment needed for an intraosseous device insertion includes:
+
+- Intraosseous Device
+- Blue barrel
+- Safety latch
+
+The device is positioned on the insertion point, and the safety latch is removed before activation.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+The equipment needed for an intraosseous device insertion includes:
+
+1. Intraosseous Injection Device
+2. IV Cap
+3. Syringe 10 mL
+4. Medical Tape
+5. Scissors - Trauma
+6. Emergency Medical Treatment Pack (Red) containing the Intraosseous Device Start Kit
+
