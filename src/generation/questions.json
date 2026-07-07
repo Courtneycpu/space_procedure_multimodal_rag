@@ -1,41 +1,33 @@
-[{
-   "id": "text_q01",
-   "category": "text_only",
-   "question": "What safety warnings are given about using the EpiPen?"
+[  {
+   "id": "steps_q07",
+   "category": "steps",
+   "question": "If the choking patient is awake, how do I perform abdominal thrusts and when do I stop?"
  },
  {
-   "id": "text_q02",
-   "category": "text_only",
-   "question": "What procedure should you follow after completing AED assisted CPR?"
+   "id": "steps_q08",
+   "category": "steps",
+   "question": "During a seizure, how should I protect the patient from injury and what should I never do with the patient's mouth?"
  },
  {
-   "id": "text_q03",
-   "category": "text_only",
-   "question": "The AED just told us to start CPR, but I think I might feel a pulse. What is the check and when do we stop compressions?"
+   "id": "steps_q09",
+   "category": "steps",
+   "question": "The seizure is not stopping after several minutes. What dose of Valium do we prepare, when do we repeat it, and what should we check afterward?"
  },
  {
-   "id": "text_q04",
-   "category": "text_only",
-   "question": "What actions should I take if the AED gives a CONNECT ELECTRODES voice prompt?"
+   "id": "steps_q10",
+   "category": "steps",
+   "question": "For difficulty breathing, how do I count pulse and respiratory rate, administer oxygen, and give inhaled Albuterol?"
  },
  {
-   "id": "text_q05",
-   "category": "text_only",
-   "question": "During CPR the AED battery warning came on. Should we stop resuscitation to change it, or keep working while handling the battery problem?"
+   "id": "steps_q11",
+   "category": "steps",
+   "question": "A crewmate lost a filling and there is a cavity. How do we pack the temporary filling material, and how long should they avoid food or drinking afterward?"
  },
  {
-   "id": "text_q06",
-   "category": "text_only",
-   "question": "What should I do if the medicine does not flow through the Intraosseous needle?"
- },
- {
-   "id": "text_q07",
-   "category": "text_only",
-   "question": "Under what conditions should CPR termination be considered in the ALS Algorithm?"
- },
- {
-   "id": "text_q08",
-   "category": "text_only",
-   "question": "For loss of tooth, how do I control bleeding, treat pain, and document the injury?"
+   "id": "steps_q12",
+   "category": "steps",
+   "question": "A crewmate broke a tooth and I can see the sensitive inner part. What pain control and Eugenol steps do we use, and what tissue contact should I avoid?"
  }
+
+
 ]
