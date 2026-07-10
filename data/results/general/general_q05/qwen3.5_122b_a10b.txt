@@ -1,0 +1,50 @@
+Model       : qwen3.5-122b-a10b
+Category    : general
+Question ID : general_q05
+Question    : What tools are needed to perform a mouth exam and send photos to the Surgeon?
+Timestamp   : 2026-07-07 19:12:16
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 4
+Answer:
+Error: LLM call failed.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 4
+Answer:
+*   Digital Camera
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 5
+Answer:
+Based on the retrieved context, the tools needed to perform a mouth exam and send photos to the Surgeon are:
+
+- **Digital Camera**
+- **SSC**
+
+**Procedure:**
+1. Inspect mouth and photo document using the Digital Camera
+2. Downlink photos for Surgeon using the SSC
+
+If required, refer to 1.480 D4 SETUP - MEDICAL IMAGERY, all (SODF: ISS PTV: NIKON D4).
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 4
+Answer:
+Based on the retrieved context for procedure 2.6.101 MOUTH EXAM:
+
+**Tools needed:**
+- Digital Camera
+- SSC
+
+**Procedure steps:**
+1. Inspect mouth and photo document using Digital Camera
+2. Downlink photos for Surgeon using SSC
+
+If required, refer to 1.480 D4 SETUP - MEDICAL IMAGERY, all (SODF: ISS PTV: NIKON D4).
+

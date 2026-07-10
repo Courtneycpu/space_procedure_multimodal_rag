@@ -1,0 +1,43 @@
+Model       : medgemma-27b-it
+Category    : general
+Question ID : general_q01
+Question    : What equipment is needed for an intraosseous device insertion?
+Timestamp   : 2026-07-07 19:21:16
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1.  Emergency Medical Treatment Pack (Red)
+2.  Scissors - Trauma
+3.  Intraosseous Device Start Kit
+4.  Intraosseous Injection Device
+5.  IV Cap
+6.  Medical Tape
+7.  Syringe 10 mL
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+1.  Unstow Emergency Medical Treatment Pack (Red):
+    *   Scissors - Trauma
+    *   Intraosseous Device Start Kit:
+        *   Intraosseous Injection Device
+        *   IV Cap
+        *   Medical Tape
+        *   Syringe 10 mL
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+The provided context does not contain enough information.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+The provided context does not contain enough information.
+

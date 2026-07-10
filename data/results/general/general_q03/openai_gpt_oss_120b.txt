@@ -1,0 +1,62 @@
+Model       : openai-gpt-oss-120b
+Category    : general
+Question ID : general_q03
+Question    : What are the main items and tools needed to treat difficulty breathing?
+Timestamp   : 2026-07-07 19:03:27
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+- AA Batteries (four)  
+- Respiratory Support Pack (includes Low‑Flow Non‑Rebreather Mask and cue card)  
+- Medical Diagnostic Pack (Blue)  
+  - Blood Oximeter  
+  - Blood Pressure Cuff (select appropriate size)  
+  - Blood Pressure Monitor  
+  - Stethoscope  
+- Topical & Injectable Medication Pack (Brown)  
+  - Albuterol (Proventil HFA)
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+- AA batteries (four)  
+- Respiratory Support Pack (includes Low‑Flow Non‑Rebreather Mask)  
+- Medical Diagnostic Pack (Blue)  
+  - Blood oximeter and sensor  
+  - Blood pressure cuff (appropriate size) and blood pressure monitor  
+  - Stethoscope  
+- Topical & Injectable Medication Pack (Brown)  
+  - Albuterol (Proventil HFA) inhaler
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+- AA Batteries (four)  
+- Respiratory Support Pack  
+- Medical Diagnostic Pack (Blue)  
+  - Blood Oximeter  
+  - Blood Pressure Cuff (select appropriate size)  
+  - Blood Pressure Monitor  
+  - Stethoscope  
+- Topical & Injectable Medication Pack (Brown)  
+  - Albuterol (Proventil HFA)
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+- AA Batteries (four)  
+- Respiratory Support Pack  
+- Medical Diagnostic Pack (Blue)  
+  - Blood Oximeter  
+  - Blood Pressure Cuff (select appropriate size)  
+  - Blood Pressure Monitor  
+  - Stethoscope  
+- Topical & Injectable Medication Pack (Brown)  
+  - Albuterol (Proventil HFA)
+

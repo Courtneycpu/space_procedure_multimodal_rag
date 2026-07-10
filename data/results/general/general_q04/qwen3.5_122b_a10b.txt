@@ -1,0 +1,54 @@
+Model       : qwen3.5-122b-a10b
+Category    : general
+Question ID : general_q04
+Question    : What is the objective of the toxic exposure procedure and what supplies are listed for it?
+Timestamp   : 2026-07-07 19:10:58
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+**Objective:**
+To decontaminate and treat after toxic exposure.
+
+**Supplies:**
+*   **Items:** Drink Bag, Towel
+*   **Tools:** Digital Camera
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+**Objective:** To decontaminate and treat after toxic exposure.
+
+**Supplies:**
+*   **Items:** Drink Bag, Towel
+*   **Tools:** Digital Camera
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+**Objective:**
+To decontaminate and treat after toxic exposure.
+
+**Supplies Listed:**
+- **ITEMS:**
+  - Drink Bag
+  - Towel
+- **TOOLS:**
+  - Digital Camera
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+**Objective:**
+To decontaminate and treat after toxic exposure.
+
+**Supplies:**
+*   Drink Bag
+*   Towel
+*   Digital Camera
+

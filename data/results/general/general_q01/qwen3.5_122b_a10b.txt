@@ -1,0 +1,54 @@
+Model       : qwen3.5-122b-a10b
+Category    : general
+Question ID : general_q01
+Question    : What equipment is needed for an intraosseous device insertion?
+Timestamp   : 2026-07-07 19:06:51
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+Error: LLM call failed.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+Error: LLM call failed.
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+Based on the retrieved context, the following equipment is mentioned for intraosseous device insertion:
+
+- **Intraosseous Device** (with the following components):
+  - Blue barrel
+  - Safety latch
+  - Gray end
+  - Needle unit
+- **Packaging** (from which the Intraosseous Device is removed)
+
+The context does not provide a complete equipment checklist beyond the Intraosseous Device itself and its components.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+Based on the retrieved context, the equipment needed for intraosseous device insertion includes:
+
+**From Emergency Medical Treatment Pack (Red):**
+- Scissors - Trauma
+
+**From Intraosseous Device Start Kit:**
+- Intraosseous Injection Device
+- IV Cap
+- Medical Tape
+- Syringe 10 mL
+
+**Additional items mentioned in the procedure:**
+- Safety latch (included with the device, to be removed and stowed for later use)
+- Blue barrel (part of the Intraosseous Device)
+- Gray end of Intraosseous Device (for activation)
+

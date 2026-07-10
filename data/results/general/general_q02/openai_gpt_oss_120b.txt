@@ -1,0 +1,37 @@
+Model       : openai-gpt-oss-120b
+Category    : general
+Question ID : general_q02
+Question    : What equipment is needed for treating a choking patient?
+Timestamp   : 2026-07-07 19:02:55
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+- Medical Diagnostic Pack (Blue)  
+  - Blood Pressure Cuff (appropriate size)  
+  - Blood Pressure Monitor
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+- **Medical Diagnostic Pack (Blue)**  
+  - Blood Pressure Cuff (select appropriate size)  
+  - Blood Pressure Monitor
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The provided context does not contain enough information.
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+- Medical Diagnostic Pack (Blue)  
+- Blood Pressure Cuff (select appropriate size)  
+- Blood Pressure Monitor
+

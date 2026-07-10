@@ -1,0 +1,67 @@
+Model       : medgemma-27b-it
+Category    : general
+Question ID : general_q03
+Question    : What are the main items and tools needed to treat difficulty breathing?
+Timestamp   : 2026-07-07 19:22:18
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The main items and tools needed to treat difficulty breathing are:
+- AA Batteries (four)
+- Respiratory Support Pack
+- Medical Diagnostic Pack (Blue)
+    - Blood Oximeter
+    - Blood Pressure Cuff (select appropriate size)
+    - Blood Pressure Monitor
+    - Stethoscope
+- Topical & Injectable Medication Pack (Brown)
+    - Albuterol (Proventil HFA)
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+ITEMS:
+*   AA Batteries (four)
+*   Respiratory Support Pack
+*   Medical Diagnostic Pack (Blue):
+    *   Blood Oximeter
+    *   Blood Pressure Cuff (select appropriate size)
+    *   Blood Pressure Monitor
+    *   Stethoscope
+*   Topical & Injectable Medication Pack (Brown):
+    *   Albuterol (Proventil HFA)
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+The main items needed to treat difficulty breathing are:
+*   AA Batteries (four)
+*   Respiratory Support Pack
+*   Medical Diagnostic Pack (Blue):
+    *   Blood Oximeter
+    *   Blood Pressure Cuff (select appropriate size)
+    *   Blood Pressure Monitor
+    *   Stethoscope
+*   Topical & Injectable Medication Pack (Brown):
+    *   Albuterol (Proventil HFA)
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The main items needed to treat difficulty breathing are:
+*   AA Batteries (four)
+*   Respiratory Support Pack
+*   Medical Diagnostic Pack (Blue):
+    *   Blood Oximeter
+    *   Blood Pressure Cuff (select appropriate size)
+    *   Blood Pressure Monitor
+    *   Stethoscope
+*   Topical & Injectable Medication Pack (Brown):
+    *   Albuterol (Proventil HFA)
+

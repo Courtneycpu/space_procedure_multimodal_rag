@@ -1,0 +1,71 @@
+Model       : deepseek-r1-distill-llama-70b
+Category    : general
+Question ID : general_q03
+Question    : What are the main items and tools needed to treat difficulty breathing?
+Timestamp   : 2026-07-07 19:17:24
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The main items and tools needed to treat difficulty breathing are:
+
+- **Respiratory Support Pack**: Includes a Cue Card and a Low Flow Non-Rebreather Mask for oxygen administration.
+- **Medical Diagnostic Pack (Blue)**: Contains a Blood Oximeter, Blood Pressure Cuff (appropriate size), Blood Pressure Monitor, and Stethoscope.
+- **Topical & Injectable Medication Pack (Brown)**: Includes Albuterol (Proventil HFA).
+- **AA Batteries**: Four are required.
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+The main items and tools needed to treat difficulty breathing are:
+
+- **Respiratory Support Pack**
+  - Low Flow Non-Rebreather Mask
+
+- **Medical Diagnostic Pack (Blue)**
+  - Blood Oximeter
+  - Blood Pressure Cuff (select appropriate size)
+  - Blood Pressure Monitor
+  - Stethoscope
+
+- **Topical & Injectable Medication Pack (Brown)**
+  - Albuterol (Proventil HFA) Inhaler
+
+- **AA Batteries (four)**
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 1
+Answer:
+The main items and tools needed to treat difficulty breathing are:
+
+- AA Batteries (four)
+- Respiratory Support Pack
+- Medical Diagnostic Pack (Blue):
+  - Blood Oximeter
+  - Blood Pressure Cuff (select appropriate size)
+  - Blood Pressure Monitor
+  - Stethoscope
+- Topical & Injectable Medication Pack (Brown):
+  - Albuterol (Proventil HFA)
+- Low Flow Non-Rebreather Mask
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 2
+Answer:
+The main items and tools needed to treat difficulty breathing are:
+
+- AA Batteries (four)
+- Respiratory Support Pack
+- Medical Diagnostic Pack (Blue):
+  - Blood Oximeter
+  - Blood Pressure Cuff (select appropriate size)
+  - Blood Pressure Monitor
+  - Stethoscope
+- Topical & Injectable Medication Pack (Brown):
+  - Albuterol (Proventil HFA)
+

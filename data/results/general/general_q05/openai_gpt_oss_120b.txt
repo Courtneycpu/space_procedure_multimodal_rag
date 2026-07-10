@@ -1,0 +1,35 @@
+Model       : openai-gpt-oss-120b
+Category    : general
+Question ID : general_q05
+Question    : What tools are needed to perform a mouth exam and send photos to the Surgeon?
+Timestamp   : 2026-07-07 19:04:18
+============================================================
+
+TRACK 1: Pure Text Vector Baseline
+------------------------------------------------------------
+Sources retrieved : 4
+Answer:
+- Digital Camera  
+- SSC (Space-to-Space Communications)
+
+TRACK 2: Enriched Markdown
+------------------------------------------------------------
+Sources retrieved : 4
+Answer:
+- Digital Camera  
+- SSC (Space-to-Space Communications)
+
+TRACK 3: Knowledge Graph Retrieval
+------------------------------------------------------------
+Sources retrieved : 5
+Answer:
+- Digital Camera  
+- SSC
+
+TRACK 4: Hybrid RAG + Knowledge Graph
+------------------------------------------------------------
+Sources retrieved : 4
+Answer:
+- Digital Camera  
+- SSC (Space-to-Space Communications)
+

@@ -1,30 +1,52 @@
-[{
-   "id": "natural_q01",
-   "category": "natural_language",
-   "question": "My crewmate is showing signs of a serious allergic reaction and I have the EpiPen. Where exactly do I inject it, how long do I hold it, and can I give another dose if symptoms come back?"
- },
- {
-   "id": "natural_q02",
-   "category": "natural_language",
-   "question": "During CPR the AED battery warning came on. Should we stop resuscitation to change it, or keep working while handling the battery problem?"
- },
- {
-   "id": "natural_q03",
-   "category": "natural_language",
-   "question": "Someone got splashed with a possible toxic substance, maybe in the eyes and on clothing. What should we do first to avoid exposing more crew and clean them up?"
- },
- {
-   "id": "natural_q04",
-   "category": "natural_language",
-   "question": "The patient has a pulse again but looks blue and is breathing badly. How do I decide between just giving oxygen and actively bagging them?"
- },
- {
-   "id": "natural_q05",
-   "category": "natural_language",
-   "question": "A crewmate says they cannot breathe well, and I need to quickly report useful vitals to the Surgeon. What should I measure first and how?"
- }
-
-
-
-
+[
+  {
+    "id": "natural_q01",
+    "category": "natural_language",
+    "question": "My crewmate is showing signs of a serious allergic reaction and I have the EpiPen. Where exactly do I inject it, how long do I hold it, and can I give another dose if symptoms come back?"
+  },
+  {
+    "id": "natural_q02",
+    "category": "natural_language",
+    "question": "During CPR the AED battery warning came on. Should we stop resuscitation to change it, or keep working while handling the battery problem?"
+  },
+  {
+    "id": "natural_q03",
+    "category": "natural_language",
+    "question": "Someone got splashed with a possible toxic substance, maybe in the eyes and on clothing. What should we do first to avoid exposing more crew and clean them up?"
+  },
+  {
+    "id": "natural_q04",
+    "category": "natural_language",
+    "question": "The patient has a pulse again but looks blue and is breathing badly. How do I decide between just giving oxygen and actively bagging them?"
+  },
+  {
+    "id": "natural_q05",
+    "category": "natural_language",
+    "question": "A crewmate says they cannot breathe well, and I need to quickly report useful vitals to the Surgeon. What should I measure first and how?"
+  },
+  {
+    "id": "general_q01",
+    "category": "general",
+    "question": "What equipment is needed for an intraosseous device insertion?"
+  },
+  {
+    "id": "general_q02",
+    "category": "general",
+    "question": "What equipment is needed for treating a choking patient?"
+  },
+  {
+    "id": "general_q03",
+    "category": "general",
+    "question": "What are the main items and tools needed to treat difficulty breathing?"
+  },
+  {
+    "id": "general_q04",
+    "category": "general",
+    "question": "What is the objective of the toxic exposure procedure and what supplies are listed for it?"
+  },
+  {
+    "id": "general_q05",
+    "category": "general",
+    "question": "What tools are needed to perform a mouth exam and send photos to the Surgeon?"
+  }
 ]
