@@ -15,7 +15,7 @@ load_dotenv(ROOT_DIR / "config" / ".env")
 
 NEO4J_URI = os.getenv("NEO4J_URI", "bolt://localhost:7687")
 NEO4J_USER = os.getenv("NEO4J_USER", "neo4j")
-NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
+NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD", "12344321")
 
 driver = GraphDatabase.driver(
     NEO4J_URI,
@@ -26,9 +26,9 @@ driver = GraphDatabase.driver(
 client = OpenAI(
     api_key=os.getenv("SAIA_API_KEY"), 
     base_url=os.getenv("SAIA_BASE_URL"), 
-    timeout=120
+    timeout=60
 )
-model_name = os.getenv("SAIA_DEFAULT_MODEL")
+model_name = os.getenv("SAIA_DEFAULT_MODEL") or "gpt-5.4-mini"
 
 
 BASE_DIR = BASE_DIR = Path(__file__).parents[2] / "data"
@@ -38,7 +38,7 @@ def encode_image(image_path):
     img = Image.open(image_path)
     # Resize if too large
     max_size = (800, 800) # TODO why exactly ?
-    img.thumbnail(max_size, Image.LANCZOS)
+    img.thumbnail(max_size, Image.Resampling.LANCZOS)
     
     # Convert to RGB if needed
     if img.mode != 'RGB':
@@ -64,7 +64,7 @@ def annotate_image(image_path):
     Output ONLY valid JSON. Do not use markdown blocks like ```json."""
 
     response = client.chat.completions.create(
-        model= model_name,
+        model=model_name,
         messages=[{
             "role": "user",
             "content": [
@@ -84,7 +84,7 @@ def annotate_image(image_path):
         max_tokens=500
     )
 
-    raw_output = response.choices[0].message.content.strip()
+    raw_output = (response.choices[0].message.content or "").strip()
     if raw_output.startswith("```json"):
         raw_output = raw_output[7:]
     if raw_output.endswith("```"):
@@ -122,29 +122,27 @@ if __name__ == "__main__":
 
     print(f"🚀 Found {len(figure_paths)} figures to annotate.\n")
 
-#process each figure, annotate, and update KG
-for path in figure_paths:
-    fixed_path = re.sub(r'images/\d+_', 'images/', path)
+    #process each figure, annotate, and update KG
+    for path in figure_paths:
+        fixed_path = re.sub(r'images/\d+_', 'images/', path)
 
-    full_path = os.path.join(BASE_DIR, fixed_path)
-    #full_path = os.path.join(BASE_DIR, path)
-    print(f"Processing: {path}")
+        full_path = os.path.join(BASE_DIR, fixed_path)
+        #full_path = os.path.join(BASE_DIR, path)
+        print(f"Processing: {path}")
 
-    if not os.path.exists(full_path):
-        print(f"  ✗ File not found at {full_path}")
-        continue
+        if not os.path.exists(full_path):
+            print(f"  ✗ File not found at {full_path}")
+            continue
 
-    try:
-        annotation = annotate_image(full_path)
-        update_figure_node(path, annotation)
-        print(f"  ✅ Caption:  {annotation.get('caption', '')[:60]}...")
-        print(f"  ✅ OCR:      {annotation.get('ocr_text', '')[:40]}")
-        print(f"  ✅ Entities: {', '.join(annotation.get('entities', []))}\n")
-        print()
-    except Exception as e:
-        print(f"  ✗ Failed: {e}\n")
+        try:
+            annotation = annotate_image(full_path)
+            update_figure_node(path, annotation)
+            print(f"  ✅ Caption:  {annotation.get('caption', '')[:60]}...")
+            print(f"  ✅ OCR:      {annotation.get('ocr_text', '')[:40]}")
+            print(f"  ✅ Entities: {', '.join(annotation.get('entities', []))}\n")
+            print()
+        except Exception as e:
+            print(f"  ✗ Failed: {e}\n")
 
-print("Annotation complete!")
-print("Stored path:", path)
-print("Full path:", full_path)
-driver.close()
+    print("Annotation complete!")
+    driver.close()

@@ -8,12 +8,12 @@ embeddings = HuggingFaceEmbeddings(
     model_kwargs={"device": "cpu"}
 )
 
-PERSIST_DIR = "data/chroma_enriched" # data/chroma_enriched or data/chroma_baseline
+PERSIST_DIR = "data/chroma_baseline" # data/chroma_enriched or data/chroma_baseline
 
 vectorstore = Chroma(
     persist_directory=PERSIST_DIR,
     embedding_function=embeddings,
-    collection_name="enriched_text_chunks" # enriched_text_chunks or row_text_chunks
+    collection_name="row_text_chunks" # enriched_text_chunks or row_text_chunks
 )
 
 # Get the raw collection
@@ -45,14 +45,20 @@ print(collection.count())
 import json
 
 all_chunks = collection.get()
+if all_chunks is None:
+    all_chunks = {"ids": [], "metadatas": [], "documents": []}
+
+ids = all_chunks.get("ids") or []
+metadatas = all_chunks.get("metadatas") or []
+documents = all_chunks.get("documents") or []
 
 data = []
 
-for i in range(len(all_chunks["ids"])):
+for i in range(len(ids)):
     data.append({
-        "id": all_chunks["ids"][i],
-        "metadata": all_chunks["metadatas"][i],
-        "text": all_chunks["documents"][i]
+        "id": ids[i],
+        "metadata": metadatas[i] if i < len(metadatas) else {},
+        "text": documents[i] if i < len(documents) else "",
     })
 
 with open("chunks_dump_enriched.json", "w", encoding="utf-8") as f:

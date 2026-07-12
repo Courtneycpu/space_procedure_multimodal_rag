@@ -1,4 +1,134 @@
-[   {
+[    {
+   "id": "text_q01",
+   "category": "text_only",
+   "question": "What safety warnings are given about using the EpiPen?"
+ },
+ {
+   "id": "text_q02",
+   "category": "text_only",
+   "question": "What procedure should you follow after completing AED assisted CPR?"
+ },
+ {
+   "id": "text_q03",
+   "category": "text_only",
+   "question": "The AED just told us to start CPR, but I think I might feel a pulse. What is the check and when do we stop compressions?"
+ },
+ {
+   "id": "text_q04",
+   "category": "text_only",
+   "question": "What actions should I take if the AED gives a CONNECT ELECTRODES voice prompt?"
+ },
+ {
+   "id": "text_q05",
+   "category": "text_only",
+   "question": "During CPR the AED battery warning came on. Should we stop resuscitation to change it, or keep working while handling the battery problem?"
+ },
+ {
+   "id": "text_q06",
+   "category": "text_only",
+   "question": "What should I do if the medicine does not flow through the Intraosseous needle?"
+ },
+ {
+   "id": "text_q07",
+   "category": "text_only",
+   "question": "Under what conditions should CPR termination be considered in the ALS Algorithm?"
+ },
+ {
+   "id": "text_q08",
+   "category": "text_only",
+   "question": "For loss of tooth, how do I control bleeding, treat pain, and document the injury?"
+ },
+ {
+   "id": "figure_q01",
+   "category": "figure_description",
+   "question": "What does the upper injection technique figure show and what labels are visible?"
+ },
+ {
+   "id": "figure_q02",
+   "category": "figure_description",
+   "question": "What anatomical landmarks are labeled in the mouth anatomy figures?"
+ },
+ {
+   "id": "figure_q03",
+   "category": "figure_description",
+   "question": "We need emergency bone access for medication. Where is the leg insertion site and what are the main setup and activation steps for the IO device?"
+ },
+ {
+   "id": "figure_q04",
+   "category": "figure_description",
+   "question": "The Surgeon wants pictures of a dental issue. What exactly should I inspect, photograph, and downlink, and where do I look for tooth-numbering references?"
+ },
+ {
+   "id": "figure_q05",
+   "category": "figure_description",
+   "question": "How do I prepare a dental nerve block, configure the syringe for one-handed aspiration, and inject Lidocaine for upper or lower nerve block?"
+ },
+ {
+   "id": "figure_q06",
+   "category": "figure_description",
+   "question": "What should I do after a lost dental crown, and how do I replace and confirm seating of the crown with Dental Adhesive?"
+ },
+ {
+   "id": "steps_q01",
+   "category": "steps",
+   "question": "What are the steps to treat a severe allergic reaction?"
+ },
+ {
+   "id": "steps_q02",
+   "category": "steps",
+   "question": "How do you perform CPR with one rescuer available?"
+ },
+ {
+   "id": "steps_q03",
+   "category": "steps",
+   "question": "What medication is used to treat a seizure and how is it administered?"
+ },
+ {
+   "id": "steps_q04",
+   "category": "steps",
+   "question": "How do you help someone who is choking and no longer conscious?"
+ },
+ {
+   "id": "steps_q05",
+   "category": "steps",
+   "question": "My crewmate is showing signs of a serious allergic reaction and I have the EpiPen. Where exactly do I inject it, how long do I hold it, and can I give another dose if symptoms come back?"
+ },
+ {
+   "id": "steps_q06",
+   "category": "steps",
+   "question": "In AED Assisted CPR, what should I do if the patient is unresponsive and not breathing or has no normal breathing, only gasping?"
+ },
+ {
+   "id": "steps_q07",
+   "category": "steps",
+   "question": "If the choking patient is awake, how do I perform abdominal thrusts and when do I stop?"
+ },
+ {
+   "id": "steps_q08",
+   "category": "steps",
+   "question": "During a seizure, how should I protect the patient from injury and what should I never do with the patient's mouth?"
+ },
+ {
+   "id": "steps_q09",
+   "category": "steps",
+   "question": "The seizure is not stopping after several minutes. What dose of Valium do we prepare, when do we repeat it, and what should we check afterward?"
+ },
+ {
+   "id": "steps_q10",
+   "category": "steps",
+   "question": "For difficulty breathing, how do I count pulse and respiratory rate, administer oxygen, and give inhaled Albuterol?"
+ },
+ {
+   "id": "steps_q11",
+   "category": "steps",
+   "question": "A crewmate lost a filling and there is a cavity. How do we pack the temporary filling material, and how long should they avoid food or drinking afterward?"
+ },
+ {
+   "id": "steps_q12",
+   "category": "steps",
+   "question": "A crewmate broke a tooth and I can see the sensitive inner part. What pain control and Eugenol steps do we use, and what tissue contact should I avoid?"
+ },
+ {
    "id": "general_q01",
    "category": "general",
    "question": "What equipment is needed for an intraosseous device insertion?"
@@ -22,8 +152,32 @@
    "id": "general_q05",
    "category": "general",
    "question": "What tools are needed to perform a mouth exam and send photos to the Surgeon?"
+ },
+ {
+   "id": "natural_q01",
+   "category": "natural_language",
+   "question": "My crewmate is showing signs of a serious allergic reaction and I have the EpiPen. Where exactly do I inject it, how long do I hold it, and can I give another dose if symptoms come back?"
+ },
+ {
+   "id": "natural_q02",
+   "category": "natural_language",
+   "question": "During CPR the AED battery warning came on. Should we stop resuscitation to change it, or keep working while handling the battery problem?"
+ },
+ {
+   "id": "natural_q03",
+   "category": "natural_language",
+   "question": "Someone got splashed with a possible toxic substance, maybe in the eyes and on clothing. What should we do first to avoid exposing more crew and clean them up?"
+ },
+ {
+   "id": "natural_q04",
+   "category": "natural_language",
+   "question": "The patient has a pulse again but looks blue and is breathing badly. How do I decide between just giving oxygen and actively bagging them?"
+ },
+ {
+   "id": "natural_q05",
+   "category": "natural_language",
+   "question": "A crewmate says they cannot breathe well, and I need to quickly report useful vitals to the Surgeon. What should I measure first and how?"
  }
-
 
 
 ]
